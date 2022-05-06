@@ -1,0 +1,335 @@
+{
+	"category": "av",
+	"label": "AV",
+	"icons": [
+		{
+			"icon": "fast_backward_10",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fast_backward_30",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fast_backward_empty",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fast_forward_10",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fast_forward_30",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fast_forward_empty",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "microphone",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "microphone_on",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "pause",
+			"variants": [
+				{
+					"size": 64
+				},
+				{
+					"size": 48
+				},
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "play",
+			"variants": [
+				{
+					"size": 64,
+					"style": "filled"
+				},
+				{
+					"size": 48,
+					"style": "filled"
+				},
+				{
+					"size": 32,
+					"style": "filled"
+				},
+				{
+					"size": 24,
+					"style": "filled"
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "play",
+			"variants": [
+				{
+					"size": 64
+				},
+				{
+					"size": 48
+				},
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "skip_backward",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "filled"
+				},
+				{
+					"size": 24,
+					"style": "filled"
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "skip_forward",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "filled"
+				},
+				{
+					"size": 24,
+					"style": "filled"
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "stop",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "filled"
+				},
+				{
+					"size": 24,
+					"style": "filled"
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "subtitles",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "volume_down",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "volume_mute",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "volume_off",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "volume_up",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,75 @@
+.DO-NOT-COPY-THIS-CLASS-example-icon-list {
+	&,
+	ul {
+		list-style: none;
+
+		padding-left: 0;
+	}
+
+	&.functional {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.DO-NOT-COPY-THIS-CLASS-example-bg-variants-regular,
+		.DO-NOT-COPY-THIS-CLASS-example-bg-variants-dark {
+			min-width: 250px;
+		}
+		.DO-NOT-COPY-THIS-CLASS-example-bg-variants-regular {
+			ul {
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	& > li {
+		display: flex;
+	}
+
+	&.icons {
+		ul {
+			color: $db-color-cool-gray-700;
+		}
+
+		li {
+			display: inline-block;
+
+			margin: 0.25rem;
+			padding: 1rem 0.25rem;
+			border-radius: 4px;
+
+			color: $db-color-cool-gray-700;
+
+			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-turquoise {
+				background-color: $db-color-turquoise-400;
+			}
+			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-red {
+				background-color: $db-color-red-500;
+
+				--db-icon-color: #fff;
+				--db-icon-pulse-color: #fff;
+			}
+			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-cyan {
+				background-color: $db-color-cyan-200;
+
+				--db-icon-pulse-color: currentColor;
+			}
+			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-dark {
+				background-color: #272d37; // TODO: richtige Farbvariable raus suchen
+
+				--db-icon-color: #fff;
+			}
+		}
+	}
+	&.illustrative {
+		li {
+			padding: 2rem;
+		}
+	}
+	&.functional {
+		ul {
+			display: flex;
+			align-items: center;
+		}
+	}
+}

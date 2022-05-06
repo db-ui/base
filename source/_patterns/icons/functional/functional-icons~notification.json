@@ -1,0 +1,86 @@
+{
+	"category": "notification",
+	"label": "Notification",
+	"icons": [
+		{
+			"icon": "error",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
+					"size": 20,
+					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "notify",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "notify_cutoff",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "warning",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
+					"size": 20,
+					"style": "solid"
+				}
+			]
+		}
+	]
+}

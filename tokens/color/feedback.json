@@ -1,0 +1,44 @@
+{
+	"color": {
+		"success": {
+			"_": {
+				"value": "{color.light-green.600.value}",
+				"comment": "This is the general success color"
+			},
+			"small-font": {
+				"value": "#467a18",
+				"comment": "in case a font-size smaller than 14dp is in use"
+			}
+		},
+		"error": {
+			"_": {
+				"value": "{color.red.500.value}",
+				"comment": "This is the general error color"
+			},
+			"small-font": {
+				"value": "#db0014",
+				"comment": "in case a font-size smaller than 14dp is in use"
+			}
+		},
+		"warning": {
+			"_": {
+				"value": "#f75f00",
+				"comment": "This is the general warning color"
+			},
+			"small-font": {
+				"value": "#cc4e00",
+				"comment": "in case a font-size smaller than 14dp is in use"
+			}
+		},
+		"informative": {
+			"_": {
+				"value": "{color.cyan.600.value}",
+				"comment": "This is the general informative color"
+			},
+			"small-font": {
+				"value": "{color.cyan.700.value}",
+				"comment": "in case a font-size smaller than 14dp is in use"
+			}
+		}
+	}
+}

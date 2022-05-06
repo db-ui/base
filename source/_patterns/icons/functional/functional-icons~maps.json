@@ -1,0 +1,176 @@
+{
+	"category": "maps",
+	"label": "Maps",
+	"icons": [
+		{
+			"icon": "gps",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "gps_north",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "gps_on",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "home",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "map",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "parking",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "place",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "set_position",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "station",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "stop",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "train_station",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		}
+	]
+}

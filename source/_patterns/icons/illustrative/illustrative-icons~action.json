@@ -1,0 +1,78 @@
+{
+	"category": "action",
+	"label": "Action",
+	"icons": [
+		{
+			"icon": "account"
+		},
+		{
+			"icon": "alarm_clock"
+		},
+		{
+			"icon": "ar_icon"
+		},
+		{
+			"icon": "calendar"
+		},
+		{
+			"icon": "christmas"
+		},
+		{
+			"icon": "clock_moving"
+		},
+		{
+			"icon": "compass"
+		},
+		{
+			"icon": "construction_sign"
+		},
+		{
+			"icon": "construction_worker"
+		},
+		{
+			"icon": "db_clock"
+		},
+		{
+			"icon": "diamond"
+		},
+		{
+			"icon": "fokus"
+		},
+		{
+			"icon": "gift"
+		},
+		{
+			"icon": "handshake"
+		},
+		{
+			"icon": "heart"
+		},
+		{
+			"icon": "information"
+		},
+		{
+			"icon": "onlineshop_brand"
+		},
+		{
+			"icon": "onlineshop_feature"
+		},
+		{
+			"icon": "pdf"
+		},
+		{
+			"icon": "printer"
+		},
+		{
+			"icon": "savings"
+		},
+		{
+			"icon": "search"
+		},
+		{
+			"icon": "tips"
+		},
+		{
+			"icon": "trash"
+		}
+	]
+}

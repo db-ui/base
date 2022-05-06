@@ -1,0 +1,64 @@
+{
+  "name": "@db-ui/base",
+  "version": "0.12.0",
+  "description": "",
+  "main": "build.js",
+  "bugs": {
+    "url": "https://github.com/db-ui/base/issues"
+  },
+  "author": {
+    "name": "Maximilian Franzke",
+    "email": "maximilian.franzke@deutschebahn.com"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
+    "@pattern-lab/cli": "5.16.2",
+    "@pattern-lab/core": "5.16.2",
+    "@pattern-lab/engine-handlebars": "5.16.1",
+    "@pattern-lab/starterkit-handlebars-vanilla": "1.4.3",
+    "@pattern-lab/uikit-workshop": "5.16.2",
+    "cpr": "3.0.1",
+    "husky": "7.0.4",
+    "nodemon": "2.0.15",
+    "np": "7.6.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.3",
+    "sass": "^1.50.0",
+    "style-dictionary": "3.7.0",
+    "stylelint": "14.5.2",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-sass-guidelines": "9.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/db-ui/base"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "release": "np",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {}\"",
+    "copy:assets": "cpr assets build/assets -d",
+    "copy:csstokens": "cpr build/css/variables.css public/css/variables.css -o",
+    "build:style-dictionary": "node style-dictionary.js && npm run copy:csstokens",
+    "build:css": "sass source/css/db-ui-base.scss:public/css/db-ui-base.css --style=compressed --embed-sources --load-path=node_modules",
+    "build:tailwind": "node scripts/tailwind-config-generator.js false true && cpr scripts/tailwind-config-generator.js build/tailwind/tailwind-config-generator.js -o",
+    "build": "npm-run-all copy:assets build:* pl:build",
+    "clean": "rm -rf build",
+    "lint": "exit 0",
+    "start": "npm-run-all build:style-dictionary --parallel pl:serve watch:tokens watch:scss",
+    "test": "exit 0",
+    "watch:tokens": "nodemon --watch tokens/ -e json -x \"npm run build:style-dictionary\"",
+    "watch:scss": "nodemon --watch source/_patterns/ -e scss -x \"npm run build:css\"",
+    "pl:build": "patternlab build --config ./patternlab-config.json",
+    "pl:help": "patternlab --help",
+    "pl:install": "patternlab install --config ./patternlab-config.json",
+    "pl:serve": "patternlab serve --config ./patternlab-config.json",
+    "pl:version": "patternlab --version"
+  },
+  "homepage": "https://db-ui.github.io/base/"
+}

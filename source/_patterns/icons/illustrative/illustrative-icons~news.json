@@ -1,0 +1,21 @@
+{
+	"category": "news",
+	"label": "News",
+	"icons": [
+		{
+			"icon": "disruptions"
+		},
+		{
+			"icon": "news"
+		},
+		{
+			"icon": "newsletter"
+		},
+		{
+			"icon": "newspaper"
+		},
+		{
+			"icon": "s_bahn_magazin_muenchen"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"spacing": {
+		"xs": {
+			"value": "0.25rem",
+			"themeable": true
+		},
+		"s": {
+			"value": "0.5rem",
+			"themeable": true
+		},
+		"sm": {
+			"value": "0.75rem",
+			"themeable": true
+		},
+		"m": {
+			"value": "1rem",
+			"themeable": true
+		}
+	}
+}

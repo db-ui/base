@@ -1,0 +1,30 @@
+{
+	"category": "communication",
+	"label": "Communication",
+	"icons": [
+		{
+			"icon": "broken"
+		},
+		{
+			"icon": "chat"
+		},
+		{
+			"icon": "customer_feedback"
+		},
+		{
+			"icon": "envelope_closed"
+		},
+		{
+			"icon": "envelope_open"
+		},
+		{
+			"icon": "error"
+		},
+		{
+			"icon": "hashtag"
+		},
+		{
+			"icon": "wifi"
+		}
+	]
+}

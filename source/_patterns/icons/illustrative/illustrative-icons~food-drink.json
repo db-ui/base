@@ -1,0 +1,12 @@
+{
+	"category": "food",
+	"label": "Food / Drink",
+	"icons": [
+		{
+			"icon": "coffee_cup"
+		},
+		{
+			"icon": "restaurant"
+		}
+	]
+}

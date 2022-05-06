@@ -1,0 +1,12 @@
+{
+	"color": {
+		"red": {
+			"_": {
+				"value": "{color.red.500.value}",
+				"comment": "This is the primary DB Red"
+			}
+		},
+		"white": { "value": "#ffffff", "comment": "This is the primary DB White" },
+		"black": { "value": "#000000", "comment": "This is the primary DB Black" }
+	}
+}

@@ -1,0 +1,302 @@
+{
+	"category": "navigation",
+	"label": "Navigation",
+	"icons": [
+		{
+			"icon": "arrow_back",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "arrow_down",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "arrow_forward",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "arrow_up",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "cancel",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "filled"
+				},
+				{
+					"size": 24,
+					"style": "filled"
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "chevron_left",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "chevron_right",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "close",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "expand_less",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "expand_more",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fullscreen",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fullscreen_exit",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "grid_view",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "filled"
+				}
+			]
+		},
+		{
+			"icon": "link",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "link_external",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "list",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "menu",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "more_horizontal",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "more_vertical",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "refresh",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		}
+	]
+}

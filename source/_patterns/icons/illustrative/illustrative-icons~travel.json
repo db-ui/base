@@ -1,0 +1,51 @@
+{
+	"category": "travel",
+	"label": "Travel",
+	"icons": [
+		{
+			"icon": "bear"
+		},
+		{
+			"icon": "db_comfort_checkin"
+		},
+		{
+			"icon": "delayed"
+		},
+		{
+			"icon": "dog"
+		},
+		{
+			"icon": "id_card"
+		},
+		{
+			"icon": "itinerary"
+		},
+		{
+			"icon": "lost_and_found"
+		},
+		{
+			"icon": "luggage"
+		},
+		{
+			"icon": "passenger_rights"
+		},
+		{
+			"icon": "poi_berlin_alternative"
+		},
+		{
+			"icon": "poi_berlin"
+		},
+		{
+			"icon": "suitcase"
+		},
+		{
+			"icon": "timetable"
+		},
+		{
+			"icon": "advertising_transportation"
+		},
+		{
+			"icon": "zuginformation"
+		}
+	]
+}

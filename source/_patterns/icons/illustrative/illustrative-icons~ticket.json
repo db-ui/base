@@ -1,0 +1,30 @@
+{
+	"category": "ticket",
+	"label": "Ticket",
+	"icons": [
+		{
+			"icon": "classic_printout"
+		},
+		{
+			"icon": "mobileticket_brand"
+		},
+		{
+			"icon": "mobileticket_feature"
+		},
+		{
+			"icon": "onlineticket_brand"
+		},
+		{
+			"icon": "onlineticket_feature"
+		},
+		{
+			"icon": "scan_ticket_printout"
+		},
+		{
+			"icon": "show_ticket"
+		},
+		{
+			"icon": "tickets"
+		}
+	]
+}

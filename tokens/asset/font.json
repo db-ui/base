@@ -1,0 +1,27 @@
+{
+	"asset": {
+		"font": {
+			"db-screensans-regular": {
+				"name": { "value": "DB Screen Sans Regular" },
+				"fontfamily": { "value": "DB Screen Sans" },
+				"fontweight": { "value": "400" },
+				"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+				"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+			},
+			"db-screensans-bold": {
+				"name": { "value": "DB Screen Sans Bold" },
+				"fontfamily": { "value": "DB Screen Sans" },
+				"fontweight": { "value": "700" },
+				"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+				"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+			},
+			"db-screenhead": {
+				"name": { "value": "DB Screen Head" },
+				"fontfamily": { "value": "DB Screen Head" },
+				"fontweight": { "value": "300" },
+				"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+				"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+			}
+		}
+	}
+}

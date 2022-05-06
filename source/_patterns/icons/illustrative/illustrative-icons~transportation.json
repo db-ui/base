@@ -1,0 +1,81 @@
+{
+	"category": "transportation",
+	"label": "Transportation",
+	"icons": [
+		{
+			"icon": "airplane_2"
+		},
+		{
+			"icon": "airplane"
+		},
+		{
+			"icon": "bicycle"
+		},
+		{
+			"icon": "bike_trailer"
+		},
+		{
+			"icon": "buggy"
+		},
+		{
+			"icon": "bus_side_view"
+		},
+		{
+			"icon": "call_a_bike"
+		},
+		{
+			"icon": "car_side_view"
+		},
+		{
+			"icon": "car"
+		},
+		{
+			"icon": "commuter_train"
+		},
+		{
+			"icon": "electric_scooter"
+		},
+		{
+			"icon": "ev_car"
+		},
+		{
+			"icon": "ferry"
+		},
+		{
+			"icon": "handcart"
+		},
+		{
+			"icon": "ice"
+		},
+		{
+			"icon": "intercity_train"
+		},
+		{
+			"icon": "local_bus"
+		},
+		{
+			"icon": "local_train"
+		},
+		{
+			"icon": "long_distance_bus"
+		},
+		{
+			"icon": "scooter"
+		},
+		{
+			"icon": "self_driving_side_view"
+		},
+		{
+			"icon": "speedboat"
+		},
+		{
+			"icon": "subway"
+		},
+		{
+			"icon": "taxi"
+		},
+		{
+			"icon": "tram"
+		}
+	]
+}

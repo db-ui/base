@@ -1,0 +1,15 @@
+{
+	"category": "devices",
+	"label": "Devices",
+	"icons": [
+		{
+			"icon": "laptop"
+		},
+		{
+			"icon": "smartphone"
+		},
+		{
+			"icon": "tablet"
+		}
+	]
+}

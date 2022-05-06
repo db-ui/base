@@ -1,0 +1,24 @@
+{
+	"category": "entertainment",
+	"label": "Entertainment",
+	"icons": [
+		{
+			"icon": "der_kleine_ice"
+		},
+		{
+			"icon": "gaming_no_wire"
+		},
+		{
+			"icon": "gaming"
+		},
+		{
+			"icon": "movie"
+		},
+		{
+			"icon": "podcast"
+		},
+		{
+			"icon": "sport"
+		}
+	]
+}

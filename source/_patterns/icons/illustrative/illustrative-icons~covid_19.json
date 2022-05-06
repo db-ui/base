@@ -1,0 +1,42 @@
+{
+	"category": "covid_19",
+	"label": "Covid 19",
+	"icons": [
+		{
+			"icon": "2g_rule"
+		},
+		{
+			"icon": "3g_rule"
+		},
+		{
+			"icon": "distance"
+		},
+		{
+			"icon": "ffp2_mask_with_sign"
+		},
+		{
+			"icon": "ffp2_mask"
+		},
+		{
+			"icon": "handwashing"
+		},
+		{
+			"icon": "no_handshaking"
+		},
+		{
+			"icon": "recovered"
+		},
+		{
+			"icon": "single_entry"
+		},
+		{
+			"icon": "test_antigen"
+		},
+		{
+			"icon": "test_pcr"
+		},
+		{
+			"icon": "vaccinated"
+		}
+	]
+}

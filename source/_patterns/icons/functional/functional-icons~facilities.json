@@ -1,0 +1,146 @@
+{
+	"category": "facilities",
+	"label": "Facilities",
+	"icons": [
+		{
+			"icon": "playground",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "restricted_mobility_toilet",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "shower",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "shower_man",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "shower_women",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "sink",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "wc",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "wc_men",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "wc_sign",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "wc_women",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		}
+	]
+}

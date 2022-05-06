@@ -1,0 +1,12 @@
+{
+	"category": "maps",
+	"label": "Maps",
+	"icons": [
+		{
+			"icon": "home"
+		},
+		{
+			"icon": "location"
+		}
+	]
+}

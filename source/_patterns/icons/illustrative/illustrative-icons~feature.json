@@ -1,0 +1,21 @@
+{
+	"category": "feature",
+	"label": "Feature",
+	"icons": [
+		{
+			"icon": "green_energy"
+		},
+		{
+			"icon": "green"
+		},
+		{
+			"icon": "mobile_payment"
+		},
+		{
+			"icon": "nfc_scan"
+		},
+		{
+			"icon": "whats_schmutzig"
+		}
+	]
+}

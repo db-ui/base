@@ -1,0 +1,26 @@
+{
+	"category": "brand",
+	"label": "Brand",
+	"icons": [
+		{
+			"icon": "logo",
+			"variants": [
+				{
+					"size": 64
+				},
+				{
+					"size": 48
+				},
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		}
+	]
+}

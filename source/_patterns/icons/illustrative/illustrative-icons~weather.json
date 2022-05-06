@@ -1,0 +1,12 @@
+{
+	"category": "weather",
+	"label": "Weather",
+	"icons": [
+		{
+			"icon": "blizzard"
+		},
+		{
+			"icon": "thunderstorm"
+		}
+	]
+}

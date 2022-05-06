@@ -1,0 +1,16 @@
+{
+	"example-bgs": [
+		{
+			"variant": "regular"
+		},
+		{
+			"variant": "turquoise"
+		},
+		{
+			"variant": "red"
+		},
+		{
+			"variant": "cyan"
+		}
+	]
+}

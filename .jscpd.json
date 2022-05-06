@@ -1,0 +1,8 @@
+{
+	"ignore": [
+		"**/node_modules/**",
+		"**/assets/fonts/**/sources/**",
+		"**/public/**",
+		"**/build/**"
+	]
+}
