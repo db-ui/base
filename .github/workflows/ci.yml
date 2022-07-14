@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "*"
+      - "!main"
+
+jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔬 Linting
+        run: |
+          npm lint
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👩‍🍳 Bake everything (StoryBook, Playground & Showcases)
+        run: |
+          npm run build
+          node scripts/build angular,react,vue,playground,reactwind withShowcase
+          npm run build:storybook
+
+  test:
+    name: Unit/Snapshot Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔬 Run unit/snapshot tests
+        run: |
+          npm test
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📖 Deploy to GH-Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/feat/basic-github-action-ci' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
