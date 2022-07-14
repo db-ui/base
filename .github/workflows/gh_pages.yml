@@ -24,3 +24,37 @@ jobs:
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
+
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔬 Linting
+        run: |
+          npm lint
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simply build
+        run: npm run build
+
+  test:
+    name: Unit/Snapshot Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔬 Run unit/snapshot tests
+        run: |
+          npm test
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📖 Deploy to GH-Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/feat/basic-github-action-ci' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
