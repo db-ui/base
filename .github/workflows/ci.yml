@@ -1,8 +1,8 @@
-name: CI
+name: GitHub Pages
 
 on:
   push:
-    branches:
+    branches: # Set a branch name to trigger deployment
       - "*"
       - "!main"
 
@@ -37,11 +37,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: 👩‍🍳 Bake everything (StoryBook, Playground & Showcases)
-        run: |
-          npm run build
-          node scripts/build angular,react,vue,playground,reactwind withShowcase
-          npm run build:storybook
+      - name: Simply build
+        run: npm run build
 
   test:
     name: Unit/Snapshot Tests
