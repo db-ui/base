@@ -1,0 +1,19 @@
+<ul class="DO-NOT-COPY-THIS-CLASS-example-icon-list icons functional">
+	{{#each icons }}<li>
+		<ul>
+			{{#each @root.example-bgs }}
+				<li class="DO-NOT-COPY-THIS-CLASS-example-bg-variants-{{ variant }}">
+					<ul>
+						{{#each ../variants }}
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
+								<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
+							</svg>
+						</li>
+						{{/each }}
+					</ul>
+				</li>
+			{{/each }}
+		</ul>
+	</li>{{/each }}
+</ul>
