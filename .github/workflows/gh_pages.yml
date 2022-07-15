@@ -2,57 +2,21 @@ name: GitHub Pages
 
 on:
   push:
-    branches: # Set a branch name to trigger deployment
-      - "*"
-      - "!main"
+    branches:
+      - feat/basic-github-action-ci # Set a branch name to trigger deployment
 
 jobs:
-  prepare:
-    name: Prepare
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-  lint:
-    name: Linting
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🔬 Linting
-        run: |
-          npm lint
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Simply build
-        run: npm run build
-
-  test:
-    name: Unit/Snapshot Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🔬 Run unit/snapshot tests
-        run: |
-          npm test
-
   deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: 📖 Deploy to GH-Pages
+      - uses: actions/checkout@v3
+      - name: NPM install
+        run: npm ci
+      - name: NPM Build
+        run: npm run build
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/feat/basic-github-action-ci' }}
         with:
