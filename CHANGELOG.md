@@ -12,11 +12,26 @@ Regarding BREAKING CHANGES in between, please have a look into [the migration gu
 
 ## [Unreleased]
 
+## [0.14.0] - 2022-07-31
+
+### Changed
+
+-   updated DB Icon libraries (functional to 2.16.1 and illustrative to 2.14.1)
+    -   **BREAKING CHANGE** The previous prefix writings of `_on` and `_filled` have been consolidated to `_solid`, as we're even already using this elsewhere
+    -   **BREAKING CHANGE** Renamed according to the icons centrally provided illustrative: (`news/s_-_bahn_magazin_muenchen` became `news/s-bahn_magazin_muenchen`, `transportation/ev_-_car` became `transportation/ev-car`, `transportation/self_driving_side_view` became `transportation/self-driving_side_view`, `advertising_transportation` became `transportation_advertising`)
+    -   Added `hydrogen` icons
+    -   Added 16px sized functional icons (`action/add`, `action/minus`, `navigation/chevron_left`, `navigation/chevron_right`, `navigation/close`, `navigation/expand_less`, `navigation/expand_more`)
+    -   Added some more filled icons (`action/add_circle`, `action/remove`)
+    -   Added further functional icons in general (`action/fingerprint`, `feature/day`)
+    -   Added further illustrative icons in general (`devices/usb_3.0`, `devices/usb_c`, `feature/cyber_security`, `feature/hydrogen`, `travel/departure_board`)
+    -   The `transportation` icons are quite special: They are actually devided in between `regular` and `inverted` for upcoming dark mode
+
 ## [0.13.0] - 2022-07-02
 
 ### Changed
 
 -   Enable the logo theming via CSS variables
+
 ## [0.12.0] - 2022-05-04
 
 ### Changed
