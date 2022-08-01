@@ -12,6 +12,8 @@ Regarding BREAKING CHANGES in between, please have a look into [the migration gu
 
 ## [Unreleased]
 
+## [0.13.0] - 2022-07-02
+
 ### Changed
 
 -   Enable the logo theming via CSS variables
