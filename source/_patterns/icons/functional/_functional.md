@@ -21,9 +21,9 @@ You could either use the Icon font provided with [DB UI Core](https://db-ui.gith
 
 To change the line-colors of the icon define a color value for its CSS variable:
 
-- `--db-icon-color`
+-   `--db-icon-color`
 
-The fallback for a non-defined `--db-icon-color` is the `font-color` defined around or for the `<svg>` itself.
+The fallback for an undefined `--db-icon-color` is the `font-color` defined around or for the `<svg>` itself.
 
 #### Accessibility
 

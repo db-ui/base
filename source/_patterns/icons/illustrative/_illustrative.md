@@ -23,10 +23,10 @@ You could reference the multicolor icons directly via the `<use>` HTML tag withi
 
 You could easily change the line-colors of both the pulse and the icon itself by defining different color values for both CSS variables:
 
-- `--db-icon-color`
-- `--db-icon-pulse-color`
+-   `--db-icon-color`
+-   `--db-icon-pulse-color`
 
-The fallback for a non-defined `--db-icon-color` is the `font-color` defined around or for the `<svg>` itself, and `--db-icon-pulse-color` would fall back to `#EC0016`, which is the general pulse color defined by brand.
+The fallback for an undefined `--db-icon-color` is the `font-color` defined around or for the `<svg>` itself, and `--db-icon-pulse-color` would fall back to `#EC0016`, which is the general pulse color defined by brand.
 
 #### Accessibility
 
