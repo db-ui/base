@@ -12,6 +12,9 @@
 			"icon": "delayed"
 		},
 		{
+			"icon": "departure_board"
+		},
+		{
 			"icon": "dog"
 		},
 		{
@@ -42,7 +45,7 @@
 			"icon": "timetable"
 		},
 		{
-			"icon": "advertising_transportation"
+			"icon": "transportation_advertising"
 		},
 		{
 			"icon": "zuginformation"

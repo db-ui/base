@@ -31,20 +31,6 @@
 			]
 		},
 		{
-			"icon": "gps_on",
-			"variants": [
-				{
-					"size": 32
-				},
-				{
-					"size": 24
-				},
-				{
-					"size": 20
-				}
-			]
-		},
-		{
 			"icon": "home",
 			"variants": [
 				{
@@ -58,7 +44,7 @@
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -108,7 +94,7 @@
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},

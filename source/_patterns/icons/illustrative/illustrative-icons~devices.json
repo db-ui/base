@@ -10,6 +10,12 @@
 		},
 		{
 			"icon": "tablet"
+		},
+		{
+			"icon": "usb_3.0"
+		},
+		{
+			"icon": "usb_c"
 		}
 	]
 }

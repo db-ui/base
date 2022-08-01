@@ -97,20 +97,18 @@
 				},
 				{
 					"size": 20
-				}
-			]
-		},
-		{
-			"icon": "microphone_on",
-			"variants": [
-				{
-					"size": 32
 				},
 				{
-					"size": 24
+					"size": 32,
+					"style": "solid"
 				},
 				{
-					"size": 20
+					"size": 24,
+					"style": "solid"
+				},
+				{
+					"size": 20,
+					"style": "solid"
 				}
 			]
 		},
@@ -139,23 +137,23 @@
 			"variants": [
 				{
 					"size": 64,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 48,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 32,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -193,15 +191,15 @@
 				},
 				{
 					"size": 32,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -219,15 +217,15 @@
 				},
 				{
 					"size": 32,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -245,15 +243,15 @@
 				},
 				{
 					"size": 32,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -271,7 +269,7 @@
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},

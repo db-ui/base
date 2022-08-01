@@ -45,6 +45,24 @@
 			]
 		},
 		{
+			"icon": "day",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "solid"
+				}
+			]
+		},
+		{
 			"icon": "entry_aid",
 			"variants": [
 				{
@@ -69,6 +87,24 @@
 				},
 				{
 					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "hydrogen",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "solid"
 				}
 			]
 		},
@@ -132,7 +168,7 @@
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -150,7 +186,7 @@
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},

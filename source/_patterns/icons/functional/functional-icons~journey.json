@@ -72,11 +72,11 @@
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -94,11 +94,11 @@
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -116,11 +116,11 @@
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -138,11 +138,11 @@
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},
@@ -160,11 +160,11 @@
 				},
 				{
 					"size": 24,
-					"style": "filled"
+					"style": "solid"
 				},
 				{
 					"size": 20,
-					"style": "filled"
+					"style": "solid"
 				}
 			]
 		},

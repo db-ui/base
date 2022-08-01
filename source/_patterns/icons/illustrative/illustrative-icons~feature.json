@@ -3,10 +3,16 @@
 	"label": "Feature",
 	"icons": [
 		{
+			"icon": "cyber_security"
+		},
+		{
 			"icon": "green_energy"
 		},
 		{
 			"icon": "green"
+		},
+		{
+			"icon": "hydrogen"
 		},
 		{
 			"icon": "mobile_payment"
