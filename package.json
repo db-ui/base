@@ -19,7 +19,9 @@
     "@pattern-lab/engine-handlebars": "5.16.1",
     "@pattern-lab/starterkit-handlebars-vanilla": "1.4.3",
     "@pattern-lab/uikit-workshop": "5.16.2",
+    "@zeplin/sdk": "^1.14.0",
     "cpr": "3.0.1",
+    "dotenv": "^16.0.2",
     "husky": "7.0.4",
     "nodemon": "2.0.15",
     "np": "7.6.0",
@@ -60,7 +62,8 @@
     "pl:install": "patternlab install --config ./patternlab-config.json",
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
-    "version": "npm run build"
+    "version": "npm run build",
+    "zeplin:token": "node scripts/zeplin-styleguide.js"
   },
   "homepage": "https://db-ui.github.io/base/"
 }
