@@ -1,4 +1,4 @@
-{{#color}}
+{{#colors}}
 	{{#each this}}
 		<h2>{{@key}}</h2>
 		<ul class="sg-colors">
@@ -6,7 +6,7 @@
 				<li>
 					<span class="sg-swatch" style="background: {{value}};"></span>
 					<span class="sg-label">
-						color-{{attributes.color}}-{{@key}}
+						colors-{{attributes.color}}-{{@key}}
 						<br />
 						{{value}}
 					</span>
@@ -14,5 +14,5 @@
 			{{/each}}
 		</ul>
 	{{/each}}
-{{/color}}
+{{/colors}}
 <!--end sg-colors-->

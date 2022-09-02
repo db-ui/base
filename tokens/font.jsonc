@@ -3,14 +3,14 @@
 		"family": {
 			// These first two ones are the only two that are necessary tokens, the three at the end are only relevant for tailwind
 			"base": {
-				"value": "'{asset.font.db-screensans-regular.fontfamily.value}', Helvetica, Arial, sans-serif"
+				"value": "'DBScreenSans', Helvetica, Arial, sans-serif"
 			},
 			"headline": {
-				"value": "'{asset.font.db-screenhead.fontfamily.value}', Helvetica, Arial, sans-serif"
+				"value": "'DBScreenHead', Helvetica, Arial, sans-serif"
 			},
-			"sans": "'{asset.font.db-screensans-regular.name.value}', Helvetica, Arial, sans-serif",
-			"bold": "'{asset.font.db-screensans-bold.name.value}', Helvetica, Arial, sans-serif",
-			"head": "'{asset.font.db-screenhead.name.value}', Helvetica, Arial, sans-serif"
+			"sans": "'DBScreenSans', Helvetica, Arial, sans-serif",
+			"bold": "'DBScreenSans', Helvetica, Arial, sans-serif",
+			"head": "'DBScreenHead', Helvetica, Arial, sans-serif"
 		}
 	}
 }
