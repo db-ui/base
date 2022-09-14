@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 14 Sep 2022 15:22:30 GMT
+ * Generated on Wed, 14 Sep 2022 15:39:36 GMT
  */
 
 export const DbAssetFontDbScreensansRegularName = "DB Screen Sans Regular";
