@@ -27,6 +27,18 @@
 				},
 				{
 					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
+					"size": 20,
+					"style": "solid"
 				}
 			]
 		},
