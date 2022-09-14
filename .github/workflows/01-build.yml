@@ -21,4 +21,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: public
+          path: |
+            public
+            build
