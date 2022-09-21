@@ -1,6 +1,6 @@
 {
   "name": "@db-ui/base",
-  "version": "0.14.0",
+  "version": "0.0.0",
   "description": "Provides basic tokens and assets based on the DB Design System.",
   "main": "build.js",
   "bugs": {
@@ -24,7 +24,6 @@
     "dotenv": "^16.0.2",
     "husky": "7.0.4",
     "nodemon": "2.0.15",
-    "np": "7.6.0",
     "npm-run-all": "4.1.5",
     "prettier": "2.5.1",
     "pretty-quick": "3.1.3",
@@ -43,7 +42,6 @@
     "access": "public"
   },
   "scripts": {
-    "release": "np",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {}\"",
     "copy:assets": "cpr assets build/assets -d",
     "copy:csstokens": "cpr build/css/variables.css public/css/variables.css -o",
@@ -62,7 +60,6 @@
     "pl:install": "patternlab install --config ./patternlab-config.json",
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
-    "version": "npm run build",
     "zeplin:token": "node scripts/zeplin-styleguide.js"
   },
   "homepage": "https://db-ui.github.io/base/"
