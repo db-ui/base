@@ -12,6 +12,20 @@ Regarding BREAKING CHANGES in between, please have a look into [the migration gu
 
 ## [Unreleased]
 
+## [0.15.0] - 2022-09-14
+
+### Changed
+
+-   updated functional DB Icon library (to 2.17.0)
+    -   **BREAKING CHANGE** removed the following icons:
+        -   `assets/icons/functional/images/transportation/db_ic_local_train_filled_20.svg`
+        -   `assets/icons/functional/images/transportation/db_ic_local_train_filled_24.svg`
+        -   `assets/icons/functional/images/transportation/db_ic_local_train_filled_32.svg`
+        -   `assets/icons/functional/images/transportation/db_ic_long_distance_bus_filled_20.svg`
+        -   `assets/icons/functional/images/transportation/db_ic_long_distance_bus_filled_24.svg`
+        -   `assets/icons/functional/images/transportation/db_ic_long_distance_bus_filled_32.svg`
+    -   updated and added some icons
+
 ## [0.14.0] - 2022-07-31
 
 ### Changed
@@ -36,122 +50,122 @@ Regarding BREAKING CHANGES in between, please have a look into [the migration gu
 
 ### Changed
 
-- Web Fonts: Structure of the `fonts` folder, especially to flatten the relevant files structure
+-   Web Fonts: Structure of the `fonts` folder, especially to flatten the relevant files structure
 
 ## [0.11.0] - 2022-05-04
 
 ### Added
 
-- docs: Another hint regarding the assets place for trademark related assets
+-   docs: Another hint regarding the assets place for trademark related assets
 
 ### Changed
 
-- Updated functional icons to version 2.14.4
+-   Updated functional icons to version 2.14.4
 
 ## [0.10.0] - 2022-04-28
 
 ### Added
 
-- generated Android and iOS tokens (testwise, we're currently evaluating those)
-- Several organisational documents
+-   generated Android and iOS tokens (testwise, we're currently evaluating those)
+-   Several organisational documents
 
 ### Changed
 
-- `--iconPulseColor` has been renamed to `--db-icon-pulse-color`
+-   `--iconPulseColor` has been renamed to `--db-icon-pulse-color`
 
 ## [0.9.1] - 2022-04-15
 
 ### Changed
 
-- Specific `font-family` values
+-   Specific `font-family` values
 
 ## [0.9.0] - 2022-04-13
 
 ### Changed
 
-- **BREAKING CHANGE**: We've removed the `primary`, `secondary`, `poi`, `transportation` and `feedback` grouping name as parts from the `color` Design Tokens due to unnecessary differentiation; these are even already unique and this would only lengthen the Design Tokens names
-- updated `style-dictionary` dependency
+-   **BREAKING CHANGE**: We've removed the `primary`, `secondary`, `poi`, `transportation` and `feedback` grouping name as parts from the `color` Design Tokens due to unnecessary differentiation; these are even already unique and this would only lengthen the Design Tokens names
+-   updated `style-dictionary` dependency
 
 ## [0.8.1] - 2022-04-12
 
 ### Fixed
 
-- Corrected some further icon names
+-   Corrected some further icon names
 
 ## [0.8.0] - 2022-04-12
 
 ### Changed
 
-- **BREAKING CHANGE**: Added `db-` prefix to `css`, `scss` and `js` Design Tokens
+-   **BREAKING CHANGE**: Added `db-` prefix to `css`, `scss` and `js` Design Tokens
 
 ## [0.7.0] - 2022-04-12
 
 ### Added
 
-- tailwind tokens
+-   tailwind tokens
 
 ### Changed
 
-- Made the spacing tokens themeable again
+-   Made the spacing tokens themeable again
 
 ## [0.6.1] - 2022-04-12
 
 ### Fixed
 
-- Removed duplicated underscore in some icons names
+-   Removed duplicated underscore in some icons names
 
 ## [0.6.0] - 2022-04-12
 
 ### Added
 
-- DB Design System Icons 2.14.3
-- DB Design System illustrative icons v2.12.0
-- Spacing Tokens
+-   DB Design System Icons 2.14.3
+-   DB Design System illustrative icons v2.12.0
+-   Spacing Tokens
 
 ### Changed
 
-- Added fallback fonts to `DB Screen Sans` variables
+-   Added fallback fonts to `DB Screen Sans` variables
 
 ## [0.5.0] - 2022-04-05
 
 ### Added
 
-- Icons: further icons out of the current version DB Standard Icon 2.11.3
+-   Icons: further icons out of the current version DB Standard Icon 2.11.3
 
 ### Changed
 
-- **BREAKING CHANGE:** Icons: reorganized the icon (fonts) file structure
+-   **BREAKING CHANGE:** Icons: reorganized the icon (fonts) file structure
 
 ## [0.4.0] - 2022-04-04
 
 ### Added
 
-- Missing small size feedback colors
+-   Missing small size feedback colors
 
 ### Changed
 
-- updated existing iconset for transportation, seat, feature and facilities
+-   updated existing iconset for transportation, seat, feature and facilities
 
 ## [0.3.0] - 2022-03-13
 
 ### Added
 
-- Further specified feedback colors
+-   Further specified feedback colors
 
 ### Changed
 
-- **BREAKING CHANGE**: Removed previous left-over "in-between" color values
-- **BREAKING CHANGE**: Feedback color phrase `information` has been changed to `informative`, resulting in e.g. `color-feedback-informative`
-- Updated web fonts / to version 2.506 from the UX Guide: https://ux-guide.deutschebahn.com/document/144#/screen-typografie
-- Adapted general DB UI Core pattern lab styling
-- Switched to the new repository URL
+-   **BREAKING CHANGE**: Removed previous left-over "in-between" color values
+-   **BREAKING CHANGE**: Feedback color phrase `information` has been changed to `informative`, resulting in e.g. `color-feedback-informative`
+-   Updated web fonts / to version 2.506 from the UX Guide: https://ux-guide.deutschebahn.com/document/144#/screen-typografie
+-   Adapted general DB UI Core pattern lab styling
+-   Switched to the new repository URL
 
 ### Fixed
 
-- Two color values (feedback)
+-   Two color values (feedback)
 
 ## [0.1.0] - 2021-07-23
 
 ### Added
 
-- Initial stack of Webfonts (DB Screen)
+-   Initial stack of Webfonts (DB Screen)
