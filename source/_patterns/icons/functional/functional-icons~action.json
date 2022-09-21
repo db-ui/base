@@ -218,6 +218,20 @@
 			]
 		},
 		{
+			"icon": "bug",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "build",
 			"variants": [
 				{
@@ -695,7 +709,35 @@
 			]
 		},
 		{
+			"icon": "key",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "legal",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "lightbulb",
 			"variants": [
 				{
 					"size": 32
@@ -1097,6 +1139,34 @@
 		},
 		{
 			"icon": "swap_vertical",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "thumb_up",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "thumb_up_down",
 			"variants": [
 				{
 					"size": 32
