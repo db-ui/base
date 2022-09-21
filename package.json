@@ -62,5 +62,8 @@
     "pl:version": "patternlab --version",
     "version": "npm run build"
   },
-  "homepage": "https://db-ui.github.io/base/"
+  "homepage": "https://db-ui.github.io/base/",
+  "dependencies": {
+    "hex-a11y": "^1.0.2"
+  }
 }

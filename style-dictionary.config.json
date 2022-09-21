@@ -1,5 +1,5 @@
 {
-	"source": ["tokens/**/*.json", "tokens/**/*.jsonc"],
+	"source": ["tokens/**/*.js"],
 	"platforms": {
 		"css": {
 			"transformGroup": "css",
@@ -20,6 +20,32 @@
 				{
 					"destination": "_variables.scss",
 					"format": "scss/variables"
+				}
+			]
+		},
+		"sketch": {
+			"transforms": [
+				"attribute/cti",
+				"color/sketchTransform",
+				"name/cti/kebab"
+			],
+			"buildPath": "build/sketch/",
+			"prefix": "db",
+			"files": [
+				{
+					"destination": "sketch-palette.sketchpalette",
+					"format": "sketch/sketchpalette"
+				}
+			]
+		},
+		"json": {
+			"transformGroup": "js",
+			"buildPath": "build/json/",
+			"prefix": "db",
+			"files": [
+				{
+					"destination": "colors.json",
+					"format": "json"
 				}
 			]
 		},
