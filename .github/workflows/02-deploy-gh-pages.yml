@@ -20,7 +20,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: public
 
       - name: 🥅 Deploy to GH-Pages
         uses: peaceiris/actions-gh-pages@v3
