@@ -19,15 +19,71 @@ const correctKey = (key) => {
 	return correctKey;
 };
 
+const correctColor = (key) => {
+	let correctKey = key;
+	if (correctKey.startsWith('on') && !correctKey.startsWith('on-')) {
+		correctKey = correctKey.replace('on', 'on-');
+	}
+	if (
+		!correctKey.endsWith('-enabled') &&
+		!correctKey.endsWith('-hover') &&
+		!correctKey.endsWith('-pressed')
+	) {
+		correctKey = `${correctKey}-enabled`;
+	}
+	return correctKey.replace('backgroundonly', 'bg');
+};
+
+const combineDataRecursive = (data, currentKey, keyArray, value) => {
+	const nextKey = keyArray.shift();
+	if (keyArray.length === 0) {
+		return { [nextKey]: value };
+	}
+	data[currentKey] = {
+		...data[currentKey],
+		[nextKey]: combineDataRecursive(
+			data[currentKey],
+			nextKey,
+			keyArray,
+			value
+		)
+	};
+};
+
+const mergeData = (data) => {
+	const mData = {};
+	Object.keys(data).forEach((key) => {
+		const splitKeys = key.split('-');
+		if (splitKeys.length > 1 && splitKeys[0] === 'on') {
+			const onKey = splitKeys.shift();
+			const lastKey = splitKeys.pop();
+			splitKeys.push(onKey);
+			splitKeys.push(lastKey);
+		}
+		let tmpData = mData;
+		splitKeys.forEach((sKey, index) => {
+			if (index === splitKeys.length - 1) {
+				tmpData[sKey] = data[key];
+			} else {
+				if (!tmpData[sKey]) {
+					tmpData[sKey] = {};
+				}
+				tmpData = tmpData[sKey];
+			}
+		});
+	});
+	return mData;
+};
+
 const convertColors = (data) => {
 	const keys = Object.keys(data.colors);
 	const newColors = {};
 	keys.forEach((key) => {
 		const color = data.colors[key];
 		// TODO: Merge Similar Keys together
-		newColors[correctKey(key)] = { value: color.value };
+		newColors[correctColor(correctKey(key))] = { value: color.value };
 	});
-	data.colors = newColors;
+	data.colors = mergeData(newColors);
 };
 
 const convertTextStyles = (data) => {

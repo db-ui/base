@@ -50,15 +50,21 @@
 }
 
 .sg-swatch {
-	display: block;
+	display: flex;
 	height: 4em;
 	margin-bottom: 0.3em;
 	border-radius: 5px;
+	border: black dashed 1px;
 }
 
 .sg-label {
 	font-size: 90%;
 	line-height: 1;
+}
+
+.sg-swatch .sg-label {
+	font-size: 80%;
+	margin: auto;
 }
 
 /**

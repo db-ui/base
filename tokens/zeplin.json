@@ -1,101 +1,221 @@
 {
 	"colors": {
-		"background-0-enabled": { "value": "rgb(255, 255, 255)" },
-		"background-2-enabled": { "value": "rgb(242, 243, 244)" },
-		"background-2-hover": { "value": "rgb(223, 223, 224)" },
-		"background-2-pressed": { "value": "rgb(203, 203, 204)" },
-		"background-3-enabled": { "value": "rgb(236, 236, 237)" },
-		"background-3-pressed": { "value": "rgb(198, 198, 198)" },
-		"background-4-enabled": { "value": "rgb(230, 230, 232)" },
-		"background-5-enabled": { "value": "rgb(224, 225, 227)" },
-		"background-5-hover": { "value": "rgb(206, 207, 209)" },
-		"background-5-pressed": { "value": "rgb(187, 188, 190)" },
-		"background-6-enabled": { "value": "rgb(217, 219, 221)" },
-		"background-6-hover": { "value": "rgb(199, 201, 203)" },
-		"background-6-pressed": { "value": "rgb(182, 183, 185)" },
-		"onbackground-high-empahsis": { "value": "rgb(40, 45, 55)" },
-		"onneutral-2": { "value": "rgb(40, 45, 55)" },
-		"onneutral-5": { "value": "rgb(40, 45, 55)" },
-		"onneutral-4": { "value": "rgb(40, 45, 55)" },
-		"onneutral-7": { "value": "rgb(40, 45, 55)" },
-		"onneutral-6": { "value": "rgb(40, 45, 55)" },
-		"onneutral-1": { "value": "rgb(40, 45, 55)" },
-		"onneutral-3": { "value": "rgb(40, 45, 55)" },
-		"primary-enabled": { "value": "rgb(236, 0, 22)" },
-		"primary-hover": { "value": "rgb(217, 0, 20)" },
-		"primary-pressed": { "value": "rgb(198, 0, 18)" },
-		"primary-weak-enabled": { "value": "rgb(250, 191, 196)" },
-		"primary-strong-enabled": { "value": "rgb(117, 0, 10)" },
-		"primary-strong-hover": { "value": "rgb(127, 20, 29)" },
-		"primary-strong-pressed": { "value": "rgb(139, 41, 49)" },
-		"primary-weak-hover": { "value": "rgb(230, 176, 180)" },
-		"primary-weak-pressed": { "value": "rgb(209, 160, 164)" },
-		"background-4-hover": { "value": "rgb(211, 211, 213)" },
-		"background-4-pressed": { "value": "rgb(193, 193, 194)" },
-		"background-3-hover": { "value": "rgb(217, 217, 218)" },
-		"background-1-enabled": { "value": "rgb(248, 249, 249)" },
-		"onprimary-weak": { "value": "rgb(85, 0, 7)" },
-		"onprimary-strong": { "value": "rgb(255, 255, 255)" },
-		"onprimary-default": { "value": "rgb(255, 255, 255)" },
-		"secondary-enabled": { "value": "rgb(40, 45, 55)" },
-		"secondary-hover": { "value": "rgb(56, 61, 70)" },
-		"secondary-pressed": { "value": "rgb(74, 78, 87)" },
-		"secondary-weak-enabled": { "value": "rgb(201, 202, 204)" },
-		"secondary-weak-hover": { "value": "rgb(185, 186, 188)" },
-		"secondary-weak-pressed": { "value": "rgb(168, 169, 171)" },
-		"secondary-strong-enabled": { "value": "rgb(19, 22, 27)" },
-		"secondary-strong-hover": { "value": "rgb(37, 40, 44)" },
-		"secondary-strong-pressed": { "value": "rgb(56, 59, 63)" },
-		"success-enabled": { "value": "rgb(80, 139, 27)" },
-		"success-hover": { "value": "rgb(73, 128, 24)" },
-		"success-pressed": { "value": "rgb(67, 116, 22)" },
-		"success-weak-enabled": { "value": "rgb(211, 225, 197)" },
-		"success-weak-hover": { "value": "rgb(194, 207, 181)" },
-		"success-weak-pressed": { "value": "rgb(177, 188, 165)" },
-		"success-strong-enabled": { "value": "rgb(39, 69, 13)" },
-		"success-strong-hover": { "value": "rgb(55, 83, 31)" },
-		"success-strong-pressed": { "value": "rgb(73, 98, 51)" },
-		"onsecondary-default": { "value": "rgb(255, 255, 255)" },
-		"onsecondary-weak": { "value": "rgb(14, 16, 19)" },
-		"onsecondary-strong": { "value": "rgb(255, 255, 255)" },
-		"onsuccess-default": { "value": "rgb(255, 255, 255)" },
-		"onsuccess-weak": { "value": "rgb(28, 50, 9)" },
-		"critical-enabled": { "value": "rgb(236, 0, 22)" },
-		"onsuccess-strong": { "value": "rgb(255, 255, 255)" },
-		"critical-hover": { "value": "rgb(217, 0, 20)" },
-		"critical-pressed": { "value": "rgb(198, 0, 18)" },
-		"critical-weak-enabled": { "value": "rgb(250, 191, 196)" },
-		"critical-weak-hover": { "value": "rgb(230, 176, 180)" },
-		"critical-weak-pressed": { "value": "rgb(209, 160, 164)" },
-		"critical-strong-enabled": { "value": "rgb(117, 0, 10)" },
-		"oncritical-default": { "value": "rgb(255, 255, 255)" },
-		"oncritical-weak": { "value": "rgb(85, 0, 7)" },
-		"oncritical-strong": { "value": "rgb(255, 255, 255)" },
-		"warning-enabled": { "value": "rgb(240, 80, 0)" },
-		"warning-hover": { "value": "rgb(221, 73, 0)" },
-		"warning-pressed": { "value": "rgb(201, 67, 0)" },
-		"warning-strong-enabled": { "value": "rgb(119, 39, 0)" },
-		"warning-weak-enabled": { "value": "rgb(251, 211, 191)" },
-		"warning-strong-hover": { "value": "rgb(129, 55, 20)" },
-		"warning-strong-pressed": { "value": "rgb(140, 73, 41)" },
-		"onwarning-default": { "value": "rgb(255, 255, 255)" },
-		"onwarning-weak": { "value": "rgb(86, 28, 0)" },
-		"onwarning-strong": { "value": "rgb(255, 255, 255)" },
-		"warning-weak-hover": { "value": "rgb(231, 194, 176)" },
-		"warning-weak-pressed": { "value": "rgb(210, 177, 160)" },
-		"information-enabled": { "value": "rgb(0, 135, 185)" },
-		"information-hover": { "value": "rgb(0, 124, 170)" },
-		"information-pressed": { "value": "rgb(0, 113, 155)" },
-		"information-weak-enabled": { "value": "rgb(191, 224, 237)" },
-		"information-weak-hover": { "value": "rgb(176, 206, 218)" },
-		"information-weak-pressed": { "value": "rgb(160, 187, 198)" },
-		"information-strong-enabled": { "value": "rgb(0, 67, 92)" },
-		"information-strong-pressed": { "value": "rgb(41, 97, 118)" },
-		"oninformation-default": { "value": "rgb(255, 255, 255)" },
-		"oninformation-weak": { "value": "rgb(0, 48, 66)" },
-		"oninformation-strong": { "value": "rgb(255, 255, 255)" },
-		"information-strong-hover": { "value": "rgb(20, 81, 104)" },
-		"critical-strong-hover": { "value": "rgb(127, 20, 29)" }
+		"neutral": {
+			"enabled": { "value": "rgb(255, 255, 255)" },
+			"hover": { "value": "rgb(235, 235, 235)" },
+			"pressed": { "value": "rgb(214, 214, 214)" },
+			"bg": {
+				"1": {
+					"enabled": { "value": "rgb(248, 249, 249)" },
+					"hover": { "value": "rgb(228, 229, 229)" },
+					"pressed": { "value": "rgb(208, 208, 208)" }
+				},
+				"2": {
+					"enabled": { "value": "rgb(242, 243, 244)" },
+					"hover": { "value": "rgb(223, 223, 224)" },
+					"pressed": { "value": "rgb(203, 203, 204)" }
+				},
+				"3": {
+					"enabled": { "value": "rgb(236, 236, 237)" },
+					"pressed": { "value": "rgb(198, 198, 198)" },
+					"hover": { "value": "rgb(217, 217, 218)" }
+				},
+				"4": {
+					"enabled": { "value": "rgb(230, 230, 232)" },
+					"hover": { "value": "rgb(211, 211, 213)" },
+					"pressed": { "value": "rgb(193, 193, 194)" }
+				},
+				"5": {
+					"enabled": { "value": "rgb(224, 225, 227)" },
+					"hover": { "value": "rgb(206, 207, 209)" },
+					"pressed": { "value": "rgb(187, 188, 190)" }
+				},
+				"6": {
+					"enabled": { "value": "rgb(217, 219, 221)" },
+					"hover": { "value": "rgb(199, 201, 203)" },
+					"pressed": { "value": "rgb(182, 183, 185)" }
+				},
+				"on": {
+					"enabled": { "value": "rgb(40, 45, 55)" },
+					"pressed": { "value": "rgba(40, 45, 55, 0.5)" },
+					"hover": { "value": "rgba(40, 45, 55, 0.75)" }
+				},
+				"weak": {
+					"on": {
+						"enabled": { "value": "rgba(40, 45, 55, 0.75)" },
+						"pressed": { "value": "rgba(40, 45, 55, 0.25)" },
+						"hover": { "value": "rgba(40, 45, 55, 0.5)" }
+					}
+				}
+			},
+			"on": {
+				"enabled": { "value": "rgb(40, 45, 55)" },
+				"hover": { "value": "rgba(40, 45, 55, 0.75)" },
+				"pressed": { "value": "rgba(40, 45, 55, 0.5)" }
+			}
+		},
+		"primary": {
+			"enabled": { "value": "rgb(236, 0, 22)" },
+			"hover": { "value": "rgb(217, 0, 20)" },
+			"pressed": { "value": "rgb(199, 0, 18)" },
+			"bg": {
+				"enabled": { "value": "rgb(250, 191, 196)" },
+				"hover": { "value": "rgb(246, 161, 169)" },
+				"pressed": { "value": "rgb(246, 139, 149)" },
+				"on": {
+					"enabled": { "value": "rgb(85, 0, 7)" },
+					"pressed": { "value": "rgba(85, 0, 7, 0.5)" },
+					"hover": { "value": "rgba(85, 0, 7, 0.75)" }
+				},
+				"weak": {
+					"on": {
+						"enabled": { "value": "rgba(85, 0, 7, 0.75)" },
+						"hover": { "value": "rgba(85, 0, 7, 0.5)" },
+						"pressed": { "value": "rgba(85, 0, 7, 0.25)" }
+					}
+				}
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" }
+			}
+		},
+		"secondary": {
+			"enabled": { "value": "rgb(40, 45, 55)" },
+			"hover": { "value": "rgb(66, 70, 79)" },
+			"pressed": { "value": "rgb(91, 95, 102)" },
+			"bg": {
+				"enabled": { "value": "rgb(195, 196, 199)" },
+				"hover": { "value": "rgb(176, 177, 181)" },
+				"pressed": { "value": "rgb(158, 160, 164)" },
+				"on": {
+					"enabled": { "value": "rgb(14, 16, 19)" },
+					"pressed": { "value": "rgba(14, 16, 19, 0.5)" },
+					"hover": { "value": "rgba(14, 16, 19, 0.75)" }
+				},
+				"weak": {
+					"on": {
+						"enabled": { "value": "rgba(14, 16, 19, 0.75)" },
+						"pressed": { "value": "rgba(14, 16, 19, 0.25)" },
+						"hover": { "value": "rgba(14, 16, 19, 0.5)" }
+					}
+				}
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.25)" }
+			}
+		},
+		"success": {
+			"enabled": { "value": "rgb(67, 122, 18)" },
+			"hover": { "value": "rgb(61, 113, 16)" },
+			"pressed": { "value": "rgb(57, 104, 15)" },
+			"bg": {
+				"enabled": { "value": "rgb(206, 222, 191)" },
+				"hover": { "value": "rgb(190, 212, 170)" },
+				"pressed": { "value": "rgb(175, 201, 151)" },
+				"on": {
+					"enabled": { "value": "rgb(28, 50, 9)" },
+					"pressed": { "value": "rgba(28, 50, 9, 0.5)" },
+					"hover": { "value": "rgba(28, 50, 9, 0.75)" }
+				},
+				"weak": {
+					"on": {
+						"enabled": { "value": "rgba(28, 50, 9, 0.75)" },
+						"pressed": { "value": "rgba(28, 50, 9, 0.25)" },
+						"hover": { "value": "rgba(28, 50, 9, 0.5)" }
+					}
+				}
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" }
+			}
+		},
+		"critical": {
+			"enabled": { "value": "rgb(236, 0, 22)" },
+			"hover": { "value": "rgb(217, 0, 20)" },
+			"pressed": { "value": "rgb(198, 0, 18)" },
+			"bg": {
+				"enabled": { "value": "rgb(249, 184, 190)" },
+				"hover": { "value": "rgb(247, 167, 175)" },
+				"pressed": { "value": "rgb(246, 139, 149)" },
+				"on": {
+					"enabled": { "value": "rgb(85, 0, 7)" },
+					"pressed": { "value": "rgba(85, 0, 7, 0.5)" },
+					"hover": { "value": "rgba(85, 0, 7, 0.75)" }
+				},
+				"weak": {
+					"on": {
+						"enabled": { "value": "rgba(85, 0, 7, 0.75)" },
+						"hover": { "value": "rgba(85, 0, 7, 0.5)" },
+						"pressed": { "value": "rgba(85, 0, 7, 0.25)" }
+					}
+				}
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" }
+			}
+		},
+		"warning": {
+			"enabled": { "value": "rgb(240, 80, 0)" },
+			"hover": { "value": "rgb(221, 73, 0)" },
+			"pressed": { "value": "rgb(201, 67, 0)" },
+			"bg": {
+				"enabled": { "value": "rgb(250, 206, 184)" },
+				"weak": {
+					"on": {
+						"enabled": { "value": "rgba(86, 28, 0, 0.75)" },
+						"pressed": { "value": "rgba(86, 28, 0, 0.25)" },
+						"hover": { "value": "rgba(86, 28, 0, 0.5)" }
+					}
+				},
+				"on": {
+					"enabled": { "value": "rgb(86, 28, 0)" },
+					"pressed": { "value": "rgba(86, 28, 0, 0.5)" },
+					"hover": { "value": "rgba(86, 28, 0, 0.75)" }
+				},
+				"hover": { "value": "rgb(248, 190, 161)" },
+				"pressed": { "value": "rgb(248, 175, 139)" }
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" }
+			}
+		},
+		"information": {
+			"enabled": { "value": "rgb(0, 135, 185)" },
+			"hover": { "value": "rgb(0, 124, 170)" },
+			"pressed": { "value": "rgb(0, 113, 155)" },
+			"bg": {
+				"enabled": { "value": "rgb(184, 221, 235)" },
+				"hover": { "value": "rgb(161, 210, 228)" },
+				"pressed": { "value": "rgb(139, 200, 222)" },
+				"on": {
+					"enabled": { "value": "rgb(0, 48, 66)" },
+					"pressed": { "value": "rgba(0, 48, 66, 0.5)" },
+					"hover": { "value": "rgba(0, 48, 66, 0.75)" }
+				},
+				"weak": {
+					"on": {
+						"pressed": { "value": "rgba(0, 48, 66, 0.25)" },
+						"enabled": { "value": "rgba(0, 48, 66, 0.75)" },
+						"hover": { "value": "rgba(0, 48, 66, 0.5)" }
+					}
+				}
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" }
+			}
+		}
 	},
 	"spacing": {
 		"spacing-1": { "value": "8px" },
@@ -3433,6 +3553,1469 @@
 				"font": {
 					"family": "DBScreenSans",
 					"size": 12,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-headline-extralarge-desktop-light-autoheight-center": {
+			"value": {
+				"lineHeight": 80,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 64,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-desktop-light-autoheight-left": {
+			"value": {
+				"lineHeight": 80,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 64,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-tablet-light-autoheight-center": {
+			"value": {
+				"lineHeight": 48,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 40,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-tablet-light-autoheight-left": {
+			"value": {
+				"lineHeight": 48,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 40,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-desktop-light-autoheight-center": {
+			"value": {
+				"lineHeight": 64,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 48,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-desktop-light-autoheight-left": {
+			"value": {
+				"lineHeight": 64,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 48,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-desktop-light-autoheight-right": {
+			"value": {
+				"lineHeight": 64,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 48,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-desktop-light-autowidth-center": {
+			"value": {
+				"lineHeight": 80,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 64,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-desktop-light-autoheight-right": {
+			"value": {
+				"lineHeight": 80,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 64,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-tablet-light-autoheight-right": {
+			"value": {
+				"lineHeight": 48,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 40,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-mobile-light-autoheight-center": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-mobile-light-autoheight-right": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-mobile-light-autoheight-left": {
+			"value": {
+				"lineHeight": 40,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-mobile-light-autoheight-center": {
+			"value": {
+				"lineHeight": 32,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 28,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-mobile-light-autoheight-left": {
+			"value": {
+				"lineHeight": 32,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 28,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-mobile-light-autoheight-right": {
+			"value": {
+				"lineHeight": 32,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 28,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-tablet-light-autoheight-center": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-tablet-light-autoheight-left": {
+			"value": {
+				"lineHeight": 24,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-tablet-light-autoheight-right": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-mobile-light-autoheight-center": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-mobile-light-autoheight-left": {
+			"value": {
+				"lineHeight": 28,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-mobile-light-autoheight-right": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-system-large-autoheight-left": {
+			"value": {
+				"lineHeight": 28,
+				"font": {
+					"family": "DBScreenSans",
+					"size": 20,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-headline-small-tablet-light-autoheight-center": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-tablet-light-autoheight-left": {
+			"value": {
+				"lineHeight": 24,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-tablet-light-autoheight-right": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-desktop-light-autoheight-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-desktop-light-autoheight-left": {
+			"value": {
+				"lineHeight": 20,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-desktop-light-autoheight-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-system-xxsmall-autoheight-center": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-system-xxsmall-autoheight-right": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-system-xxsmall-autoheight-left": {
+			"value": {
+				"lineHeight": 12,
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-system-xxsmall-bold-autoheight-center": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 700,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+		},
+		"typography-system-xxsmall-bold-autoheight-left": {
+			"value": {
+				"lineHeight": 12,
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 700,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+		},
+		"typography-system-xxsmall-bold-autoheight-right": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 700,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+		},
+		"typography-headline-large-desktop-light-autowidth-center": {
+			"value": {
+				"lineHeight": 64,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 48,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-desktop-light-autowidth-left": {
+			"value": {
+				"lineHeight": 64,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 48,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-desktop-light-autowidth-right": {
+			"value": {
+				"lineHeight": 80,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 64,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-tablet-light-autowidth-center": {
+			"value": {
+				"lineHeight": 48,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 40,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-desktop-light-autowidth-left": {
+			"value": {
+				"lineHeight": 80,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 64,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-desktop-light-autowidth-right": {
+			"value": {
+				"lineHeight": 64,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 48,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-tablet-light-autowidth-right": {
+			"value": {
+				"lineHeight": 48,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 40,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-tablet-light-autowidth-left": {
+			"value": {
+				"lineHeight": 48,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 40,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-mobile-light-autowidth-left": {
+			"value": {
+				"lineHeight": 40,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-mobile-light-autowidth-center": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-extralarge-mobile-light-autowidth-right": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-mobile-light-autowidth-center": {
+			"value": {
+				"lineHeight": 32,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 28,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-mobile-light-autowidth-left": {
+			"value": {
+				"lineHeight": 32,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 28,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-tablet-light-autowidth-center": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-tablet-light-autowidth-right": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-tablet-light-autowidth-left": {
+			"value": {
+				"lineHeight": 24,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-mobile-light-autowidth-right": {
+			"value": {
+				"lineHeight": 32,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 28,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-mobile-light-autowidth-center": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-mobile-light-autowidth-left": {
+			"value": {
+				"lineHeight": 28,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-mobile-light-autowidth-right": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-tablet-light-autowidth-center": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-tablet-light-autowidth-left": {
+			"value": {
+				"lineHeight": 24,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-tablet-light-autowidth-right": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-desktop-light-autowidth-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-desktop-light-autowidth-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-desktop-light-autowidth-left": {
+			"value": {
+				"lineHeight": 20,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-system-xxsmall-autowidth-center": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-system-xxsmall-autowidth-left": {
+			"value": {
+				"lineHeight": 12,
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-system-xxsmall-autowidth-right": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-system-xxsmall-bold-autowidth-center": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 700,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+		},
+		"typography-system-xxsmall-bold-autowidth-right": {
+			"value": {
+				"lineHeight": 12,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 700,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+		},
+		"typography-system-xxsmall-bold-autowidth-left": {
+			"value": {
+				"lineHeight": 12,
+				"font": {
+					"family": "DBScreenSans",
+					"size": 10,
+					"weight": 700,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-bold.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-bold.woff2" }
+		},
+		"typography-headline-large-tablet-light-autoheight-right": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-desktop-light-autoheight-center": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-desktop-light-autoheight-left": {
+			"value": {
+				"lineHeight": 28,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-tablet-light-autoheight-left": {
+			"value": {
+				"lineHeight": 40,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-tablet-light-autoheight-center": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-desktop-light-autoheight-right": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-mobile-light-autoheight-right": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-mobile-light-autoheight-center": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-mobile-light-autoheight-left": {
+			"value": {
+				"lineHeight": 24,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-tablet-light-autoheight-left": {
+			"value": {
+				"lineHeight": 20,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-tablet-light-autoheight-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-tablet-light-autoheight-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-tablet-light-autowidth-left": {
+			"value": {
+				"lineHeight": 40,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-tablet-light-autowidth-center": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-desktop-light-autowidth-left": {
+			"value": {
+				"lineHeight": 28,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-desktop-light-autowidth-right": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-large-tablet-light-autowidth-right": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-desktop-light-autowidth-center": {
+			"value": {
+				"lineHeight": 28,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 24,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-mobile-light-autowidth-center": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-mobile-light-autowidth-left": {
+			"value": {
+				"lineHeight": 24,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-tablet-light-autowidth-left": {
+			"value": {
+				"lineHeight": 20,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-tablet-light-autowidth-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-small-mobile-light-autowidth-right": {
+			"value": {
+				"lineHeight": 24,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 20,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-tablet-light-autowidth-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-desktop-light-autoheight-right": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-desktop-light-autoheight-left": {
+			"value": {
+				"lineHeight": 40,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-mobile-light-autoheight-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-desktop-light-autoheight-center": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-mobile-light-autoheight-left": {
+			"value": {
+				"lineHeight": 20,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-mobile-light-autoheight-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-desktop-light-autowidth-right": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-desktop-light-autowidth-left": {
+			"value": {
+				"lineHeight": 40,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-mobile-light-autowidth-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-mobile-light-autowidth-left": {
+			"value": {
+				"lineHeight": 20,
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-medium-desktop-light-autowidth-center": {
+			"value": {
+				"lineHeight": 40,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 32,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-headline-xsmall-mobile-light-autowidth-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenHead",
+					"size": 16,
+					"weight": 300,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
+			"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+		},
+		"typography-link-small-right": {
+			"value": {
+				"lineHeight": 16,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 12,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-link-small-center": {
+			"value": {
+				"lineHeight": 16,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 12,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-link-medium-right": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "right",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 16,
+					"weight": 400,
+					"stretch": 1
+				}
+			},
+			"woff": { "value": "assets/fonts/dbscreensans-regular.woff" },
+			"woff2": { "value": "assets/fonts/dbscreensans-regular.woff2" }
+		},
+		"typography-link-medium-center": {
+			"value": {
+				"lineHeight": 20,
+				"alignment": "center",
+				"font": {
+					"family": "DBScreenSans",
+					"size": 16,
 					"weight": 400,
 					"stretch": 1
 				}
