@@ -59,5 +59,8 @@
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version"
   },
-  "homepage": "https://db-ui.github.io/base/"
+  "homepage": "https://db-ui.github.io/base/",
+  "dependencies": {
+    "hex-a11y": "^1.0.2"
+  }
 }
