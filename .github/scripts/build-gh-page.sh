@@ -16,7 +16,7 @@ fi
 
 
 echo "📥 Get gh-pages tar"
-curl -L https://github.com/db-ui/elements/tarball/gh-pages --output gh-pages
+curl -L https://github.com/db-ui/base/tarball/gh-pages --output gh-pages
 
 echo "📦 Unpack Tar"
 if [[ $RELEASE == "true" ]]; then

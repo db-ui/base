@@ -69,12 +69,12 @@ jobs:
         run: |
           if [[ $RELEASE == "true" ]];
           then
-            export URL=https://db-ui.github.io/elements
+            export URL=https://db-ui.github.io/base
           elif [[ $PRE_RELEASE == "true" ]];
           then
-            export URL=https://db-ui.github.io/elements/version/${NAME}
+            export URL=https://db-ui.github.io/base/version/${NAME}
           else
-            export URL=https://db-ui.github.io/elements/review/${NAME}
+            export URL=https://db-ui.github.io/base/review/${NAME}
           fi
           echo "URL: $URL"
           echo "### GH-Pages URL :rocket: <br> <br> $URL" >> $GITHUB_STEP_SUMMARY
