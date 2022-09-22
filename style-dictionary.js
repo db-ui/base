@@ -36,7 +36,7 @@ const flattenColors = (dictionary) => {
 
 StyleDictionary.registerFormat({
 	name: 'tailwind',
-	formatter: function ({ dictionary, platform, options, file }) {
+	formatter: function ({ dictionary }) {
 		const minifiedDic = minifyDictionary(dictionary.tokens);
 		// TODO: Fix colors for tailwind with "base" instead of "enabled"
 		flattenColors(minifiedDic);

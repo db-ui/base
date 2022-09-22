@@ -29,11 +29,11 @@ jobs:
       - name: 🔄 Init Cache
         uses: ./.github/actions/npm-cache
 
-      - name: ⬇️Download package build
-        uses: actions/download-artifact@v3
+      - name: ⬇ Download build
+        uses: ./.github/actions/download-tar-artifact
         with:
-          name: build
-          path: ./
+          name: tkns
+          path: build
 
       - name: 📰 Publish to NPM Registries
         run: |
