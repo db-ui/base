@@ -74,6 +74,24 @@ const mergeData = (data) => {
 	return mData;
 };
 
+const getWoffs = (key, fontFamily) => {
+	let font = 'dbscreensans-regular';
+	if (key.includes('bold')) {
+		font = 'dbscreensans-bold';
+	} else if (fontFamily === 'DBScreenHead') {
+		font = 'dbscreenhead-light';
+	}
+
+	return {
+		woff: {
+			value: `'assets/fonts/${font}.woff'`
+		},
+		woff2: {
+			value: `'assets/fonts/${font}.woff2'`
+		}
+	};
+};
+
 const convertColors = (data) => {
 	const keys = Object.keys(data.colors);
 	const newColors = {};
@@ -85,40 +103,95 @@ const convertColors = (data) => {
 	data.colors = mergeData(newColors);
 };
 
+const tShirtSizes = [
+	'extralarge',
+	'large',
+	'medium',
+	'small',
+	'xsmall',
+	'xxsmall',
+	'bold'
+];
+const alignments = ['left', 'center', 'right'];
+
+const shortenTypographyRecursive = (data) => {
+	if (data instanceof Object) {
+		const result = {};
+		try {
+			const dataKeys = Object.keys(data);
+			dataKeys.forEach((topLvlKey) => {
+				const topLvlData = data[topLvlKey];
+				if (!topLvlData) {
+					return { [topLvlKey]: { value: 'error' } };
+				}
+				const secondLvKeys = Object.keys(topLvlData);
+				if (
+					secondLvKeys.length > 0 &&
+					secondLvKeys.find(
+						(sKey) => sKey === 'value' || alignments.includes(sKey)
+					)
+				) {
+					const foundValue =
+						secondLvKeys[0] === 'value'
+							? topLvlData['value']
+							: topLvlData[secondLvKeys[0]]['value'];
+					if (!foundValue) {
+						return { [topLvlKey]: { value: 'error' } };
+					}
+
+					result[topLvlKey] = {
+						lineHeight: { value: foundValue.lineHeight },
+						fontFamily: {
+							value: foundValue.font.family.includes('Head')
+								? '{font.family.headline.value}'
+								: '{font.family.base.value}'
+						},
+						fontSize: { value: foundValue.font.size },
+						fontWeight: { value: foundValue.font.weight },
+						...getWoffs(topLvlKey, foundValue.font.family)
+					};
+				} else {
+					result[topLvlKey] = shortenTypographyRecursive(topLvlData);
+				}
+			});
+		} catch (e) {
+			console.error(e);
+			console.log(data);
+		}
+		return result;
+	}
+	return { value: 'error' };
+};
+
 const convertTextStyles = (data) => {
 	const keys = Object.keys(data.textStyles);
 
 	const newTextStyles = {};
-	keys.forEach((key) => {
+	keys.filter((key) => {
+		// some issue of old data?
+		return key !== '-db-';
+	}).forEach((key) => {
 		const textStyle = data.textStyles[key];
 		delete textStyle.value.color;
-		// TODO: Merge Similar Keys together
-		const cKey = correctKey(key).replace('foundation-', '');
-		newTextStyles[cKey] = { value: textStyle.value };
-		if (cKey.includes('bold')) {
-			newTextStyles[cKey].woff = {
-				value: 'assets/fonts/dbscreensans-bold.woff'
-			};
-			newTextStyles[cKey].woff2 = {
-				value: 'assets/fonts/dbscreensans-bold.woff2'
-			};
-		} else if (textStyle.value.font.family === 'DBScreenHead') {
-			newTextStyles[cKey].woff = {
-				value: 'assets/fonts/dbscreenhead-light.woff'
-			};
-			newTextStyles[cKey].woff2 = {
-				value: 'assets/fonts/dbscreenhead-light.woff2'
-			};
-		} else {
-			newTextStyles[cKey].woff = {
-				value: 'assets/fonts/dbscreensans-regular.woff'
-			};
-			newTextStyles[cKey].woff2 = {
-				value: 'assets/fonts/dbscreensans-regular.woff2'
-			};
+		const cKey = correctKey(key)
+			.replace('foundation-', '')
+			.replace('typography-', '')
+			.replace('autowidth-', '')
+			.replace('autoheight-', '')
+			.replace('link-link-', 'link-')
+			.replace('button-button-', 'button-')
+			.replace('large-bold', 'bold-large');
+		if (!cKey.startsWith('headline')) {
+			// Skip headline for now until it is fixed
+			newTextStyles[cKey] = { value: textStyle.value };
 		}
 	});
-	data.textStyles = newTextStyles;
+	data.textStyles = shortenTypographyRecursive(mergeData(newTextStyles));
+	data.textStyles['alignment'] = {
+		center: { value: 'center' },
+		left: { value: 'left' },
+		right: { value: 'right' }
+	};
 };
 
 const convertSpacings = (data) => {
@@ -144,7 +217,14 @@ const convertSpacings = (data) => {
 		convertTextStyles(data);
 		convertSpacings(data);
 
-		FS.writeFileSync('./tokens/zeplin.json', JSON.stringify(data));
+		FS.writeFileSync(
+			'./tokens/zeplin.json',
+			JSON.stringify({
+				typography: data.textStyles,
+				spacing: data.spacing,
+				colors: data.colors
+			})
+		);
 	} catch (e) {
 		console.error(e);
 	}

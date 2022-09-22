@@ -3,7 +3,7 @@
 
 	padding-left: 0;
 
-	color: $db-colors-neutral-bg-6-enabled;
+	color: $db-colors-secondary-enabled;
 
 	li {
 		display: inline-block;
@@ -13,10 +13,10 @@
 		padding: 80px;
 		border-radius: 4px;
 
-		color: $db-colors-neutral-bg-6-enabled;
+		color: $db-colors-secondary-enabled;
 
 		&.do-not-copy-this-class-example-bg-variants-cool-gray {
-			background-color: $db-colors-neutral-bg-6-enabled;
+			background-color: $db-colors-secondary-enabled;
 		}
 		&.do-not-copy-this-class-example-bg-variants-red {
 			background-color: $db-colors-primary-enabled;

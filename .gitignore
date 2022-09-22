@@ -4,6 +4,7 @@ npm-debug.log
 .history
 .idea
 build/
+build-old/
 public/
 out/
 dependencyGraph.json

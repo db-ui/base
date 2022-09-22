@@ -28,7 +28,7 @@
 
 	&.icons {
 		ul {
-			color: $db-colors-neutral-bg-6-enabled;
+			color: $db-colors-secondary-enabled;
 		}
 
 		li {
@@ -38,26 +38,27 @@
 			padding: 1rem 0.25rem;
 			border-radius: 4px;
 
-			color: $db-colors-neutral-bg-6-enabled;
+			color: $db-colors-secondary-enabled;
 
 			&.do-not-copy-this-class-example-bg-variants-turquoise {
 				background-color: $db-colors-success-enabled;
+				--db-icon-color: rgb(255, 255, 255);
 			}
 			&.do-not-copy-this-class-example-bg-variants-red {
 				background-color: $db-colors-primary-enabled;
 
-				--db-icon-color: #fff;
-				--db-icon-pulse-color: #fff;
+				--db-icon-color: rgb(255, 255, 255);
+				--db-icon-pulse-color: rgb(255, 255, 255);
 			}
 			&.do-not-copy-this-class-example-bg-variants-cyan {
 				background-color: $db-colors-information-enabled;
 
-				--db-icon-pulse-color: currentColor;
+				--db-icon-color: rgb(255, 255, 255);
 			}
 			&.do-not-copy-this-class-example-bg-variants-dark {
-				background-color: #272d37; // TODO: richtige Farbvariable raus suchen
+				background-color: $db-colors-secondary-enabled;
 
-				--db-icon-color: #fff;
+				--db-icon-color: rgb(255, 255, 255);
 			}
 		}
 	}

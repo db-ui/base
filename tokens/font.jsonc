@@ -3,14 +3,14 @@
 		"family": {
 			// These first two ones are the only two that are necessary tokens, the three at the end are only relevant for tailwind
 			"base": {
-				"value": "'DBScreenSans', Helvetica, Arial, sans-serif"
+				"value": "'DB Screen Sans', Helvetica, Arial, sans-serif"
 			},
 			"headline": {
-				"value": "'DBScreenHead', Helvetica, Arial, sans-serif"
+				"value": "'DB Screen Head', Helvetica, Arial, sans-serif"
 			},
-			"sans": "'DBScreenSans', Helvetica, Arial, sans-serif",
-			"bold": "'DBScreenSans', Helvetica, Arial, sans-serif",
-			"head": "'DBScreenHead', Helvetica, Arial, sans-serif"
+			"sans": "'DB Screen Sans', Helvetica, Arial, sans-serif",
+			"bold": "'DB Screen Sans Bold', Helvetica, Arial, sans-serif",
+			"head": "'DB Screen Head', Helvetica, Arial, sans-serif"
 		}
 	}
 }
