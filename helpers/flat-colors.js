@@ -28,7 +28,7 @@ const addListElement = (header, key, value) => {
 		<span class="sg-label" style="color: ${
 			value?.background ? 'inherit' : 'rgb(236, 0, 22)'
 		};">
-			${header}-${key}
+			<strong>${header}-${key}</strong>
 			<br />
 			${value?.background || 'not available'}
 		</span>
