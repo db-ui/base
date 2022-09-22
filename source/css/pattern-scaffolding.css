@@ -51,8 +51,9 @@
 
 .sg-swatch {
 	display: flex;
-	height: 4em;
+	min-height: 6em;
 	margin-bottom: 0.3em;
+	padding: 4px;
 	border-radius: 5px;
 	border: black dashed 1px;
 }

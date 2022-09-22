@@ -1,3 +1,10 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+const getOnHeader = (header) => {
+	const splitHeader = header.split('-');
+	splitHeader.splice(1, 0, 'on');
+	return splitHeader.filter((part) => Number.isNaN(Number(part))).join('-');
+};
+
 const addListElement = (header, key, value) => {
 	return `
 <!-- TODO: Make this clickable with copy to clipboard-->
@@ -6,9 +13,16 @@ const addListElement = (header, key, value) => {
 			<span class="sg-label" style="color: ${
 				value?.foreground || 'rgb(236, 0, 22)'
 			};">
-				<strong>on</strong>-${header}-${key}
+				<strong>${getOnHeader(header)}-${key}</strong>
 				<br />
 				${value?.foreground || 'not available'}
+				${
+					value?.weak
+						? `<br /><br /><strong>${getOnHeader(
+								header
+						  )}-weak-${key}</strong><br />${value?.weak}`
+						: ''
+				}
 			</span>
 		</div>
 		<span class="sg-label" style="color: ${
@@ -30,14 +44,28 @@ const addList = (header, headerObject, keys) => {
 	keys.forEach((key) => {
 		if (key === 'on') {
 			const onObject = headerObject['on'];
-			Object.keys(onObject).forEach((onKey) => {
-				listElements[onKey] = {
-					...listElements[onKey],
-					foreground: onObject[onKey]?.value
-						? onObject[onKey].value
-						: 'error'
-				};
-			});
+			Object.keys(onObject)
+				.filter((onKey) => onKey !== 'bg')
+				.forEach((onKey) => {
+					if (onKey === 'weak') {
+						const weakObject = onObject['weak'];
+						Object.keys(weakObject).forEach((weakKey) => {
+							listElements[weakKey] = {
+								...listElements[weakKey],
+								weak: weakObject[weakKey]?.value
+									? weakObject[weakKey].value
+									: 'error'
+							};
+						});
+					} else {
+						listElements[onKey] = {
+							...listElements[onKey],
+							foreground: onObject[onKey]?.value
+								? onObject[onKey].value
+								: 'error'
+						};
+					}
+				});
 		} else {
 			listElements[key] = {
 				...listElements[key],
@@ -81,9 +109,24 @@ module.exports = function (Handlebars) {
 					headerObject,
 					headerObjKeysRest
 				);
+				const onBgObject = headerObject['on'];
 				const bgObject = headerObject['bg'];
 				if (bgObject) {
-					const bgKeys = Object.keys(bgObject);
+					let bgKeys = Object.keys(bgObject);
+					if (onBgObject['bg']) {
+						if (bgKeys.find((key) => key === 'enabled')) {
+							bgObject.on = onBgObject['bg'];
+						} else {
+							// Only happens in neutral colors
+							bgKeys.forEach((bgKey) => {
+								bgObject[bgKey] = {
+									...bgObject[bgKey],
+									on: onBgObject['bg']
+								};
+							});
+						}
+					}
+					bgKeys = Object.keys(bgObject);
 					const defaultChildren = bgKeys.filter(isDefaultChild);
 					const otherChildren = bgKeys.filter(
 						(key) => !isDefaultChild(key)
