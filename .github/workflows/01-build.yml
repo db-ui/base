@@ -20,13 +20,13 @@ jobs:
       - name: ⬆ Upload build
         uses: ./.github/actions/upload-tar-artifact
         with:
-          name: build
+          name: tokens
           path: build
 
       - name: ⬆ Upload out
         uses: ./.github/actions/upload-tar-artifact
         with:
-          name: out
+          name: patternlab
           path: out
 
       - name: 💀 Killing me softly
