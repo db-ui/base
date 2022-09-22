@@ -55,10 +55,9 @@ const mergeData = (data) => {
 	Object.keys(data).forEach((key) => {
 		const splitKeys = key.split('-');
 		if (splitKeys.length > 1 && splitKeys[0] === 'on') {
-			const onKey = splitKeys.shift();
-			const lastKey = splitKeys.pop();
-			splitKeys.push(onKey);
-			splitKeys.push(lastKey);
+			const dataKey = splitKeys[1];
+			splitKeys[0] = dataKey;
+			splitKeys[1] = 'on';
 		}
 		let tmpData = mData;
 		splitKeys.forEach((sKey, index) => {

@@ -34,22 +34,20 @@
 					"enabled": { "value": "rgb(217, 219, 221)" },
 					"hover": { "value": "rgb(199, 201, 203)" },
 					"pressed": { "value": "rgb(182, 183, 185)" }
-				},
-				"on": {
-					"enabled": { "value": "rgb(40, 45, 55)" },
-					"pressed": { "value": "rgba(40, 45, 55, 0.5)" },
-					"hover": { "value": "rgba(40, 45, 55, 0.75)" }
-				},
-				"weak": {
-					"on": {
-						"enabled": { "value": "rgba(40, 45, 55, 0.75)" },
-						"pressed": { "value": "rgba(40, 45, 55, 0.25)" },
-						"hover": { "value": "rgba(40, 45, 55, 0.5)" }
-					}
 				}
 			},
 			"on": {
 				"enabled": { "value": "rgb(40, 45, 55)" },
+				"bg": {
+					"enabled": { "value": "rgb(40, 45, 55)" },
+					"pressed": { "value": "rgba(40, 45, 55, 0.5)" },
+					"hover": { "value": "rgba(40, 45, 55, 0.75)" },
+					"weak": {
+						"enabled": { "value": "rgba(40, 45, 55, 0.75)" },
+						"pressed": { "value": "rgba(40, 45, 55, 0.25)" },
+						"hover": { "value": "rgba(40, 45, 55, 0.5)" }
+					}
+				},
 				"hover": { "value": "rgba(40, 45, 55, 0.75)" },
 				"pressed": { "value": "rgba(40, 45, 55, 0.5)" }
 			}
@@ -61,21 +59,19 @@
 			"bg": {
 				"enabled": { "value": "rgb(250, 191, 196)" },
 				"hover": { "value": "rgb(246, 161, 169)" },
-				"pressed": { "value": "rgb(246, 139, 149)" },
-				"on": {
+				"pressed": { "value": "rgb(246, 139, 149)" }
+			},
+			"on": {
+				"bg": {
 					"enabled": { "value": "rgb(85, 0, 7)" },
 					"pressed": { "value": "rgba(85, 0, 7, 0.5)" },
-					"hover": { "value": "rgba(85, 0, 7, 0.75)" }
-				},
-				"weak": {
-					"on": {
+					"hover": { "value": "rgba(85, 0, 7, 0.75)" },
+					"weak": {
 						"enabled": { "value": "rgba(85, 0, 7, 0.75)" },
 						"hover": { "value": "rgba(85, 0, 7, 0.5)" },
 						"pressed": { "value": "rgba(85, 0, 7, 0.25)" }
 					}
-				}
-			},
-			"on": {
+				},
 				"enabled": { "value": "rgb(255, 255, 255)" },
 				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
 				"pressed": { "value": "rgba(255, 255, 255, 0.5)" }
@@ -88,24 +84,22 @@
 			"bg": {
 				"enabled": { "value": "rgb(195, 196, 199)" },
 				"hover": { "value": "rgb(176, 177, 181)" },
-				"pressed": { "value": "rgb(158, 160, 164)" },
-				"on": {
+				"pressed": { "value": "rgb(158, 160, 164)" }
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.25)" },
+				"bg": {
 					"enabled": { "value": "rgb(14, 16, 19)" },
 					"pressed": { "value": "rgba(14, 16, 19, 0.5)" },
-					"hover": { "value": "rgba(14, 16, 19, 0.75)" }
-				},
-				"weak": {
-					"on": {
+					"hover": { "value": "rgba(14, 16, 19, 0.75)" },
+					"weak": {
 						"enabled": { "value": "rgba(14, 16, 19, 0.75)" },
 						"pressed": { "value": "rgba(14, 16, 19, 0.25)" },
 						"hover": { "value": "rgba(14, 16, 19, 0.5)" }
 					}
 				}
-			},
-			"on": {
-				"enabled": { "value": "rgb(255, 255, 255)" },
-				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
-				"pressed": { "value": "rgba(255, 255, 255, 0.25)" }
 			}
 		},
 		"success": {
@@ -115,24 +109,22 @@
 			"bg": {
 				"enabled": { "value": "rgb(206, 222, 191)" },
 				"hover": { "value": "rgb(190, 212, 170)" },
-				"pressed": { "value": "rgb(175, 201, 151)" },
-				"on": {
+				"pressed": { "value": "rgb(175, 201, 151)" }
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
+				"bg": {
 					"enabled": { "value": "rgb(28, 50, 9)" },
 					"pressed": { "value": "rgba(28, 50, 9, 0.5)" },
-					"hover": { "value": "rgba(28, 50, 9, 0.75)" }
-				},
-				"weak": {
-					"on": {
+					"hover": { "value": "rgba(28, 50, 9, 0.75)" },
+					"weak": {
 						"enabled": { "value": "rgba(28, 50, 9, 0.75)" },
 						"pressed": { "value": "rgba(28, 50, 9, 0.25)" },
 						"hover": { "value": "rgba(28, 50, 9, 0.5)" }
 					}
 				}
-			},
-			"on": {
-				"enabled": { "value": "rgb(255, 255, 255)" },
-				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
-				"pressed": { "value": "rgba(255, 255, 255, 0.5)" }
 			}
 		},
 		"critical": {
@@ -142,24 +134,22 @@
 			"bg": {
 				"enabled": { "value": "rgb(249, 184, 190)" },
 				"hover": { "value": "rgb(247, 167, 175)" },
-				"pressed": { "value": "rgb(246, 139, 149)" },
-				"on": {
+				"pressed": { "value": "rgb(246, 139, 149)" }
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
+				"bg": {
 					"enabled": { "value": "rgb(85, 0, 7)" },
 					"pressed": { "value": "rgba(85, 0, 7, 0.5)" },
-					"hover": { "value": "rgba(85, 0, 7, 0.75)" }
-				},
-				"weak": {
-					"on": {
+					"hover": { "value": "rgba(85, 0, 7, 0.75)" },
+					"weak": {
 						"enabled": { "value": "rgba(85, 0, 7, 0.75)" },
 						"hover": { "value": "rgba(85, 0, 7, 0.5)" },
 						"pressed": { "value": "rgba(85, 0, 7, 0.25)" }
 					}
 				}
-			},
-			"on": {
-				"enabled": { "value": "rgb(255, 255, 255)" },
-				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
-				"pressed": { "value": "rgba(255, 255, 255, 0.5)" }
 			}
 		},
 		"warning": {
@@ -168,25 +158,23 @@
 			"pressed": { "value": "rgb(201, 67, 0)" },
 			"bg": {
 				"enabled": { "value": "rgb(250, 206, 184)" },
-				"weak": {
-					"on": {
-						"enabled": { "value": "rgba(86, 28, 0, 0.75)" },
-						"pressed": { "value": "rgba(86, 28, 0, 0.25)" },
-						"hover": { "value": "rgba(86, 28, 0, 0.5)" }
-					}
-				},
-				"on": {
-					"enabled": { "value": "rgb(86, 28, 0)" },
-					"pressed": { "value": "rgba(86, 28, 0, 0.5)" },
-					"hover": { "value": "rgba(86, 28, 0, 0.75)" }
-				},
 				"hover": { "value": "rgb(248, 190, 161)" },
 				"pressed": { "value": "rgb(248, 175, 139)" }
 			},
 			"on": {
 				"enabled": { "value": "rgb(255, 255, 255)" },
 				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
-				"hover": { "value": "rgba(255, 255, 255, 0.75)" }
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"bg": {
+					"weak": {
+						"enabled": { "value": "rgba(86, 28, 0, 0.75)" },
+						"pressed": { "value": "rgba(86, 28, 0, 0.25)" },
+						"hover": { "value": "rgba(86, 28, 0, 0.5)" }
+					},
+					"enabled": { "value": "rgb(86, 28, 0)" },
+					"pressed": { "value": "rgba(86, 28, 0, 0.5)" },
+					"hover": { "value": "rgba(86, 28, 0, 0.75)" }
+				}
 			}
 		},
 		"information": {
@@ -196,24 +184,22 @@
 			"bg": {
 				"enabled": { "value": "rgb(184, 221, 235)" },
 				"hover": { "value": "rgb(161, 210, 228)" },
-				"pressed": { "value": "rgb(139, 200, 222)" },
-				"on": {
+				"pressed": { "value": "rgb(139, 200, 222)" }
+			},
+			"on": {
+				"enabled": { "value": "rgb(255, 255, 255)" },
+				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
+				"hover": { "value": "rgba(255, 255, 255, 0.75)" },
+				"bg": {
 					"enabled": { "value": "rgb(0, 48, 66)" },
 					"pressed": { "value": "rgba(0, 48, 66, 0.5)" },
-					"hover": { "value": "rgba(0, 48, 66, 0.75)" }
-				},
-				"weak": {
-					"on": {
+					"hover": { "value": "rgba(0, 48, 66, 0.75)" },
+					"weak": {
 						"pressed": { "value": "rgba(0, 48, 66, 0.25)" },
 						"enabled": { "value": "rgba(0, 48, 66, 0.75)" },
 						"hover": { "value": "rgba(0, 48, 66, 0.5)" }
 					}
 				}
-			},
-			"on": {
-				"enabled": { "value": "rgb(255, 255, 255)" },
-				"pressed": { "value": "rgba(255, 255, 255, 0.5)" },
-				"hover": { "value": "rgba(255, 255, 255, 0.75)" }
 			}
 		}
 	},
