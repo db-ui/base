@@ -32,7 +32,7 @@ jobs:
       - name: ⬇ Download build
         uses: ./.github/actions/download-tar-artifact
         with:
-          name: tokens
+          name: tkns
           path: build
 
       - name: 📰 Publish to NPM Registries

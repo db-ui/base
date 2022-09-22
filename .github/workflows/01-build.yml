@@ -20,7 +20,7 @@ jobs:
       - name: ⬆ Upload build
         uses: ./.github/actions/upload-tar-artifact
         with:
-          name: tokens
+          name: tkns
           path: build
 
       - name: ⬆ Upload out
