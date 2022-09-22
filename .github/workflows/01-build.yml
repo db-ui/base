@@ -17,10 +17,20 @@ jobs:
       - name: 🍼 Create pages build
         run: npm run build
 
-      - name: ⬆️Upload build
-        uses: actions/upload-artifact@v3
+      - name: ⬆ Upload build
+        uses: ./.github/actions/upload-tar-artifact
         with:
           name: build
-          path: |
-            public
-            build
+          path: build
+
+      - name: ⬆ Upload out
+        uses: ./.github/actions/upload-tar-artifact
+        with:
+          name: out
+          path: out
+
+      - name: 💀 Killing me softly
+        uses: ./.github/actions/cancel-workflow
+        if: failure()
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
