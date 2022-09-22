@@ -6,11 +6,14 @@ jobs:
   init:
     uses: ./.github/workflows/00-init.yml
 
-  # TODO: Reactivate when test and lint works
-  #  lint:
-  #    uses: ./.github/workflows/01-lint.yml
-  #    needs: [init]
-  #
+  scan-secrets:
+    uses: ./.github/workflows/00-scan-secrets.yml
+
+  lint:
+    uses: ./.github/workflows/01-lint.yml
+    needs: [init]
+
+  # TODO: Reactivate when test works
   #  test:
   #    uses: ./.github/workflows/01-test.yml
   #    needs: [init]
@@ -20,7 +23,5 @@ jobs:
     needs: [init]
 
   deploy:
-    if: contains( github.ref, 'main')
     uses: ./.github/workflows/02-deploy-gh-pages.yml
-    #    needs: [lint, test, build]
-    needs: [build]
+    needs: [lint, build]

@@ -55,21 +55,26 @@
 			"sitemap": "./source/sitemap.xml"
 		},
 		"public": {
-			"root": "public/",
-			"patterns": "public/patterns/",
-			"data": "public/styleguide/data/",
-			"annotations": "public/annotations/",
-			"styleguide": "public/styleguide/",
-			"js": "public/js",
-			"images": "public/images",
-			"fonts": "public/fonts",
-			"css": "public/css",
-			"icons": "public/icons",
-			"sitemap": "public/sitemap.xml"
+			"root": "out/",
+			"patterns": "out/patterns/",
+			"data": "out/styleguide/data/",
+			"annotations": "out/annotations/",
+			"styleguide": "out/styleguide/",
+			"js": "out/js",
+			"images": "out/images",
+			"fonts": "out/fonts",
+			"css": "out/css",
+			"icons": "out/icons",
+			"sitemap": "out/sitemap.xml"
 		}
 	},
 	"patternExtension": "hbs",
-	"patternStateCascade": ["inevaluation", "inprogress", "inreview", "complete"],
+	"patternStateCascade": [
+		"inevaluation",
+		"inprogress",
+		"inreview",
+		"complete"
+	],
 	"patternExportAll": false,
 	"patternExportDirectory": "pattern_exports",
 	"patternExportPatternPartials": [],
