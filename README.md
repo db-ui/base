@@ -25,7 +25,7 @@ npm i -save @db-ui/base
 
 #### Tailwind
 
-Install Tailwind based on your framework: https://tailwindcsscom/docs/installation, but don't use `npx tailwindcss init`.
+Install Tailwind based on your framework: [Installations](https://tailwindcsscom/docs/installation), but don't use `npx tailwindcss init`.
 
 Instead, run this command in your project:
 
@@ -55,9 +55,9 @@ All of the style tokens and assets are in this package. Make any changes to suit
 
 To get started, run
 
-```
-$ npm install
-$ npm run build
+```shell
+npm install
+npm run build
 ```
 
 The `npm build` task is what performs the style dictionary build steps to generate the files for each platform. Every time you change something in the style dictionary, like changing colors or adding tokens, you will have to run this command again to generate the files.
