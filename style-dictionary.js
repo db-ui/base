@@ -18,9 +18,11 @@ const flattenColors = (dictionary) => {
 				Object.keys(colors[colorKey]).forEach((subColorKey) => {
 					// TODO: We should be able to removed this with Amazon Style Dictionary 4, as this might allow parallel "nesting" of a value and subentries
 					if (subColorKey === '_') {
-						flatColors[`${colorKey}`] = colors[colorKey][subColorKey];
+						flatColors[`${colorKey}`] =
+							colors[colorKey][subColorKey];
 					} else if (subColorKey.includes('small')) {
-						flatColors[`${colorKey}-sm`] = colors[colorKey][subColorKey];
+						flatColors[`${colorKey}-sm`] =
+							colors[colorKey][subColorKey];
 					} else {
 						flatColors[`${colorKey}-${subColorKey}`] =
 							colors[colorKey][subColorKey];
@@ -34,7 +36,7 @@ const flattenColors = (dictionary) => {
 
 StyleDictionary.registerFormat({
 	name: 'tailwind',
-	formatter: function ({ dictionary, platform, options, file }) {
+	formatter: function ({ dictionary }) {
 		const minifiedDic = minifyDictionary(dictionary.tokens);
 		flattenColors(minifiedDic);
 		return JSON.stringify(minifiedDic, null, 2);

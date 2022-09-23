@@ -1,0 +1,19 @@
+---
+name: Default On-Pull-Request
+
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  pull-requests: write
+  contents: write
+  actions: read
+  security-events: write
+
+jobs:
+  codeql:
+    uses: ./.github/workflows/99-codeql-analysis.yml
+
+  dependency-review:
+    uses: ./.github/workflows/99-dependency-review.yml

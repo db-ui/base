@@ -1,7 +1,3 @@
 {
-	"extends": [
-		"stylelint-config-sass-guidelines",
-		"@wemake-services/stylelint-config-scss",
-		"stylelint-config-prettier"
-	]
+	"extends": ["stylelint-config-sass-guidelines", "stylelint-config-prettier"]
 }
