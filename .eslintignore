@@ -2,4 +2,4 @@ cypress
 scripts
 **/build
 **/public
-
+**/out
