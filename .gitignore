@@ -11,3 +11,5 @@ source/_meta/_head.mustache
 source/_meta/_foot.mustache
 
 tailwind.config.js
+
+.env
