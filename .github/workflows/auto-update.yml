@@ -13,7 +13,7 @@ permissions:
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
-    if: contains( github.ref, 'main')
+    #    if: contains( github.ref, 'main')
     steps:
       - name: ↔ Create Pull Request
         uses: actions/github-script@v6
