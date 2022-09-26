@@ -11,3 +11,7 @@ patterns:
 # Add 'documentation' label to any file changes for the documentation files
 documentation:
   - ./**/*.md
+
+# Add 'tokens' label to any file changes for the design tokens files
+tokens:
+  - tokens/**
