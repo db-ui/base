@@ -633,6 +633,32 @@
 			]
 		},
 		{
+			"icon": "train_and_car",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 32,
+					"style": "inverted"
+				},
+				{
+					"size": 24,
+					"style": "inverted"
+				},
+				{
+					"size": 20,
+					"style": "inverted"
+				}
+			]
+		},
+		{
 			"icon": "tram",
 			"variants": [
 				{
