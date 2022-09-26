@@ -32,7 +32,7 @@
     "pl:install": "patternlab install --config ./patternlab-config.json",
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version",
-    "zeplin:token": "node scripts/zeplin-styleguide.js"
+    "zeplin:tokens": "node scripts/zeplin-styleguide.js"
   },
   "license": "Apache-2.0",
   "devDependencies": {
