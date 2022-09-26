@@ -23,7 +23,6 @@
     "lint:markdownlint": "markdownlint -c .markdown-lint.yml **/*.md",
     "lint:stylelint": "stylelint **/*.scss",
     "lint:eslint": "eslint . --ext .js --ignore-path .gitignore  --ignore-path .eslintignore",
-    "lint:commit-mail": "node ./scripts/check-commit-mail.js",
     "start": "npm-run-all build:style-dictionary --parallel pl:serve watch:tokens watch:scss",
     "test": "exit 0",
     "watch:tokens": "nodemon --watch tokens/ -e json -x \"npm run build:style-dictionary\"",
