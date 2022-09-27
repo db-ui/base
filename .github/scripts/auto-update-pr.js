@@ -5,8 +5,8 @@ module.exports = async ({ github, context }, head, base) => {
 			title: 'Auto Update from main',
 			owner,
 			repo,
-			head: `${head}`,
-			base: `${base}`,
+			head: `'${head}'`,
+			base: `'${base}'`,
 			body: '(o゜▽゜)o ☆ ☜(ﾟヮﾟ☜)'
 		});
 
