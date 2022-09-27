@@ -17,13 +17,6 @@ module.exports = async ({ github, context }, head, base) => {
 			labels: ['automated update']
 		});
 
-		await github.rest.pulls.createReview({
-			owner,
-			repo,
-			pull_number: result.data.number,
-			event: 'APPROVE'
-		});
-
 		return result.data.html_url;
 	} catch (e) {
 		console.error(e);
