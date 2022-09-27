@@ -24,5 +24,4 @@ jobs:
 
   deploy:
     uses: ./.github/workflows/02-deploy-gh-pages.yml
-    if: ${{ github.actor != 'dependabot[bot]' }}
     needs: [lint, build]
