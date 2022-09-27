@@ -30,8 +30,8 @@ jobs:
               title: 'Auto Update from main',
               owner,
               repo,
-              head: ${{ inputs.head }},
-              base: ${{ inputs.base }},
+              head: '${{ inputs.head }}',
+              base: '${{ inputs.base }}',
               body: '(o゜▽゜)o ☆ ☜(ﾟヮﾟ☜)'
             });
             await github.rest.issues.addLabels({
