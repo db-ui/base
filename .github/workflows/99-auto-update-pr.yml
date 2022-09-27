@@ -25,7 +25,7 @@ jobs:
         with:
           result-encoding: string
           script: |
-            const script = require('./.github/scripts/auto-update-pr.js')
+            const script = require('.github/scripts/auto-update-pr.js')
             return await script({github, context})
 
       - name: 🤖 Enable auto-merge for auto-update
