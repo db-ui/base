@@ -29,7 +29,9 @@ jobs:
           result-encoding: string
           script: |
             const script = require('./.github/scripts/auto-update-pr.js')
-            return await script({github, context})
+            const head = ${{ inputs.head }};
+            const base = ${{ inputs.base }};
+            return await script({github, context}, head, base)
 
       - name: 🤖 Enable auto-merge for auto-update
         run: |

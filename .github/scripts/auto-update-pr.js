@@ -1,12 +1,12 @@
-module.exports = async ({ github, context }) => {
+module.exports = async ({ github, context }, head, base) => {
 	try {
 		const { repo, owner } = context.repo;
 		const result = await github.rest.pulls.create({
 			title: 'Auto Update from main',
 			owner,
 			repo,
-			head: '${{ inputs.head }}',
-			base: '${{ inputs.base }}',
+			head: `${head}`,
+			base: `${base}`,
 			body: '(o゜▽゜)o ☆ ☜(ﾟヮﾟ☜)'
 		});
 
