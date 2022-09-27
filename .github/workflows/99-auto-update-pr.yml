@@ -34,6 +34,7 @@ jobs:
               base: '${{ inputs.base }}',
               body: '(o゜▽゜)o ☆ ☜(ﾟヮﾟ☜)'
             });
+
             await github.rest.issues.addLabels({
               owner,
               repo,
@@ -41,13 +42,14 @@ jobs:
               labels: ['automated update']
             });
 
-            return  result.data.html_url
+            await github.pulls.createReview({
+            owner,
+            repo,
+            pull_number: result.data.number,
+            event: "APPROVE"
+            })
 
-      - name: ✔ Approve a PR
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{steps.create-pr.outputs.result}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+            return  result.data.html_url
 
       - name: 🤖 Enable auto-merge for auto-update
         run: gh pr merge --auto --merge "$PR_URL"
