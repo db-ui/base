@@ -1,0 +1,56 @@
+---
+name: Auto Update PR
+
+on:
+  workflow_call:
+    inputs:
+      head:
+        required: true
+        type: string
+      base:
+        required: true
+        type: string
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ↔ Create Pull Request
+        uses: actions/github-script@v6
+        id: create-pr
+        with:
+          result-encoding: string
+          script: |
+            const { repo, owner } = context.repo;
+            const result = await github.rest.pulls.create({
+              title: 'Auto Update from main',
+              owner,
+              repo,
+              head: ${{ inputs.head }},
+              base: ${{ inputs.base }},
+              body: '(o゜▽゜)o ☆ ☜(ﾟヮﾟ☜)'
+            });
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: result.data.number,
+              labels: ['automated update']
+            });
+
+            return  result.data.html_url
+
+      - name: ✔ Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{steps.create-pr.outputs.result}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: 🤖 Enable auto-merge for auto-update
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{steps.create-pr.outputs.result}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
