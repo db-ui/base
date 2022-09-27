@@ -41,7 +41,7 @@
     "@pattern-lab/core": "5.16.4",
     "@pattern-lab/engine-handlebars": "5.16.4",
     "@pattern-lab/starterkit-handlebars-vanilla": "1.4.3",
-    "@pattern-lab/uikit-workshop": "5.16.4",
+    "@pattern-lab/uikit-workshop": "5.17.0",
     "cpr": "3.0.1",
     "dotenv": "^16.0.2",
     "eslint": "8.23.1",
