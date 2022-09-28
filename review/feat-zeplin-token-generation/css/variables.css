@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 28 Sep 2022 12:04:08 GMT
+ * Generated on Wed, 28 Sep 2022 14:10:58 GMT
  */
 
 :root {
@@ -249,6 +249,22 @@
   --db-colors-information-on-bg-weak-pressed: rgba(0, 48, 66, 0.25);
   --db-colors-information-on-bg-weak-enabled: rgba(0, 48, 66, 0.75);
   --db-colors-information-on-bg-weak-hover: rgba(0, 48, 66, 0.5);
-  --db-font-family-base: 'DB Screen Sans', Helvetica, Arial, sans-serif;
-  --db-font-family-headline: 'DB Screen Head', Helvetica, Arial, sans-serif;
+  --db-font-db-screensans-regular-name: 'DB Screen Sans Regular';
+  --db-font-db-screensans-regular-font-family: 'DB Screen Sans';
+  --db-font-db-screensans-regular-font-weight: 400;
+  --db-font-db-screensans-regular-woff: 'assets/fonts/dbscreensans-regular.woff';
+  --db-font-db-screensans-regular-woff2: 'assets/fonts/dbscreensans-regular.woff2';
+  --db-font-db-screensans-bold-name: 'DB Screen Sans Bold';
+  --db-font-db-screensans-bold-font-family: 'DB Screen Sans';
+  --db-font-db-screensans-bold-font-weight: 700;
+  --db-font-db-screensans-bold-woff: 'assets/fonts/dbscreensans-bold.woff';
+  --db-font-db-screensans-bold-woff2: 'assets/fonts/dbscreensans-bold.woff2';
+  --db-font-db-screenhead-name: 'DB Screen Head';
+  --db-font-db-screenhead-font-family: 'DB Screen Head';
+  --db-font-db-screenhead-font-weight: 300;
+  --db-font-db-screenhead-woff: 'assets/fonts/dbscreenhead-light.woff';
+  --db-font-db-screenhead-woff2: 'assets/fonts/dbscreenhead-light.woff2';
+  --db-font-family-sans: ''DB Screen Sans'', Helvetica, Arial, sans-serif;
+  --db-font-family-head: ''DB Screen Head'', Helvetica, Arial, sans-serif;
+  --db-font-family-bold: ''DB Screen Sans'', Helvetica, Arial, sans-serif;
 }
