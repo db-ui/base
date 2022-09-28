@@ -3,7 +3,7 @@ const StyleDictionary = require('style-dictionary').extend(
 );
 
 const minifyDictionary = require('style-dictionary/lib/common/formatHelpers/minifyDictionary');
-
+const SCSSUtilities = require('../base/scripts/scss-utility-classes-generator');
 const transforms = require('style-dictionary/lib/common/transforms');
 
 const modifyTailwind = (dictionary) => {
@@ -23,6 +23,16 @@ StyleDictionary.registerFormat({
 		return JSON.stringify(minifiedDic, null, 2);
 	}
 });
+
+
+StyleDictionary.registerFormat({
+	name: 'db-color-utilities',
+	formatter: function ({ dictionary, platform, options, file }) {
+		const colors = dictionary.tokens.colors;
+		return SCSSUtilities.generateColorUtilitityClasses(colors);
+	}
+});
+
 
 const getPathTransform = (orgTransform, token, options) => {
 	return transforms[orgTransform].transformer(
@@ -80,4 +90,5 @@ StyleDictionary.registerTransformGroup({
 		'font/flutter/literal'
 	]
 });
+
 StyleDictionary.buildAllPlatforms();

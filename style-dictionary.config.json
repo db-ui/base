@@ -94,6 +94,16 @@
 				}
 			]
 		},
+		"db-color-utilities": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_color-utilities.scss",
+					"format": "db-color-utilities"
+				}
+			]
+		},
 		"android": {
 			"transformGroup": "android",
 			"buildPath": "build/android/src/main/res/values/",
