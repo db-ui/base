@@ -83,6 +83,16 @@
 				}
 			]
 		},
+		"db-core-classes": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_color-utilities.scss",
+					"format": "db-core-classes"
+				}
+			]
+		},
 		"android": {
 			"transformGroup": "android",
 			"buildPath": "build/android/src/main/res/values/",
