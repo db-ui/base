@@ -23,13 +23,13 @@
 		},
 		"family": {
 			"sans": {
-				"value": "'{font.db-screensans-regular.font-family.value}', Helvetica, Arial, sans-serif"
+				"value": "{font.db-screensans-regular.font-family.value}, Helvetica, Arial, sans-serif"
 			},
 			"head": {
-				"value": "'{font.db-screenhead.font-family.value}', Helvetica, Arial, sans-serif"
+				"value": "{font.db-screenhead.font-family.value}, Helvetica, Arial, sans-serif"
 			},
 			"bold": {
-				"value": "'{font.db-screensans-bold.font-family.value}', Helvetica, Arial, sans-serif"
+				"value": "{font.db-screensans-bold.font-family.value}, Helvetica, Arial, sans-serif"
 			}
 		}
 	}
