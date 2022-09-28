@@ -55,8 +55,7 @@ const mergeData = (data) => {
 	Object.keys(data).forEach((key) => {
 		const splitKeys = key.split('-');
 		if (splitKeys.length > 1 && splitKeys[0] === 'on') {
-			const dataKey = splitKeys[1];
-			splitKeys[0] = dataKey;
+			splitKeys[0] = splitKeys[1];
 			splitKeys[1] = 'on';
 		}
 		let tmpData = mData;
@@ -74,44 +73,16 @@ const mergeData = (data) => {
 	return mData;
 };
 
-const getWoffs = (key, fontFamily) => {
-	let font = 'dbscreensans-regular';
-	if (key.includes('bold')) {
-		font = 'dbscreensans-bold';
-	} else if (fontFamily === 'DBScreenHead') {
-		font = 'dbscreenhead-light';
-	}
-
-	return {
-		woff: {
-			value: `'assets/fonts/${font}.woff'`
-		},
-		woff2: {
-			value: `'assets/fonts/${font}.woff2'`
-		}
-	};
-};
-
 const convertColors = (data) => {
 	const keys = Object.keys(data.colors);
 	const newColors = {};
 	keys.forEach((key) => {
 		const color = data.colors[key];
-		// TODO: Merge Similar Keys together
 		newColors[correctColor(correctKey(key))] = { value: color.value };
 	});
 	data.colors = mergeData(newColors);
 };
 
-const tShirtSizes = [
-	'extralarge',
-	'large',
-	'medium',
-	'small',
-	'xsmall',
-	'xxsmall',
-	'bold'
-];
 const alignments = ['left', 'center', 'right'];
 
 const shortenTypographyRecursive = (data) => {
@@ -141,14 +112,8 @@ const shortenTypographyRecursive = (data) => {
 
 					result[topLvlKey] = {
 						lineHeight: { value: foundValue.lineHeight },
-						fontFamily: {
-							value: foundValue.font.family.includes('Head')
-								? '{font.family.headline.value}'
-								: '{font.family.base.value}'
-						},
 						fontSize: { value: foundValue.font.size },
-						fontWeight: { value: foundValue.font.weight },
-						...getWoffs(topLvlKey, foundValue.font.family)
+						fontWeight: { value: foundValue.font.weight }
 					};
 				} else {
 					result[topLvlKey] = shortenTypographyRecursive(topLvlData);
@@ -169,7 +134,7 @@ const convertTextStyles = (data) => {
 	const newTextStyles = {};
 	keys.filter((key) => {
 		// some issue of old data?
-		return key !== '-db-';
+		return !key.startsWith('db-');
 	}).forEach((key) => {
 		const textStyle = data.textStyles[key];
 		delete textStyle.value.color;
@@ -181,17 +146,9 @@ const convertTextStyles = (data) => {
 			.replace('link-link-', 'link-')
 			.replace('button-button-', 'button-')
 			.replace('large-bold', 'bold-large');
-		if (!cKey.startsWith('headline')) {
-			// Skip headline for now until it is fixed
-			newTextStyles[cKey] = { value: textStyle.value };
-		}
+		newTextStyles[cKey] = { value: textStyle.value };
 	});
 	data.textStyles = shortenTypographyRecursive(mergeData(newTextStyles));
-	data.textStyles['alignment'] = {
-		center: { value: 'center' },
-		left: { value: 'left' },
-		right: { value: 'right' }
-	};
 };
 
 const convertSpacings = (data) => {
@@ -199,8 +156,9 @@ const convertSpacings = (data) => {
 	const newSpacings = {};
 	keys.forEach((key) => {
 		const spacing = data.spacing[key];
-		const cKey =
-			key.split('-').length === 3 ? key.replace('-5', '.5') : key;
+		const containsDot = key.split('-').length === 3;
+		let cKey = containsDot ? key.replace('-5', '.5') : key;
+		cKey = cKey.replace('spacing-', '');
 		newSpacings[cKey] = {
 			value: `${spacing.value}px`
 		};
