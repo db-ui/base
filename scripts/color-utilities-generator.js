@@ -27,15 +27,22 @@ const generateBGVariants = (value, index, currentColorObj, baseColorObj) => {
 %${prefix}-bg-${value}-${index},
 .${prefix}-bg-${value}-${index} {    
     background-color: $${prefix}-${currentColorObj.enabled.name};
-    color: $${prefix}-${baseColorObj.enabled.name};
+    
+    > * {
+        color: $${prefix}-${baseColorObj.enabled.name};
+    }
 
     &-ia,
     &[data-variant="ia"] {
+        @extend %${prefix}-bg-${value}-${index};
+
         ${generateInteractiveVariants(currentColorObj, 'background-color')}
     }
 
     &-text-ia,
     &[data-variant="text-ia"] {
+        color: $${prefix}-${baseColorObj.enabled.name};
+
          ${generateInteractiveVariants(baseColorObj, 'color')}
     }
 
@@ -44,6 +51,8 @@ const generateBGVariants = (value, index, currentColorObj, baseColorObj) => {
 
         &-ia,
         &[data-variant="ia"] {
+            color: $${prefix}-${baseColorObj.weak.enabled.name};
+
             ${generateInteractiveVariants(baseColorObj.weak, 'color')}
         }
     }
@@ -77,16 +86,22 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 %${prefix}-bg-${value},
 .${prefix}-bg-${value} {
     background-color: $${prefix}-${colorToken[value].enabled.name};
-    color: $${prefix}-${colorToken[value].on.enabled.name};
+    
+    > * {
+        color: $${prefix}-${colorToken[value].on.enabled.name};
+    }
 
     &-ia,
     &[data-variant="ia"] {
+        @extend %${prefix}-bg-${value};
         ${generateInteractiveVariants(colorToken[value], 'background-color')}
     }
 
     &-text-ia,
     &[data-variant="text-ia"] {
-         ${generateInteractiveVariants(colorToken[value].on, 'color')}
+       color: $${prefix}-${colorToken[value].on.enabled.name};
+       
+        ${generateInteractiveVariants(colorToken[value].on, 'color')}
     }
 }`;
 
@@ -97,16 +112,22 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 %${prefix}-bg-${value}-light,
 .${prefix}-bg-${value}-light {    
     background-color: $${prefix}-${colorToken[value].bg.enabled.name};
-    color: $${prefix}-${colorToken[value].on.bg.enabled.name};
+    
+    > * {
+        color: $${prefix}-${colorToken[value].on.bg.enabled.name};
+    }
 
     &-ia,
     &[data-variant="ia"] {
+        @extend %${prefix}-bg-${value}-light;
         ${generateInteractiveVariants(colorToken[value].bg, 'background-color')}
     }
 
     &-text-ia,
     &[data-variant="text-ia"] {
-         ${generateInteractiveVariants(colorToken[value].on.bg, 'color')}
+        color: $${prefix}-${colorToken[value].on.bg.enabled.name};
+
+        ${generateInteractiveVariants(colorToken[value].on.bg, 'color')}
     }
 
     .db-text-weak {
@@ -114,6 +135,8 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 
         &-ia,
         &[data-variant="ia"] {
+            color: $${prefix}-${colorToken[value].on.bg.weak.enabled.name};
+
             ${generateInteractiveVariants(
 				colorToken[value].on.bg.weak,
 				'color'
