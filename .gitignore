@@ -4,6 +4,7 @@ npm-debug.log
 .history
 .idea
 build/
+build-old/
 public/
 out/
 dependencyGraph.json
@@ -11,5 +12,4 @@ source/_meta/_head.mustache
 source/_meta/_foot.mustache
 
 tailwind.config.js
-
-.env
+/.env

@@ -24,7 +24,7 @@
 			]
 		},
 		"js": {
-			"transformGroup": "js",
+			"transformGroup": "JS",
 			"buildPath": "build/js/",
 			"prefix": "db",
 			"files": [
@@ -35,7 +35,7 @@
 			]
 		},
 		"flutter": {
-			"transformGroup": "flutter",
+			"transformGroup": "Flutter",
 			"buildPath": "build/flutter/unique_file/",
 			"files": [
 				{
@@ -56,7 +56,7 @@
 					"type": "color",
 					"filter": {
 						"attributes": {
-							"category": "color"
+							"category": "colors"
 						}
 					}
 				},
@@ -68,6 +68,17 @@
 					"filter": {
 						"attributes": {
 							"category": "font"
+						}
+					}
+				},
+				{
+					"destination": "style_dictionary_typography.dart",
+					"format": "flutter/class.dart",
+					"className": "StyleDictionaryTypography",
+					"type": "text",
+					"filter": {
+						"attributes": {
+							"category": "typography"
 						}
 					}
 				}
@@ -107,7 +118,7 @@
 		"ios": {
 			"transformGroup": "ios",
 			"buildPath": "build/ios/Classes/Generated/",
-			"prefix": "StyleDictionary",
+			"prefix": "db",
 			"files": [
 				{
 					"destination": "StyleDictionaryColor.h",
@@ -116,7 +127,7 @@
 					"type": "StyleDictionaryColorName",
 					"filter": {
 						"attributes": {
-							"category": "color"
+							"category": "colors"
 						}
 					}
 				},
@@ -127,7 +138,7 @@
 					"type": "StyleDictionaryColorName",
 					"filter": {
 						"attributes": {
-							"category": "color"
+							"category": "colors"
 						}
 					}
 				},
@@ -139,7 +150,7 @@
 			]
 		},
 		"ios-swift": {
-			"transformGroup": "ios-swift",
+			"transformGroup": "Swift",
 			"buildPath": "build/ios-swift/",
 			"files": [
 				{
@@ -177,7 +188,7 @@
 					"className": "StyleDictionaryColor",
 					"filter": {
 						"attributes": {
-							"category": "color"
+							"category": "colors"
 						}
 					}
 				}

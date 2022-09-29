@@ -3,7 +3,7 @@
 
 	padding-left: 0;
 
-	color: $db-color-cool-gray-700;
+	color: $db-colors-secondary-enabled;
 
 	li {
 		display: inline-block;
@@ -13,15 +13,15 @@
 		padding: 80px;
 		border-radius: 4px;
 
-		color: $db-color-cool-gray-700;
+		color: $db-colors-secondary-enabled;
 
 		&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-cool-gray {
-			background-color: $db-color-cool-gray-100;
+			background-color: $db-colors-secondary-enabled;
 		}
 		&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-red {
-			background-color: $db-color-red-500;
+			background-color: $db-colors-primary-enabled;
 
-			--db-logo-color: #{$db-color-white};
+			--db-logo-color: #{$db-colors-neutral-enabled};
 		}
 		&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-image {
 			background-image: url(https://marketingportal.extranet.deutschebahn.com/sites/default/files/2021-12-13/Ausn01.png);
@@ -36,7 +36,7 @@
 			width: 600px;
 			height: 340px;
 
-			--db-logo-backgroundcolor: #{$db-color-white};
+			--db-logo-backgroundcolor: #{$db-colors-neutral-enabled};
 		}
 	}
 }
