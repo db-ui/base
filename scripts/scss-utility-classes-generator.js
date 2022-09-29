@@ -11,7 +11,42 @@ const generateInteractiveVariants = (currentColorObj, cssProp) => {
 
         &:active {
             ${cssProp}: $${prefix}-${currentColorObj.pressed.name};
-        }`;
+        }
+        `;
+};
+
+const generateNeutralVariants = (
+	value,
+	index,
+	currentColorObj,
+	baseColorObj
+) => {
+	return `
+%${prefix}-bg-${value}-${index},
+.${prefix}-bg-${value}-${index} {    
+    background-color: $${prefix}-${currentColorObj.enabled.name};
+    color: $${prefix}-${baseColorObj.enabled.name};
+
+    &-ia,
+    &[data-variant="ia"] {
+        ${generateInteractiveVariants(currentColorObj, 'background-color')}
+    }
+
+    &-text-ia,
+    &[data-variant="text-ia"] {
+         ${generateInteractiveVariants(baseColorObj, 'color')}
+    }
+
+    .db-text-weak {
+        color: $${prefix}-${baseColorObj.weak.enabled.name};
+
+        &-ia,
+        &[data-variant="ia"] {
+            ${generateInteractiveVariants(baseColorObj.weak, 'color')}
+        }
+    }
+}
+`;
 };
 
 exports.generateColorUtilitityClasses = (colorToken) => {
@@ -21,11 +56,14 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 	let output = '';
 
 	Object.keys(colorToken).forEach((value, index) => {
+		output += `/**
+* ${value.toUpperCase()} - Utilities          
+**/
+`;
 		// text colors
-		output += `
-%${prefix}-text-${value}, 
+		output += `%${prefix}-text-${value}, 
 .${prefix}-text-${value} {
-    color: $${prefix}-${colorToken[value].on.enabled.name};
+    color: $${prefix}-${colorToken[value].enabled.name};
 }
 `;
 		// text and background colors
@@ -78,6 +116,15 @@ exports.generateColorUtilitityClasses = (colorToken) => {
     }
 }
 `;
+		} else {
+			Object.keys(colorToken[value].bg).forEach((variant) => {
+				output += generateNeutralVariants(
+					value,
+					variant,
+					colorToken[value].bg[variant],
+					colorToken[value].on.bg
+				);
+			});
 		}
 	});
 
