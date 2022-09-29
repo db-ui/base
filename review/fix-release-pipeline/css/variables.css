@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 28 Sep 2022 14:39:50 GMT
+ * Generated on Thu, 29 Sep 2022 03:16:50 GMT
  */
 
 :root {
@@ -165,6 +165,12 @@
   --db-spacing-s: 0.5rem;
   --db-spacing-sm: 0.75rem;
   --db-spacing-m: 1rem;
+  --db-transition-duration-fast: 0.3s; /* Consider this as beta for the moment */
+  --db-transition-emotional-timing: cubic-bezier(0.27, 0.05, 0.4, 0.95); /* Consider this as beta for the moment */
+  --db-transition-emotional-straight: 0.3s cubic-bezier(0.27, 0.05, 0.4, 0.95); /* Consider this as beta for the moment */
+  --db-transition-functional-timing: cubic-bezier(0.15, 0, 0.45, 1); /* Consider this as beta for the moment */
+  --db-transition-functional-straight: 0.3s cubic-bezier(0.15, 0, 0.45, 1); /* Consider this as beta for the moment */
+  --db-transition-color: 0.3s cubic-bezier(0.15, 0, 0.45, 1); /* Consider this as beta for the moment */
   --db-font-family-base: 'DB Screen Sans', Helvetica, Arial, sans-serif;
   --db-font-family-headline: 'DB Screen Head', Helvetica, Arial, sans-serif;
 }
