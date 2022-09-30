@@ -47,8 +47,9 @@ module.exports = async ({ github, context }) => {
 		repo
 	});
 
-	return (
-		removeOldFromPath(false, branches.data) ||
-		removeOldFromPath(true, tags.data)
-	);
+	return {
+		deploy:
+			removeOldFromPath(false, branches.data) ||
+			removeOldFromPath(true, tags.data)
+	};
 };

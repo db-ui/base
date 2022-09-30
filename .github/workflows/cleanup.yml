@@ -26,13 +26,13 @@ jobs:
         id: cleanup
         uses: actions/github-script@v6
         with:
-          result-encoding: boolean
+          result-encoding: json
           script: |
             const script = require('./.github/scripts/cleanup-gh-pages.js')
             return await script({github, context})
 
       - name: 🥅 Deploy to GH-Pages
-        if: ${{ steps.cleanup.outputs.result }}
+        if: ${{ steps.cleanup.outputs.result.deploy }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
