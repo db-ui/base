@@ -43,7 +43,7 @@
     "@pattern-lab/starterkit-handlebars-vanilla": "1.4.3",
     "@pattern-lab/uikit-workshop": "5.17.0",
     "cpr": "3.0.1",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
     "find-versions-cli": "^4.0.0",
