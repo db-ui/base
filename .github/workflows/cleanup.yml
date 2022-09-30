@@ -13,11 +13,6 @@ jobs:
       - name: ⬇ Checkout repo
         uses: actions/checkout@v3
 
-      - name: 📥 Download deps default-npm-cache
-        uses: bahmutov/npm-install@v1
-        with:
-          install-command: npm ci --ignore-scripts
-
       - name: 📥 Get gh-pages tar
         run: wget -q https://github.com/db-ui/base/tarball/gh-pages
 
@@ -28,12 +23,16 @@ jobs:
         run: tar -zxf gh-pages -C public --strip-components 1
 
       - name: 🗑️ Clean all preview pages
+        id: cleanup
         uses: actions/github-script@v6
         with:
           result-encoding: string
           script: |
             const script = require('./.github/scripts/cleanup-gh-pages.js')
-            await script({github, context})
+            return await script({github, context})
+
+      - name: 📰 Print cleanup messages
+        run: echo ${{steps.cleanup.outputs.result}}
 
       - name: 🥅 Deploy to GH-Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -3,34 +3,30 @@
  */
 const FS = require('fs');
 
-const TAG = 'cleanup-gh-pages:';
-
 const removeOldFromPath = (isTag, data) => {
+	let result = '';
 	const path = `public/${isTag ? 'version' : 'review'}`;
 	if (FS.existsSync(path) && data?.length > 0) {
 		const dirsToDelete = FS.readdirSync(path).filter(
 			(file) => !data.find((branch) => branch.name === file)
 		);
 		if (dirsToDelete?.length > 0) {
-			console.log(
-				TAG,
-				`Start removing ${isTag ? 'tags' : 'branches'} from gh-pages`
-			);
-			console.log(TAG, dirsToDelete);
+			result += `Start removing ${
+				isTag ? 'tags' : 'branches'
+			} from gh-pages`;
+			result += JSON.stringify(dirsToDelete);
 			dirsToDelete.forEach((dir) => {
 				FS.rmSync(`${path}/${dir}`, {
 					recursive: true,
 					force: true
 				});
-				console.log(TAG, `deleted  ${isTag ? 'tag' : 'branch'} ${dir}`);
+				result += `deleted  ${isTag ? 'tag' : 'branch'} ${dir}`;
 			});
 		} else {
-			console.log(
-				TAG,
-				`All ${isTag ? 'tags' : 'branches'} are up to date`
-			);
+			result += `All ${isTag ? 'tags' : 'branches'} are up to date`;
 		}
 	}
+	return result;
 };
 
 module.exports = async ({ github, context }) => {
@@ -43,7 +39,9 @@ module.exports = async ({ github, context }) => {
 		owner,
 		repo
 	});
-
-	removeOldFromPath(false, branches);
-	removeOldFromPath(true, tags);
+	let result = '';
+	result += removeOldFromPath(false, branches);
+	result += '\n';
+	result += removeOldFromPath(true, tags);
+	return result;
 };
