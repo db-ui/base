@@ -35,10 +35,12 @@ module.exports = async ({ github, context }) => {
 		owner,
 		repo
 	});
+	console.log(branches);
 	const tags = await github.rest.repos.listTags({
 		owner,
 		repo
 	});
+	console.log(tags);
 	let result = '';
 	result += removeOldFromPath(false, branches);
 	result += '\n';
