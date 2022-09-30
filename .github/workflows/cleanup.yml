@@ -31,12 +31,8 @@ jobs:
             const script = require('./.github/scripts/cleanup-gh-pages.js')
             return await script({github, context})
 
-      - name: 📰 Print cleanup messages
-        run: echo "$MESSAGE"
-        env:
-          MESSAGE: ${{steps.cleanup.outputs.result}}
-
       - name: 🥅 Deploy to GH-Pages
+        if: ${{steps.cleanup.outputs.result == "true" }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
