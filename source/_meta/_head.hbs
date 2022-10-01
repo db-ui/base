@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />
     <link rel="stylesheet" href="https://db-ui.github.io/core/css/pattern-scaffolding-project-specific.css?{{ cacheBuster }}" media="all" />
 
-    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+	  <script type="module">
+		  import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@db-ui/elements/loader/index.es2017.js';
+		  defineCustomElements();
+	  </script>
+
+
+	  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{{ patternLabHead }}}
     <!-- End Pattern Lab -->
 
   </head>
   <body class="{{ bodyClass }}">
+
+  <div style="position: absolute; top: 8px; right: 8px">
+	  <github-version-switcher owner="db-ui" repo="base">
+	  </github-version-switcher>
+  </div>
