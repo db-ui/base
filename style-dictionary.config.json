@@ -94,13 +94,23 @@
 				}
 			]
 		},
-		"db-color-utilities": {
+		"db-color-placeholders": {
 			"transformGroup": "scss",
 			"buildPath": "build/scss/",
 			"files": [
 				{
-					"destination": "_color-utilities.scss",
-					"format": "db-color-utilities"
+					"destination": "_color-placeholder.scss",
+					"format": "db-color-placeholders"
+				}
+			]
+		},
+		"db-color-classes": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_color-classes.scss",
+					"format": "db-color-classes"
 				}
 			]
 		},

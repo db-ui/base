@@ -3,7 +3,8 @@ const StyleDictionary = require('style-dictionary').extend(
 );
 
 const minifyDictionary = require('style-dictionary/lib/common/formatHelpers/minifyDictionary');
-const SCSSUtilities = require('./scripts/color-utilities-generator');
+const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
+const SCSSClasses = require('./scripts/color-classes-generator');
 const transforms = require('style-dictionary/lib/common/transforms');
 
 const modifyTailwind = (dictionary) => {
@@ -25,10 +26,18 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFormat({
-	name: 'db-color-utilities',
+	name: 'db-color-placeholders',
 	formatter: function ({ dictionary }) {
 		const colors = dictionary.tokens.colors;
-		return SCSSUtilities.generateColorUtilitityClasses(colors);
+		return SCSSPlaceholders.generateColorUtilitityPlaceholder(colors);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-color-classes',
+	formatter: function ({ dictionary }) {
+		const colors = dictionary.tokens.colors;
+		return SCSSClasses.generateColorUtilitityClasses(colors);
 	}
 });
 
