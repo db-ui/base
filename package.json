@@ -13,8 +13,8 @@
   "scripts": {
     "prepare": "node -e \"try { require('husky').install() } catch (e) {}\"",
     "copy:assets": "cpr assets build/assets -d",
-    "copy:csstokens": "cpr build/css/variables.css out/css/variables.css -o",
-    "build:style-dictionary": "node style-dictionary.js && npm run copy:csstokens",
+    "copy:font-faces": "cpr scss build/scss -o",
+    "build:style-dictionary": "node style-dictionary.js && npm run copy:font-faces",
     "build:css": "sass source/css/db-ui-base.scss:out/css/db-ui-base.css --style=compressed --embed-sources --load-path=node_modules",
     "build:tailwind": "node scripts/tailwind-config-generator.js false true && cpr scripts/tailwind-config-generator.js build/tailwind/tailwind-config-generator.js -o",
     "build": "npm-run-all copy:assets build:* pl:build",

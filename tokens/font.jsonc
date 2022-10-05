@@ -15,7 +15,7 @@
 			"woff2": { "value": "'assets/fonts/dbscreensans-bold.woff2'" }
 		},
 		"db-screenhead": {
-			"name": { "value": "'DB Screen Head'" },
+			"name": { "value": "'DB Screen Head Light'" },
 			"font-family": { "value": "'DB Screen Head'" },
 			"font-weight": { "value": "300" },
 			"woff": { "value": "'assets/fonts/dbscreenhead-light.woff'" },

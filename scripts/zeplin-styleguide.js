@@ -78,7 +78,12 @@ const convertColors = (data) => {
 	const newColors = {};
 	keys.forEach((key) => {
 		const color = data.colors[key];
-		newColors[correctColor(correctKey(key))] = { value: color.value };
+		newColors[correctColor(correctKey(key))] = {
+			value: color.value,
+			attributes: {
+				category: 'color'
+			}
+		};
 	});
 	data.colors = mergeData(newColors);
 };
@@ -111,8 +116,18 @@ const shortenTypographyRecursive = (data) => {
 					}
 
 					result[topLvlKey] = {
-						lineHeight: { value: foundValue.lineHeight },
-						fontSize: { value: foundValue.font.size },
+						lineHeight: {
+							value: foundValue.lineHeight,
+							attributes: {
+								category: 'size'
+							}
+						},
+						fontSize: {
+							value: `${foundValue.font.size}`,
+							attributes: {
+								category: 'size'
+							}
+						},
 						fontWeight: { value: foundValue.font.weight }
 					};
 				} else {
