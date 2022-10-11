@@ -3,7 +3,8 @@ const prefix = 'db';
 const fileHeader =
 	'\n' +
 	'// Do not edit directly\n' +
-	'// Generated on Thu, 29 Sep 2022 07:59:43 GMT' +
+	'// Generated on ' +
+	new Date().toString() +
 	'\n';
 
 const getShortSize = (size) => {
@@ -37,7 +38,7 @@ const getUtilityClass = (
 	missingMediaQuery
 ) => {
 	let result = `
-${utility ? '.' : '%'}${prefix}-typo-${typoType}-${getShortSize(size)}{
+${utility ? '.' : '%'}${prefix}-text-${typoType}-${getShortSize(size)}{
 `;
 	if (!missingMediaQuery) {
 		result += `
