@@ -59,10 +59,7 @@ exports.generateColorUtilitityClasses = (colorToken) => {
     @extend %${prefix}-text-${value};
         
     &-ia,
-    &[data-variant="ia"] {
-        @extend %${prefix}-text-${value}-ia;
-    }
-
+    &[data-variant="ia"],
     a {
         @extend %${prefix}-text-${value}-ia;
     }
