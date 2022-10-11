@@ -20,8 +20,6 @@ jobs:
   publish:
     name: Publish latest package versions to GitHub Packages
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
     steps:
       - name: ⬇ Checkout repo
         uses: actions/checkout@v3
@@ -43,6 +41,7 @@ jobs:
           RELEASE: ${{ inputs.release }}
           PRE_RELEASE: ${{ inputs.preRelease }}
           VALID_SEMVER_VERSION: ${{ inputs.version }}
+          GITHUB_COMMITISH: ${{ github.event.release.target_commitish }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GPR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

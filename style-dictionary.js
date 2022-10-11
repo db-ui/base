@@ -7,6 +7,8 @@ const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
 const SCSSClasses = require('./scripts/color-classes-generator');
 const transforms = require('style-dictionary/lib/common/transforms');
 
+const GenerateClasses = require('./scripts/scss-typography-generator');
+
 const modifyTailwind = (dictionary) => {
 	const colors = JSON.stringify(dictionary['colors']).replace(
 		/enabled/g,
@@ -26,7 +28,25 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFormat({
-	name: 'db-color-placeholders',
+	name: 'db-core-typography-classes',
+	formatter: function ({ dictionary }) {
+		const typography = dictionary.tokens.typography;
+		const screens = dictionary.tokens.screens;
+		return GenerateClasses(typography, screens, true);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-typography-placeholder',
+	formatter: function ({ dictionary }) {
+		const typography = dictionary.tokens.typography;
+		const screens = dictionary.tokens.screens;
+		return GenerateClasses(typography, screens, false);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-color-placeholder',
 	formatter: function ({ dictionary }) {
 		const colors = dictionary.tokens.colors;
 		return SCSSPlaceholders.generateColorUtilitityPlaceholder(colors);
@@ -34,7 +54,7 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFormat({
-	name: 'db-color-classes',
+	name: 'db-core-color-classes',
 	formatter: function ({ dictionary }) {
 		const colors = dictionary.tokens.colors;
 		return SCSSClasses.generateColorUtilitityClasses(colors);
@@ -68,8 +88,37 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransformGroup({
+	name: 'JSDotty',
+	transforms: ['attribute/cti', 'name/dotty/pascal', 'size/px', 'color/hex']
+});
+
+StyleDictionary.registerTransformGroup({
 	name: 'JS',
-	transforms: ['attribute/cti', 'name/dotty/pascal', 'size/rem', 'color/hex']
+	transforms: ['attribute/cti', 'name/dotty/pascal', 'size/px', 'color/hex']
+});
+
+StyleDictionary.registerTransformGroup({
+	name: 'CSS',
+	transforms: [
+		'attribute/cti',
+		'name/cti/kebab',
+		'time/seconds',
+		'content/icon',
+		'size/px',
+		'color/css'
+	]
+});
+
+StyleDictionary.registerTransformGroup({
+	name: 'SCSS',
+	transforms: [
+		'attribute/cti',
+		'name/cti/kebab',
+		'time/seconds',
+		'content/icon',
+		'size/px',
+		'color/css'
+	]
 });
 
 StyleDictionary.registerTransformGroup({

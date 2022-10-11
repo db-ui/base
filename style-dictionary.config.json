@@ -2,7 +2,7 @@
 	"source": ["tokens/**/*.json", "tokens/**/*.jsonc"],
 	"platforms": {
 		"css": {
-			"transformGroup": "css",
+			"transformGroup": "CSS",
 			"buildPath": "build/css/",
 			"prefix": "db",
 			"files": [
@@ -13,7 +13,7 @@
 			]
 		},
 		"scss": {
-			"transformGroup": "scss",
+			"transformGroup": "SCSS",
 			"buildPath": "build/scss/",
 			"prefix": "db",
 			"files": [
@@ -24,7 +24,7 @@
 			]
 		},
 		"js": {
-			"transformGroup": "JS",
+			"transformGroup": "JSDotty",
 			"buildPath": "build/js/",
 			"prefix": "db",
 			"files": [
@@ -85,7 +85,7 @@
 			]
 		},
 		"tailwind": {
-			"transformGroup": "js",
+			"transformGroup": "JS",
 			"buildPath": "build/tailwind/",
 			"files": [
 				{
@@ -94,23 +94,43 @@
 				}
 			]
 		},
-		"db-color-placeholders": {
+		"db-core-typography-classes": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_typography-classes.scss",
+					"format": "db-core-typography-classes"
+				}
+			]
+		},
+		"db-core-typography-placeholder": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_typography-placeholder.scss",
+					"format": "db-core-typography-placeholder"
+				}
+			]
+		},
+		"db-core-color-placeholder": {
 			"transformGroup": "scss",
 			"buildPath": "build/scss/",
 			"files": [
 				{
 					"destination": "_color-placeholder.scss",
-					"format": "db-color-placeholders"
+					"format": "db-core-color-placeholder"
 				}
 			]
 		},
-		"db-color-classes": {
+		"db-core-color-classes": {
 			"transformGroup": "scss",
 			"buildPath": "build/scss/",
 			"files": [
 				{
 					"destination": "_color-classes.scss",
-					"format": "db-color-classes"
+					"format": "db-core-color-classes"
 				}
 			]
 		},
