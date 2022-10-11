@@ -1,0 +1,33 @@
+.db-scale-lg {
+	@extend %db-body-lg;
+
+	h1 {
+		@extend %db-headline1-lg;
+	}
+
+	h2 {
+		@extend %db-headline2-lg;
+	}
+
+	h3 {
+		@extend %db-headline3-lg;
+	}
+
+	h4 {
+		@extend %db-headline4-lg;
+	}
+
+	h5 {
+		@extend %db-headline5-lg;
+	}
+
+	h6 {
+		@extend %db-headline6-lg;
+	}
+
+	small {
+		@extend %db-small-lg;
+	}
+}
+
+/* TODO: Other scales*/

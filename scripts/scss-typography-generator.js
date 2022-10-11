@@ -38,7 +38,7 @@ const getUtilityClass = (
 	missingMediaQuery
 ) => {
 	let result = `
-${utility ? '.' : '%'}${prefix}-text-${typoType}-${getShortSize(size)}{
+${utility ? '.' : '%'}${prefix}-${typoType}-${getShortSize(size)}{
 `;
 	if (!missingMediaQuery) {
 		result += `
