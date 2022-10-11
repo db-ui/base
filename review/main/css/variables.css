@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 11 Oct 2022 06:10:20 GMT
+ * Generated on Tue, 11 Oct 2022 06:17:32 GMT
  */
 
 :root {
@@ -165,6 +165,7 @@
   --db-spacing-s: 0.5rem;
   --db-spacing-sm: 0.75rem;
   --db-spacing-m: 1rem;
+  --db-spacing-l: 1.25rem;
   --db-transition-duration-fast: 0.3s; /* Consider this as beta for the moment */
   --db-transition-emotional-timing: cubic-bezier(0.27, 0.05, 0.4, 0.95); /* Consider this as beta for the moment */
   --db-transition-emotional-straight: 0.3s cubic-bezier(0.27, 0.05, 0.4, 0.95); /* Consider this as beta for the moment */
