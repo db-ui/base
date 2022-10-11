@@ -31,7 +31,7 @@ const correctColor = (key) => {
 	) {
 		correctKey = `${correctKey}-enabled`;
 	}
-	return correctKey.replace('backgroundonly', 'bg');
+	return correctKey.replace('background', 'bg');
 };
 
 const combineDataRecursive = (data, currentKey, keyArray, value) => {

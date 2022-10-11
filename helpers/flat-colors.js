@@ -141,17 +141,20 @@ module.exports = function (Handlebars) {
 		let resultString = '';
 
 		Object.keys(context.data.root.colors).forEach((header) => {
-			resultString += `<h2>${header}</h2>`;
+			resultString += `<h2>${header}</h2>`; // e.g. neutral, primary
 			const headerObject = context.data.root.colors[header];
 			if (headerObject) {
 				const headerObjKeysRest = Object.keys(headerObject).filter(
 					(k) => k !== 'bg'
 				);
-				resultString += addList(
-					header,
-					headerObject,
-					headerObjKeysRest
-				);
+				// neutral has no enabled color
+				if (context.data.root.colors[header].enabled) {
+					resultString += addList(
+						header,
+						headerObject,
+						headerObjKeysRest
+					);
+				}
 				const onBgObject = headerObject['on'];
 				const bgObject = headerObject['bg'];
 				if (bgObject) {
@@ -162,10 +165,28 @@ module.exports = function (Handlebars) {
 						} else {
 							// Only happens in neutral colors
 							bgKeys.forEach((bgKey) => {
-								bgObject[bgKey] = {
-									...bgObject[bgKey],
-									on: onBgObject['bg']
-								};
+								if (
+									Object.keys(bgObject[bgKey]).find(
+										(key) => key === 'enabled'
+									)
+								) {
+									bgObject[bgKey] = {
+										...bgObject[bgKey],
+										on: onBgObject['bg']
+									};
+								} else {
+									Object.keys(bgObject[bgKey]).forEach(
+										(bgChildKey) => {
+											bgObject[`${bgKey}-${bgChildKey}`] =
+												{
+													...bgObject[bgKey][
+														bgChildKey
+													],
+													on: onBgObject['bg']
+												};
+										}
+									);
+								}
 							});
 						}
 					}
@@ -174,7 +195,7 @@ module.exports = function (Handlebars) {
 					const otherChildren = bgKeys.filter(
 						(key) => !isDefaultChild(key)
 					);
-					resultString += `<h3>${header} backgrounds light (only)</h3>`;
+					resultString += `<h3>${header} backgrounds</h3>`;
 					resultString += addList(
 						`${header}-bg`,
 						bgObject,

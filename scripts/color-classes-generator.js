@@ -10,9 +10,9 @@ const prefix = 'db';
  * e.g. neutral with variants 1-6
  */
 
-const generateBGVariants = (value, index, currentColorObj, baseColorObj) => {
+const generateBGVariants = (value, index) => {
 	return `
-.${prefix}-${value}-${index} {    
+.${prefix}-bg-${value}-${index} {    
     @extend %${prefix}-bg-${value}-${index}; 
 
     &-ia,
@@ -52,8 +52,24 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 * ${value.toUpperCase()} - Utility Classes          
 **/
 `;
-		output += `
-.${prefix}-${value} {
+		// text colors with interactive variant, e.g. primary
+		if (colorToken[value].enabled) {
+			output += `
+.${prefix}-text-${value} {
+    @extend %${prefix}-text-${value};
+        
+    &-ia,
+    &[data-variant="ia"] {
+        @extend %${prefix}-text-${value}-ia;
+    }
+
+    a {
+        @extend %${prefix}-text-${value}-ia;
+    }
+}`;
+
+			output += `
+.${prefix}-bg-${value} {
     @extend %${prefix}-bg-${value};
         
     &-ia,
@@ -65,44 +81,51 @@ exports.generateColorUtilitityClasses = (colorToken) => {
         @extend %${prefix}-bg-${value}-text-ia;
     }
 }`;
-
-		// special case neutral has no default value for enabled
-		if (colorToken[value].bg.enabled) {
-			// weak variants
-			output += `
-.${prefix}-${value}-light {    
-     @extend %${prefix}-bg-${value}-light;
-    
-    &-ia,
-    &[data-variant="ia"] {
-        @extend %${prefix}-bg-${value}-light-ia;
-    }
-
-    a {
-         @extend %${prefix}-bg-${value}-light-text-ia;
-    }
-
-    .db-weak {
-        @extend %weak;
-
-        &-ia,
-        &[data-variant="ia"],
-        a {
-            @extend %weak-ia;
-        }
-    }
-}
-`;
-		} else {
-			Object.keys(colorToken[value].bg).forEach((variant) => {
-				output += generateBGVariants(
-					value,
-					variant,
-					colorToken[value].bg[variant],
-					colorToken[value].on.bg
-				);
-			});
 		}
+
+		// 		// special case neutral has no default value for enabled
+		// 		if (colorToken[value].bg.enabled) {
+		// 			// weak variants
+		// 			output += `
+		// .${prefix}-${value}-light {
+		//      @extend %${prefix}-bg-${value}-light;
+
+		//     &-ia,
+		//     &[data-variant="ia"] {
+		//         @extend %${prefix}-bg-${value}-light-ia;
+		//     }
+
+		//     a {
+		//          @extend %${prefix}-bg-${value}-light-text-ia;
+		//     }
+
+		//     .db-weak {
+		//         @extend %weak;
+
+		//         &-ia,
+		//         &[data-variant="ia"],
+		//         a {
+		//             @extend %weak-ia;
+		//         }
+		//     }
+		// }
+		// `;
+		// 		} else {
+		Object.keys(colorToken[value].bg).forEach((variant) => {
+			if (colorToken[value].bg[variant].enabled) {
+				output += generateBGVariants(value, variant);
+			} else {
+				Object.keys(colorToken[value].bg[variant]).forEach(
+					(childVariant) => {
+						output += generateBGVariants(
+							value,
+							variant + '-' + childVariant
+						);
+					}
+				);
+			}
+		});
+		//}
 	});
 
 	return output;
