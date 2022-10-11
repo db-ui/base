@@ -18,8 +18,8 @@ const generateInteractiveVariants = (currentColorObj, cssProp) => {
 };
 
 /**
- * some backgrounds have more than one variant with the same color for text (on-color)
- * e.g. neutral with variants 1-6
+ * backgrounds have more than one variant with the same color for text (on-color)
+ * e.g. neutral with variants 1-6 or transparent-full or transparent-semi
  */
 
 const generateBGVariants = (value, index, currentColorObj, baseColorObj) => {

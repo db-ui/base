@@ -6,8 +6,8 @@
 const prefix = 'db';
 
 /**
- * some backgrounds have more than one variant with the same color for text (on-color)
- * e.g. neutral with variants 1-6
+ * backgrounds have more than one variant with the same color for text (on-color)
+ * e.g. neutral with variants 1-6 or transparent-full and transparent-semi
  */
 
 const generateBGVariants = (value, index) => {
@@ -83,34 +83,6 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 }`;
 		}
 
-		// 		// special case neutral has no default value for enabled
-		// 		if (colorToken[value].bg.enabled) {
-		// 			// weak variants
-		// 			output += `
-		// .${prefix}-${value}-light {
-		//      @extend %${prefix}-bg-${value}-light;
-
-		//     &-ia,
-		//     &[data-variant="ia"] {
-		//         @extend %${prefix}-bg-${value}-light-ia;
-		//     }
-
-		//     a {
-		//          @extend %${prefix}-bg-${value}-light-text-ia;
-		//     }
-
-		//     .db-weak {
-		//         @extend %weak;
-
-		//         &-ia,
-		//         &[data-variant="ia"],
-		//         a {
-		//             @extend %weak-ia;
-		//         }
-		//     }
-		// }
-		// `;
-		// 		} else {
 		Object.keys(colorToken[value].bg).forEach((variant) => {
 			if (colorToken[value].bg[variant].enabled) {
 				output += generateBGVariants(value, variant);
@@ -125,7 +97,6 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 				);
 			}
 		});
-		//}
 	});
 
 	return output;
