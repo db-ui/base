@@ -3,7 +3,8 @@ const StyleDictionary = require('style-dictionary').extend(
 );
 
 const minifyDictionary = require('style-dictionary/lib/common/formatHelpers/minifyDictionary');
-
+const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
+const SCSSClasses = require('./scripts/color-classes-generator');
 const transforms = require('style-dictionary/lib/common/transforms');
 
 const GenerateClasses = require('./scripts/scss-typography-generator');
@@ -41,6 +42,22 @@ StyleDictionary.registerFormat({
 		const typography = dictionary.tokens.typography;
 		const screens = dictionary.tokens.screens;
 		return GenerateClasses(typography, screens, false);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-color-placeholder',
+	formatter: function ({ dictionary }) {
+		const colors = dictionary.tokens.colors;
+		return SCSSPlaceholders.generateColorUtilitityPlaceholder(colors);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-color-classes',
+	formatter: function ({ dictionary }) {
+		const colors = dictionary.tokens.colors;
+		return SCSSClasses.generateColorUtilitityClasses(colors);
 	}
 });
 

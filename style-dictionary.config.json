@@ -114,6 +114,26 @@
 				}
 			]
 		},
+		"db-core-color-placeholder": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_color-placeholder.scss",
+					"format": "db-core-color-placeholder"
+				}
+			]
+		},
+		"db-core-color-classes": {
+			"transformGroup": "scss",
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_color-classes.scss",
+					"format": "db-core-color-classes"
+				}
+			]
+		},
 		"android": {
 			"transformGroup": "android",
 			"buildPath": "build/android/src/main/res/values/",
