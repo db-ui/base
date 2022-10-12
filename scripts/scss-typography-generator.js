@@ -8,7 +8,13 @@ const fileHeader =
 	'\n';
 
 const getShortSize = (size) => {
-	if (size === 'extralarge') {
+	if (size === '3xlarge') {
+		return '3xl';
+	}
+	if (size === '2xlarge') {
+		return '2xl';
+	}
+	if (size === 'xlarge') {
 		return 'xl';
 	}
 	if (size === 'large') {
@@ -23,53 +29,43 @@ const getShortSize = (size) => {
 	if (size === 'xsmall') {
 		return 'xs';
 	}
-	if (size === 'xxsmall') {
+	if (size === '2xsmall') {
 		return '2xs';
+	}
+	if (size === '3xsmall') {
+		return '3xs';
 	}
 
 	return size;
 };
 
-const getUtilityClass = (
-	utility,
-	screens,
-	typoType,
-	size,
-	missingMediaQuery
-) => {
+const getUtilityClass = (utility, screens, scale, textType, size) => {
+	const factor = textType === 'body' ? 'regular' : 'light';
+
 	let result = `
-${utility ? '.' : '%'}${prefix}-${typoType}-${getShortSize(size)}{
+${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 `;
-	if (!missingMediaQuery) {
-		result += `
-\tline-height: $${prefix}-typography-${typoType}-${size}-mobile-line-height;
-\tfont-size: $${prefix}-typography-${typoType}-${size}-mobile-font-size;
-\tfont-weight: $${prefix}-typography-${typoType}-${size}-mobile-font-weight;
+	//$db-typography-normal-desktop-headline-3xlarge-black-line-height: 120px;
+	result += `
+\tline-height: $${prefix}-typography-${scale}-mobile-${textType}-${size}-${factor}-line-height;
+\tfont-size: $${prefix}-typography-${scale}-mobile-${textType}-${size}-${factor}-font-size;
+\tfont-weight: $${prefix}-typography-${scale}-mobile-${textType}-${size}-${factor}-font-weight;
 `;
 
-		result += `
+	result += `
 \t@media only screen and (min-width: ${screens.md.value}) {
-\t\tline-height: $${prefix}-typography-${typoType}-${size}-tablet-line-height;
-\t\tfont-size: $${prefix}-typography-${typoType}-${size}-tablet-font-size;
-\t\tfont-weight: $${prefix}-typography-${typoType}-${size}-tablet-font-weight;
+\t\tline-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-line-height;
+\t\tfont-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-font-size;
+\t\tfont-weight: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-font-weight;
 \t}\n`;
 
-		result += `
+	result += `
 \t@media only screen and (min-width: ${screens.lg.value}) {
-\t\tline-height: $${prefix}-typography-${typoType}-${size}-desktop-line-height;
-\t\tfont-size: $${prefix}-typography-${typoType}-${size}-desktop-font-size;
-\t\tfont-weight: $${prefix}-typography-${typoType}-${size}-desktop-font-weight;
+\t\tline-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-line-height;
+\t\tfont-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-font-size;
+\t\tfont-weight: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-font-weight;
 \t}
 		`;
-	} else {
-		result += '/* ERROR: Missing media queries*/';
-
-		result += `
-\tline-height: $${prefix}-typography-${typoType}-${size}-line-height;
-\tfont-size: $${prefix}-typography-${typoType}-${size}-font-size;
-\tfont-weight: $${prefix}-typography-${typoType}-${size}-font-weight;
-`;
-	}
 
 	result += `
 }
@@ -81,24 +77,29 @@ ${utility ? '.' : '%'}${prefix}-${typoType}-${getShortSize(size)}{
 const generateClasses = (typography, screens, utility) => {
 	let allClasses = fileHeader;
 
-	Object.keys(typography).forEach((typoTypeKey) => {
-		const typeObject = typography[typoTypeKey];
-		Object.keys(typeObject).forEach((sizeKey) => {
-			const sizeObject = typeObject[sizeKey];
-			let missingMediaQuery = false;
-			if (
-				!(sizeObject.mobile && sizeObject.tablet && sizeObject.desktop)
-			) {
-				missingMediaQuery = true;
-			}
-			allClasses += getUtilityClass(
-				utility,
-				screens,
-				typoTypeKey,
-				sizeKey,
-				missingMediaQuery
-			);
-		});
+	// scaleTypeKey = [normal, functional, expressive]
+	Object.keys(typography).forEach((scaleTypeKey) => {
+		const scaleObject = typography[scaleTypeKey];
+		const mediaQueryKeys = Object.keys(scaleObject);
+		if (mediaQueryKeys.length > 0) {
+			// desktop
+			const firstMediaQueryKey = mediaQueryKeys[0];
+			const firstMediaQueryObject = scaleObject[firstMediaQueryKey];
+			// textTypeKey = [headline, body]
+			Object.keys(firstMediaQueryObject).forEach((textTypeKey) => {
+				const textTypeObject = firstMediaQueryObject[textTypeKey];
+				// sizeKey = [3xlarge - 3xsmall]
+				Object.keys(textTypeObject).forEach((sizeKey) => {
+					allClasses += getUtilityClass(
+						utility,
+						screens,
+						scaleTypeKey,
+						textTypeKey,
+						sizeKey
+					);
+				});
+			});
+		}
 	});
 
 	return allClasses;

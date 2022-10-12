@@ -148,19 +148,19 @@ const convertTextStyles = (data) => {
 
 	const newTextStyles = {};
 	keys.filter((key) => {
-		// some issue of old data?
-		return !key.startsWith('db-');
+		return (
+			key.includes('token') &&
+			!key.includes('bold') &&
+			// TODO: Do we need black?
+			!key.includes('black')
+		);
 	}).forEach((key) => {
 		const textStyle = data.textStyles[key];
 		delete textStyle.value.color;
 		const cKey = correctKey(key)
 			.replace('foundation-', '')
 			.replace('typography-', '')
-			.replace('autowidth-', '')
-			.replace('autoheight-', '')
-			.replace('link-link-', 'link-')
-			.replace('button-button-', 'button-')
-			.replace('large-bold', 'bold-large');
+			.replace('token-', '');
 		newTextStyles[cKey] = { value: textStyle.value };
 	});
 	data.textStyles = shortenTypographyRecursive(mergeData(newTextStyles));
