@@ -1,4 +1,5 @@
-.db-scale-expressive {
+.db-scale-expressive,
+%db-scale-expressive {
 	@extend %db-expressive-body-md;
 
 	small {
@@ -30,7 +31,8 @@
 	}
 }
 
-.db-scale-normal {
+.db-scale-normal,
+%db-scale-normal {
 	@extend %db-normal-body-md;
 
 	small {
@@ -62,7 +64,8 @@
 	}
 }
 
-.db-scale-functional {
+.db-scale-functional,
+%db-scale-functional {
 	@extend %db-functional-body-md;
 
 	small {

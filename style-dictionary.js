@@ -31,8 +31,7 @@ StyleDictionary.registerFormat({
 	name: 'db-core-typography-classes',
 	formatter: function ({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		const screens = dictionary.tokens.screens;
-		return GenerateClasses(typography, screens, true);
+		return GenerateClasses(typography, true);
 	}
 });
 
@@ -40,8 +39,7 @@ StyleDictionary.registerFormat({
 	name: 'db-core-typography-placeholder',
 	formatter: function ({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		const screens = dictionary.tokens.screens;
-		return GenerateClasses(typography, screens, false);
+		return GenerateClasses(typography, false);
 	}
 });
 

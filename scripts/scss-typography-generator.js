@@ -39,7 +39,7 @@ const getShortSize = (size) => {
 	return size;
 };
 
-const getUtilityClass = (utility, screens, scale, textType, size) => {
+const getUtilityClass = (utility, scale, textType, size) => {
 	const factor = textType === 'body' ? 'regular' : 'light';
 
 	let result = `
@@ -53,14 +53,14 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 `;
 
 	result += `
-\t@media only screen and (min-width: ${screens.md.value}) {
+\t@media only screen and (min-width: $db-screens-md) {
 \t\tline-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-line-height;
 \t\tfont-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-font-size;
 \t\tfont-weight: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-font-weight;
 \t}\n`;
 
 	result += `
-\t@media only screen and (min-width: ${screens.lg.value}) {
+\t@media only screen and (min-width: $db-screens-lg) {
 \t\tline-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-line-height;
 \t\tfont-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-font-size;
 \t\tfont-weight: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-font-weight;
@@ -74,7 +74,7 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 	return result;
 };
 
-const generateClasses = (typography, screens, utility) => {
+const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
 
 	// scaleTypeKey = [normal, functional, expressive]
@@ -92,7 +92,6 @@ const generateClasses = (typography, screens, utility) => {
 				Object.keys(textTypeObject).forEach((sizeKey) => {
 					allClasses += getUtilityClass(
 						utility,
-						screens,
 						scaleTypeKey,
 						textTypeKey,
 						sizeKey

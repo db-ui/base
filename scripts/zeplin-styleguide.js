@@ -151,7 +151,7 @@ const convertTextStyles = (data) => {
 		return (
 			key.includes('token') &&
 			!key.includes('bold') &&
-			// TODO: Do we need black?
+			// TODO: Do we need black? - Yes we do it should be default and light should be a utility class
 			!key.includes('black')
 		);
 	}).forEach((key) => {

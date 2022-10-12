@@ -1,12 +1,15 @@
 @import "../../build/scss/variables";
 @import "../../build/scss/font-faces";
+@import "../../build/scss/typography-placeholder";
 @import "../../build/scss/typography-classes";
 @import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
+@import "../../build/scss/scale";
 
-/* body {
-	font-family: var(--asset-font-db-screensans-regular-name);
-} */
+body {
+	@extend %db-scale-normal;
+}
+
 body,
 button,
 input,
@@ -14,11 +17,6 @@ optgroup,
 select,
 textarea {
 	font-family: $db-font-family-sans;
-}
-
-strong,
-b {
-	font-family: $db-font-family-bold;
 }
 
 h1,
