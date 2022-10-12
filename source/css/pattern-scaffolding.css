@@ -31,9 +31,9 @@
 .sg-colors {
 	display: grid;
 	grid-gap: var(--pl-grid-gap);
-	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
 	list-style: none !important;
-	margin: 0 !important;
+	margin: 0.75rem 0 2 rem;
 	padding: 0 !important;
 }
 
@@ -44,13 +44,15 @@
 	flex: auto;
 	flex: auto;
 	margin: 0 0.5em 0.5em 0;
-	max-width: 14em;
+	max-width: 20em;
 	min-width: 5em;
-	padding: 0.3em;
+	padding: 0.75em;
+	font-size: 16px;
+	line-height: 1rem;
 }
 
 .sg-swatch {
-	border: #000 dashed 1px;
+	border: rgba(0, 0, 0, 0.06) solid 1px;
 	border-radius: 5px;
 	display: flex;
 	margin-bottom: 0.3em;
@@ -59,12 +61,15 @@
 }
 
 .sg-label {
-	font-size: 90%;
-	line-height: 1;
+	font-size: 0.75rem;
+}
+
+.sg-label strong {
+	font-size: 1.2em;
 }
 
 .sg-swatch .sg-label {
-	font-size: 80%;
+	font-size: 0.7rem;
 	margin: auto;
 }
 

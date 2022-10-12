@@ -38,6 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
+    "@mfranzke/plugin-node-uiextension": "^1.0.0",
     "@pattern-lab/cli": "5.17.0",
     "@pattern-lab/core": "5.17.0",
     "@pattern-lab/engine-handlebars": "5.16.4",
@@ -46,7 +47,7 @@
     "@zeplin/sdk": "^1.14.0",
     "cpr": "3.0.1",
     "dotenv": "^16.0.3",
-    "eslint": "8.24.0",
+    "eslint": "8.25.0",
     "eslint-config-prettier": "8.5.0",
     "find-versions-cli": "^4.0.0",
     "husky": "8.0.1",
