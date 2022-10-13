@@ -22,7 +22,7 @@
     "lint": "npm-run-all -p lint:*",
     "lint:markdownlint": "markdownlint -c .markdown-lint.yml **/*.md",
     "lint:stylelint": "stylelint **/*.scss",
-    "lint:xo": "xo --prettier",
+    "lint:xo": "xo",
     "start": "npm-run-all build:style-dictionary --parallel pl:serve watch:tokens watch:scss",
     "test": "exit 0",
     "watch:tokens": "nodemon --watch tokens/ -e json -x \"npm run build:style-dictionary\"",
