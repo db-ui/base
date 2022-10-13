@@ -24,7 +24,7 @@
 		</db-tab>
 		<db-tab label="SCSS" name="tab-bar" active>
 			<h2>Default</h2>
-			<p>Applies all font-faces to body and headline 1:</p>
+			<p>Applies all font-faces to body and headlines:</p>
 			<pre>
 <code class="language-scss">/* ./index.scss */
 @import "@db-ui-base/build/scss/variables";
@@ -33,26 +33,36 @@
 @import "@db-ui-base/build/scss/scale";
 
 body {
-	@extend .db-scale-normal;
+	@extend %db-scale-functional;
 	font-family: $db-font-family-sans;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: $db-font-family-head;
 }
 </code>
 			</pre>
 
-			<h2>With utility classes</h2>
+			<h2>Overrides</h2>
+			<h3>Default</h3>
+			<strong>Example html &lt;small&gt;:</strong>
+			<p>Default: <strong>14px</strong></p>
+			<small>SM: <strong>12px</strong></small>
+			<h3>With utility classes</h3>
 			<pre>
 <code class="language-scss">/* ./index.scss */
 ... see default
 @import "@db-ui-base/scss/typography-classes";
 </code>
 			</pre>
-			<strong>Example html (class='db-normal-body-sm'):</strong>
-			<p>Default: <strong>16px</strong></p>
-			<p class='db-normal-body-sm'>SM: <strong>14px</strong></p>
+			<strong>Example html (class='db-normal-body-xs'):</strong>
+			<p>Default: <strong>14px</strong></p>
+			<p class='db-normal-body-xs'>SM: <strong>12px</strong></p>
 
 		</db-tab>
 		<db-tab label="Tailwind" name="tab-bar">
