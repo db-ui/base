@@ -40,30 +40,35 @@ const getShortSize = (size) => {
 };
 
 const getUtilityClass = (utility, scale, textType, size) => {
-	const factor = textType === 'body' ? 'regular' : 'light';
+	const isHeadline = textType === 'headline';
 
 	let result = `
 ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 `;
-	//$db-typography-normal-desktop-headline-3xlarge-black-line-height: 120px;
 	result += `
-\tline-height: $${prefix}-typography-${scale}-mobile-${textType}-${size}-${factor}-line-height;
-\tfont-size: $${prefix}-typography-${scale}-mobile-${textType}-${size}-${factor}-font-size;
-\tfont-weight: $${prefix}-typography-${scale}-mobile-${textType}-${size}-${factor}-font-weight;
+\tline-height: $${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height;
+\tfont-size: $${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size;
 `;
+
+	if (isHeadline) {
+		result += `
+    &-light,
+    &[data-variant="light"] {
+        font-weight: 300;
+    }
+	`;
+	}
 
 	result += `
 \t@media only screen and (min-width: $db-screens-md) {
-\t\tline-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-line-height;
-\t\tfont-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-font-size;
-\t\tfont-weight: $${prefix}-typography-${scale}-tablet-${textType}-${size}-${factor}-font-weight;
+\t\tline-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height;
+\t\tfont-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size;
 \t}\n`;
 
 	result += `
 \t@media only screen and (min-width: $db-screens-lg) {
-\t\tline-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-line-height;
-\t\tfont-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-font-size;
-\t\tfont-weight: $${prefix}-typography-${scale}-desktop-${textType}-${size}-${factor}-font-weight;
+\t\tline-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height;
+\t\tfont-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size;
 \t}
 		`;
 

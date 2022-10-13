@@ -7,16 +7,17 @@
 @import "../../build/scss/scale";
 
 body {
-	@extend %db-scale-normal;
+	@extend %db-scale-functional;
+	font-family: $db-font-family-sans;
 }
 
-body,
+/* ugly workaround for db-ui-core components */
+div,
 button,
 input,
-optgroup,
 select,
 textarea {
-	font-family: $db-font-family-sans;
+	font-size: inherit !important;
 }
 
 h1,
@@ -34,4 +35,10 @@ h6 {
 
 main {
 	padding: $db-spacing-1 $db-spacing-3;
+}
+
+.typography-table {
+	tr > td {
+		padding: $db-spacing-0-5 $db-spacing-1;
+	}
 }

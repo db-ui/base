@@ -127,8 +127,7 @@ const shortenTypographyRecursive = (data) => {
 							attributes: {
 								category: 'size'
 							}
-						},
-						fontWeight: { value: foundValue.font.weight }
+						}
 					};
 				} else {
 					result[topLvlKey] = shortenTypographyRecursive(topLvlData);
@@ -150,9 +149,9 @@ const convertTextStyles = (data) => {
 	keys.filter((key) => {
 		return (
 			key.includes('token') &&
+			// We don't need bold and light
 			!key.includes('bold') &&
-			// TODO: Do we need black? - Yes we do it should be default and light should be a utility class
-			!key.includes('black')
+			!key.includes('light')
 		);
 	}).forEach((key) => {
 		const textStyle = data.textStyles[key];
@@ -160,7 +159,9 @@ const convertTextStyles = (data) => {
 		const cKey = correctKey(key)
 			.replace('foundation-', '')
 			.replace('typography-', '')
-			.replace('token-', '');
+			.replace('token-', '')
+			.replace('regular-', '')
+			.replace('black-', '');
 		newTextStyles[cKey] = { value: textStyle.value };
 	});
 	data.textStyles = shortenTypographyRecursive(mergeData(newTextStyles));
