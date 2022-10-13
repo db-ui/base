@@ -1,22 +1,25 @@
+/* eslint unicorn/prefer-module: 0 */
 const StyleDictionary = require('style-dictionary').extend(
 	'style-dictionary.config.json'
 );
 
+/* eslint unicorn/prefer-module: 0 */
 const minifyDictionary = require('style-dictionary/lib/common/formatHelpers/minifyDictionary');
 
 const flattenColors = (dictionary) => {
-	const colors = dictionary['color'];
-	let flatColors = {};
+	const colors = dictionary.color;
+	const flatColors = {};
 	if (colors) {
-		Object.keys(colors).forEach((colorKey) => {
+		for (const colorKey of Object.keys(colors)) {
 			if (
 				typeof colors[colorKey] === 'string' ||
 				colors[colorKey] instanceof String
 			) {
 				flatColors[colorKey] = colors[colorKey];
 			} else {
-				Object.keys(colors[colorKey]).forEach((subColorKey) => {
-					// TODO: We should be able to removed this with Amazon Style Dictionary 4, as this might allow parallel "nesting" of a value and subentries
+				for (const subColorKey of Object.keys(colors[colorKey])) {
+					/* eslint no-warning-comments: 0 */
+					// TODO: We should be able to remove this with Amazon Style Dictionary 4, as this might allow parallel "nesting" of a value and subentries
 					if (subColorKey === '_') {
 						flatColors[`${colorKey}`] =
 							colors[colorKey][subColorKey];
@@ -27,15 +30,17 @@ const flattenColors = (dictionary) => {
 						flatColors[`${colorKey}-${subColorKey}`] =
 							colors[colorKey][subColorKey];
 					}
-				});
+				}
 			}
-		});
+		}
 	}
-	dictionary['color'] = flatColors;
+
+	dictionary.color = flatColors;
 };
 
 StyleDictionary.registerFormat({
 	name: 'tailwind',
+	/* eslint object-shorthand: 0, prettier/prettier: 0 */
 	formatter: function ({ dictionary }) {
 		const minifiedDic = minifyDictionary(dictionary.tokens);
 		flattenColors(minifiedDic);
