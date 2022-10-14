@@ -116,5 +116,24 @@
 			"extend": "helpers/*.js"
 		}
 	},
-	"transformedAssetTypes": ["scss"]
+	"transformedAssetTypes": ["scss"],
+	"plugins": {
+		"@mfranzke/plugin-node-uiextension": {
+			"enabled": true,
+			"initialized": false,
+			"options": {
+				"stylesheets": [
+					"https://db-ui.github.io/core/css/pattern-scaffolding-project-specific.css"
+				],
+				"navLinks": {
+					"before": [],
+					"after": []
+				},
+				"toolLinks": {
+					"before": [],
+					"after": []
+				}
+			}
+		}
+	}
 }

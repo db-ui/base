@@ -30,7 +30,7 @@ Install Tailwind based on your framework: [Installations](https://tailwindcsscom
 Instead, run this command in your project:
 
 ```bash
-node ./node_modules/@db-ui/base/build/tailwind/tailwind-config-generator.js
+node ./node_modules/@db-ui/base/build/tailwind/tailwind-config-generator.mjs
 ```
 
 This will create your `tailwind.config.js`.
@@ -40,7 +40,7 @@ This will create your `tailwind.config.js`.
 If you don't want to have a customizable config, you can also use the default tailwind-config by running:
 
 ```bash
-node ./node_modules/@db-ui/base/build/tailwind/tailwind-config-generator.js default
+node ./node_modules/@db-ui/base/build/tailwind/tailwind-config-generator.mjs default
 ```
 
 ---

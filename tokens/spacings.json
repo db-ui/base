@@ -15,6 +15,10 @@
 		"m": {
 			"value": "1rem",
 			"themeable": true
+		},
+		"l": {
+			"value": "1.25rem",
+			"themeable": true
 		}
 	}
 }

@@ -2,7 +2,8 @@
  * This script generates a tailwind.config.js file
  */
 
-const fs = require('fs');
+import * as process from 'node:process';
+import * as fs from 'node:fs';
 
 const run = async () => {
 	const defaultConfig = process.argv[2];

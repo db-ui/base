@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import * as ChildProcess from "node:child_process";
-import * as process from "node:process";
-import * as dotenv from "dotenv";
+import * as ChildProcess from 'node:child_process';
+import * as process from 'node:process';
+import * as dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ const checkCommitMail = () => {
 		process.exit(1);
 	}
 
-	const currentMail = ChildProcess.execSync("git config user.email")
+	const currentMail = ChildProcess.execSync('git config user.email')
 		.toString()
 		.trim()
 		.toLowerCase();
@@ -24,7 +24,7 @@ const checkCommitMail = () => {
 			`currentMail: ${currentMail} !== initialMail: ${commitMail}`
 		);
 		console.error(
-			`Please set your commit user mail for this project like: 'git config user.email "${commitMail}"'`
+			`Please set your commit user mail for this project like: 'git config user.email '${commitMail}''`
 		);
 		process.exit(1);
 	}
