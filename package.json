@@ -16,13 +16,13 @@
     "copy:csstokens": "cpr build/css/variables.css out/css/variables.css -o",
     "build:style-dictionary": "node style-dictionary.js && npm run copy:csstokens",
     "build:css": "sass source/css/db-ui-base.scss:out/css/db-ui-base.css --style=compressed --embed-sources --load-path=node_modules",
-    "build:tailwind": "node scripts/tailwind-config-generator.js false true && cpr scripts/tailwind-config-generator.js build/tailwind/tailwind-config-generator.js -o",
+    "build:tailwind": "node scripts/tailwind-config-generator.mjs false true && cpr scripts/tailwind-config-generator.mjs build/tailwind/tailwind-config-generator.mjs -o",
     "build": "npm-run-all copy:assets build:* pl:build",
     "clean": "rm -rf build",
     "lint": "npm-run-all -p lint:*",
     "lint:markdownlint": "markdownlint -c .markdown-lint.yml **/*.md",
     "lint:stylelint": "stylelint **/*.scss",
-    "lint:eslint": "eslint . --ext .js --ignore-path .gitignore  --ignore-path .eslintignore",
+    "lint:xo": "xo",
     "start": "npm-run-all build:style-dictionary --parallel pl:serve watch:tokens watch:scss",
     "test": "exit 0",
     "watch:tokens": "nodemon --watch tokens/ -e json -x \"npm run build:style-dictionary\"",
@@ -45,8 +45,6 @@
     "@pattern-lab/uikit-workshop": "5.17.0",
     "cpr": "3.0.1",
     "dotenv": "^16.0.3",
-    "eslint": "8.25.0",
-    "eslint-config-prettier": "8.5.0",
     "find-versions-cli": "^4.0.0",
     "husky": "8.0.1",
     "markdownlint-cli": "^0.32.2",
@@ -59,10 +57,11 @@
     "stylelint": "14.13.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-sass-guidelines": "9.0.1",
-    "validate-branch-name": "^1.3.0"
+    "validate-branch-name": "^1.3.0",
+    "xo": "^0.52.4"
   },
   "validate-branch-name": {
-    "pattern": "((dependabot-)|^((fix|feat|bugfix|feature|test|chore|refactor|ci)\\-[a-zA-Z0-9\\-]+)$)",
+    "pattern": "((dependabot-)|^((test|feat|fix|chore|docs|refactor|style|ci|perf)\\-[a-zA-Z0-9\\-]+)$)",
     "errorMsg": "There is something wrong with your branch name. You should rename your branch to a valid name and try again. See the Pattern below."
   },
   "repository": {
