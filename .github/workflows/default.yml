@@ -12,6 +12,7 @@ jobs:
     uses: ./.github/workflows/00-init.yml
 
   scan-secrets:
+    if: github.owner == 'db-ui'
     uses: ./.github/workflows/00-scan-secrets.yml
 
   lint:
@@ -26,8 +27,15 @@ jobs:
   build:
     uses: ./.github/workflows/01-build.yml
     needs: [init]
+    
+  checks-done:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🎉 Checks done
+        run: echo "🎉 Linting & build were successful."
+    needs: [build, lint]
 
   deploy:
     uses: ./.github/workflows/02-deploy-gh-pages.yml
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: ${{ github.actor != 'dependabot[bot]' && github.owner == 'db-ui' }}
     needs: [lint, build]

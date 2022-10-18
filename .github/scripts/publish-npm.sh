@@ -19,7 +19,7 @@ echo "📦 Create packages"
 npm pack --quiet
 
 TAG="latest"
-if [[ "$GITHUB_COMMITISH" =~ v[0-9]+ ]];then
+if [[ "$GITHUB_COMMITISH" =~ dbux-[0-9]+ ]];then
   TAG=$GITHUB_COMMITISH
 elif [[ $PRE_RELEASE == 'true' ]]; then
   TAG="next"
