@@ -27,6 +27,13 @@ jobs:
   build:
     uses: ./.github/workflows/01-build.yml
     needs: [init]
+    
+  checks-done:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🎉 Checks done
+        run: echo "🎉 Linting & build were successful."
+    needs: [build, lint]
 
   deploy:
     uses: ./.github/workflows/02-deploy-gh-pages.yml
