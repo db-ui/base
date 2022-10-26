@@ -1,4 +1,16 @@
 .DO-NOT-COPY-THIS-CLASS-example-color-container {
 	width: 100%;
-	padding: 2rem;
+
+	label {
+		font-size: 0.75rem;
+		line-height: 2rem;
+	}
+
+	aside {
+		padding: 2rem;
+	}
+
+	+ .DO-NOT-COPY-THIS-CLASS-example-color-container {
+		margin-left: 1rem;
+	}
 }

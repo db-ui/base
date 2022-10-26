@@ -256,29 +256,28 @@
 /**
 *  Colors Documentation
 **/
-main.colors-documentation {
-	h2 {
-		margin-top: 3rem;
-	}
 
-	h3 {
-		margin-top: 2rem;
-	}
+main.colors-documentation h2 {
+	margin-top: 3rem;
+}
 
-	figure {
-		margin: 0;
-		display: grid;
-		grid-auto-columns: 50% 50%;
-		grid: 1fr 1fr;
-		grid-gap: 1rem;
-		grid-auto-flow: column;
-	}
+main.colors-documentation h3 {
+	margin-top: 2rem;
+}
 
-	img {
-		width: 100%;
-		max-width: 100%;
-		border-radius: 0.875rem;
-		box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
-			rgb(60 64 67 / 15%) 0px 1px 3px 1px;
-	}
+main.colors-documentation figure {
+	margin: 0;
+	display: grid;
+	grid-auto-columns: 50% 50%;
+	grid: 1fr 1fr;
+	grid-gap: 1rem;
+	grid-auto-flow: column;
+}
+
+main.colors-documentation img {
+	width: 100%;
+	max-width: 100%;
+	border-radius: 0.875rem;
+	box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
+		rgb(60 64 67 / 15%) 0px 1px 3px 1px;
 }
