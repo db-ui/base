@@ -12,7 +12,8 @@ jobs:
     uses: ./.github/workflows/00-init.yml
 
   scan-secrets:
-    if: github.repository == 'db-ui/base'
+    # TODO: Integrate a working condition for forks to work correctly
+    # if: github.repository == 'db-ui/base'
     uses: ./.github/workflows/00-scan-secrets.yml
 
   lint:
