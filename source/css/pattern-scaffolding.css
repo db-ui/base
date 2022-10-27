@@ -275,7 +275,7 @@ main.colors-documentation figure {
 }
 
 main.colors-documentation img {
-	width: 100%;
+	height: auto;
 	max-width: 100%;
 	border-radius: 0.875rem;
 	box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
