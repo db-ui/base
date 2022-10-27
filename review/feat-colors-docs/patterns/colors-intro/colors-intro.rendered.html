@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../css/db-ui-base.css?1666703273217" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1666703273217" media="all" />
-    <link rel="stylesheet" href="https://db-ui.github.io/core/css/pattern-scaffolding-project-specific.css?1666703273217" media="all" />
+    <link rel="stylesheet" href="../../css/db-ui-base.css?1666858516583" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1666858516583" media="all" />
+    <link rel="stylesheet" href="https://db-ui.github.io/core/css/pattern-scaffolding-project-specific.css?1666858516583" media="all" />
 
 	  <script type="module">
 		  import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@db-ui/elements/loader/index.es2017.js';
@@ -23,49 +23,54 @@
     <!-- End Pattern Lab -->
 
   </head>
-  <body class="">
+  <body class="tpl-intro">
 
   <div style="position: absolute; top: 8px; right: 8px">
 	  <github-version-switcher owner="db-ui" repo="base">
 	  </github-version-switcher>
   </div>
-<main class="rea-main">
-    <h1>Color System</h1>
-    <p>DB UX Design Guidelines 3.0 introduce a complete new set of color variables that follow some rules to work with.</p>
-    <p>Each accent color (primary, secondary, information, etc.) is provided in a group of four compatible colors of different tones for pairing, defining emphasis, and visual expression. </p>
-    <p>Accent colors primary, secondary, information, warning, error, critical and success are following the same pattern of a 4-color group. </p>
+<main class="colors-documentation">
+    <section>
+        <h1>Color System</h1>
+        <p>DB UX Design Guidelines 3.0 introduce a complete new set of color variables that follow some rules to work with.</p>
+        <p>Each accent color (primary, secondary, information, etc.) is provided in a group of six compatible colors of different tones for pairing, defining emphasis, and visual expression.</p>
+        <p>Background colors define their own foreground color by so named on-colors. For using the DB Design System with SCSS, we provide a wide range of SCSS placeholders and utility 
+            classes that automatically style e.g. text and links based on their current background color. For more information have a look at the usage section.</p>
+    
 
-    <h2>Color Scheme – Primary (Example)</h2>
-    <p>Each defined color has an interactive mode which means that colors for hover and pressed states are defined.</p>
-    <ul>
-        <li><b>Primary</b> – base key color</li>
-        <li><b>Primary Background-Light</b> – background color for current key color. Only used for backrounds.</li>
-        <li><b>Primary Background-Transparent</b> - Transparent or semi transparent backgrounds for current key color, e.g. used for form field backgrounds.</li>
-        <li><b>On Primary</b> – is applied to content (icons, text, etc.) that sits on top of primary</li>
-        <li><b>On Primary Background</b> – is applied to content (icons, text, etc.) that sits on top of primary background colors (background light or transparent).</li>
-        <li><b>On Primary Background Weak</b> – is applied to content (icons, text, etc.) that sits on top of primary background colors (background light or transparent) and is a variant to weaken content on primary backgrounds.
-        </li>
-    </ul>
+        <h2>Color Scheme – Primary (Example)</h2>
+        <p>The following example shows the available colors for the primary brand color. 
+            Each defined color has an interactive mode which means that colors for hover and pressed states are defined.</p>
+        <ul>
+            <li><b>Primary</b> – base key color</li>
+            <li><b>On Primary</b> – is applied to content (icons, text, etc.) that sits on top of primary</li>
+            <li><b>Primary Background-Light</b> – background color for current key color. Only used for backrounds.</li>
+            <li><b>Primary Background-Transparent</b> – Transparent or semi transparent backgrounds for current key color, e.g. used for form field backgrounds.</li>
+            <li><b>On Primary Background</b> – is applied to content (icons, text, etc.) that sits on top of primary background colors (background light or transparent).</li>
+            <li><b>On Primary Background Weak</b> – is applied to content (icons, text, etc.) that sits on top of primary background colors (background light or transparent) and is a variant to weaken content on primary backgrounds.
+            </li>
+        </ul>
 
-    <h3>Color Scheme Illustration</h3>
-    <figure class="color-scheme-illustration">
-        <img src='../../images/documentation/colors/primary.png' alt='Color Scheme Example' width="720" height="480">
-        <img src='../../images/documentation/colors/primary-background.png' alt='Color Scheme Example' width="720" height="480">
-    </figure>
+        <h3>Color Scheme Illustration</h3>
+        <figure class="color-scheme-illustration">
+            <img src='../../images/documentation/colors/primary.png' alt='Color Scheme Example' width="720" height="480">
+            <img src='../../images/documentation/colors/primary-background.png' alt='Color Scheme Example' width="720" height="480">
+        </figure>
 
-    <h2>Neutral Color Scheme</h2>
-    <p>The neutral color palette exists of 6 color variants. In contrast to key colors like primary, neutral colors can only be used for backgrounds.</p>
+        <h2>Neutral Color Scheme</h2>
+        <p>The neutral color palette exists of six color variants plus two on-color variants (default and weak). In contrast to key colors like primary, neutral colors can only be used for backgrounds.</p>
 
-    <img src='../../images/documentation/colors/neutral-palette.png' alt='Neutral Color Scheme' width="2100" height="519">
+        <img src='../../images/documentation/colors/neutral-palette.png' alt='Neutral Color Scheme' width="2100" height="519">
+    </section>
 </main>
 
 <!--DO NOT REMOVE-->
 <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
-  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>The defined color palette specifies colors in three dimensions: background, foreground (in most cases text) and specific states as :hover and :active.</p>\n","patternBreadcrumb":{"patternGroup":"colors","patternSubgroup":""},"patternExtension":"hbs","patternName":"Intro","patternPartial":"colors-intro","patternState":"","patternEngineName":"handlebars","extraOutput":{"order":-1}}
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"colors","patternSubgroup":""},"patternExtension":"hbs","patternName":"Intro","patternPartial":"colors-intro","patternState":"","patternEngineName":"handlebars","extraOutput":{"order":-1}}
 </script>
 
 <script>
-  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>The defined color palette specifies colors in three dimensions: background, foreground (in most cases text) and specific states as :hover and :active.</p>\n","patternBreadcrumb":{"patternGroup":"colors","patternSubgroup":""},"patternExtension":"hbs","patternName":"Intro","patternPartial":"colors-intro","patternState":"","patternEngineName":"handlebars","extraOutput":{"order":-1}};
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"colors","patternSubgroup":""},"patternExtension":"hbs","patternName":"Intro","patternPartial":"colors-intro","patternState":"","patternEngineName":"handlebars","extraOutput":{"order":-1}};
 </script>
 
 <script>
@@ -101,10 +106,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1666703273217">
+<script id="pl-js-polyfill-insert-1666858516583">
   (function() {
     if (self != top) {
-      var cb = '1666703273217';
+      var cb = '1666858516583';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -117,7 +122,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1666703273217" nomodule>
+<script id="pl-js-insert-1666858516583" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
