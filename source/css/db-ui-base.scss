@@ -1,6 +1,7 @@
 @import "../../build/scss/variables";
 @import "../../build/scss/font-faces";
 @import "../../build/scss/typography-classes";
+@import "../../build/scss/typography-placeholder";
 @import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
 
@@ -14,6 +15,8 @@ optgroup,
 select,
 textarea {
 	font-family: $db-font-family-sans;
+
+	@extend %db-typo-body-md;
 }
 
 strong,
