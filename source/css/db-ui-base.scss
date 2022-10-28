@@ -1,24 +1,24 @@
 @import "../../build/scss/variables";
 @import "../../build/scss/font-faces";
+@import "../../build/scss/typography-placeholder";
 @import "../../build/scss/typography-classes";
 @import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
+@import "../../build/scss/db-ui";
 
-/* body {
-	font-family: var(--asset-font-db-screensans-regular-name);
-} */
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
+body {
+	@extend %db-ui-functional;
 	font-family: $db-font-family-sans;
 }
 
-strong,
-b {
-	font-family: $db-font-family-bold;
+/* ugly workaround for db-ui-core components */
+// TODO: let's evaluate to move the reset.css to DB UI Base even already and probably even also update it
+div,
+button,
+input,
+select,
+textarea {
+	font-size: inherit !important;
 }
 
 h1,
@@ -35,5 +35,11 @@ h6 {
 @import "../_patterns/spacings/examples.demonstration";
 
 main {
-	padding: $db-spacing-1 $db-spacing-3;
+	padding: 8px 24px;
+}
+
+.typography-table {
+	tr > td {
+		padding: 4px 8px;
+	}
 }

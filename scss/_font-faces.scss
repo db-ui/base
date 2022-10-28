@@ -1,10 +1,19 @@
 @font-face {
-	font-family: $db-font-db-screenhead-font-family;
+	font-family: $db-font-db-screenhead-light-font-family;
 	font-style: normal;
-	font-weight: $db-font-db-screenhead-font-weight;
-	src: local($db-font-db-screenhead-name),
-		url($db-font-db-screenhead-woff2) format("woff2"),
-		url($db-font-db-screenhead-woff) format("woff");
+	font-weight: $db-font-db-screenhead-light-font-weight;
+	src: local($db-font-db-screenhead-light-name),
+		url($db-font-db-screenhead-light-woff2) format("woff2"),
+		url($db-font-db-screenhead-light-woff) format("woff");
+}
+
+@font-face {
+	font-family: $db-font-db-screenhead-black-font-family;
+	font-style: normal;
+	font-weight: $db-font-db-screenhead-black-font-weight;
+	src: local($db-font-db-screenhead-black-name),
+		url($db-font-db-screenhead-black-woff2) format("woff2"),
+		url($db-font-db-screenhead-black-woff) format("woff");
 }
 
 @font-face {

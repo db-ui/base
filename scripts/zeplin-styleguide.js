@@ -107,19 +107,18 @@ const shortenTypographyRecursive = (data) => {
 					}
 
 					result[topLvlKey] = {
+						// TODO: Fix values after update in zeplin
 						lineHeight: {
-							value: foundValue.lineHeight,
-							attributes: {
-								category: 'size'
-							}
+							value:
+								Number(foundValue.lineHeight) /
+								Number(foundValue.font.size)
 						},
 						fontSize: {
 							value: `${foundValue.font.size}`,
 							attributes: {
-								category: 'size'
+								category: 'dynamic-size'
 							}
-						},
-						fontWeight: { value: foundValue.font.weight }
+						}
 					};
 				} else {
 					result[topLvlKey] = shortenTypographyRecursive(topLvlData);
@@ -140,19 +139,21 @@ const convertTextStyles = (data) => {
 	const keys = Object.keys(data.textStyles);
 	const newTextStyles = {};
 	for (const key of keys.filter((key) => {
-		// Some issue of old data?
-		return !key.startsWith('db-');
+		return (
+			key.includes('token') &&
+			// We don't need bold and light
+			!key.includes('bold') &&
+			!key.includes('light')
+		);
 	})) {
 		const textStyle = data.textStyles[key];
 		delete textStyle.value.color;
 		const cKey = correctKey(key)
 			.replace('foundation-', '')
 			.replace('typography-', '')
-			.replace('autowidth-', '')
-			.replace('autoheight-', '')
-			.replace('link-link-', 'link-')
-			.replace('button-button-', 'button-')
-			.replace('large-bold', 'bold-large');
+			.replace('token-', '')
+			.replace('regular-', '')
+			.replace('black-', '');
 		newTextStyles[cKey] = { value: textStyle.value };
 	}
 

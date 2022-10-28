@@ -14,19 +14,26 @@
 			"woff": { "value": "'assets/fonts/dbscreensans-bold.woff'" },
 			"woff2": { "value": "'assets/fonts/dbscreensans-bold.woff2'" }
 		},
-		"db-screenhead": {
+		"db-screenhead-light": {
 			"name": { "value": "'DB Screen Head Light'" },
 			"font-family": { "value": "'DB Screen Head'" },
 			"font-weight": { "value": "300" },
 			"woff": { "value": "'assets/fonts/dbscreenhead-light.woff'" },
 			"woff2": { "value": "'assets/fonts/dbscreenhead-light.woff2'" }
 		},
+		"db-screenhead-black": {
+			"name": { "value": "'DB Screen Head Black'" },
+			"font-family": { "value": "'DB Screen Head'" },
+			"font-weight": { "value": "900" },
+			"woff": { "value": "'assets/fonts/dbscreenhead-black.woff'" },
+			"woff2": { "value": "'assets/fonts/dbscreenhead-black.woff2'" }
+		},
 		"family": {
 			"sans": {
 				"value": "{font.db-screensans-regular.font-family.value}, Helvetica, Arial, sans-serif"
 			},
 			"head": {
-				"value": "{font.db-screenhead.font-family.value}, Helvetica, Arial, sans-serif"
+				"value": "{font.db-screenhead-black.font-family.value}, Helvetica, Arial, sans-serif"
 			},
 			"bold": {
 				"value": "{font.db-screensans-bold.font-family.value}, Helvetica, Arial, sans-serif"
