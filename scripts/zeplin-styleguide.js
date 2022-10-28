@@ -107,8 +107,11 @@ const shortenTypographyRecursive = (data) => {
 					}
 
 					result[topLvlKey] = {
+						// TODO: Fix values after update in zeplin
 						lineHeight: {
-							value: foundValue.lineHeight
+							value:
+								Number(foundValue.lineHeight) /
+								Number(foundValue.font.size)
 						},
 						fontSize: {
 							value: `${foundValue.font.size}`,

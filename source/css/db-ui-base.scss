@@ -4,10 +4,10 @@
 @import "../../build/scss/typography-classes";
 @import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
-@import "../../build/scss/scale";
+@import "../../build/scss/db-ui";
 
 body {
-	@extend %db-scale-functional;
+	@extend %db-ui-functional;
 	font-family: $db-font-family-sans;
 }
 
