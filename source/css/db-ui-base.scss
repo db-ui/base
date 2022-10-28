@@ -35,11 +35,11 @@ h6 {
 @import "../_patterns/spacings/examples.demonstration";
 
 main {
-	padding: $db-spacing-1 $db-spacing-3;
+	padding: 8px 24px;
 }
 
 .typography-table {
 	tr > td {
-		padding: $db-spacing-0-5 $db-spacing-1;
+		padding: 4px 8px;
 	}
 }

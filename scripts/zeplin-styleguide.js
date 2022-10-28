@@ -117,15 +117,12 @@ const shortenTypographyRecursive = (data) => {
 
 					result[topLvlKey] = {
 						lineHeight: {
-							value: foundValue.lineHeight,
-							attributes: {
-								category: 'size'
-							}
+							value: foundValue.lineHeight
 						},
 						fontSize: {
 							value: `${foundValue.font.size}`,
 							attributes: {
-								category: 'size'
+								category: 'dynamic-size'
 							}
 						}
 					};
