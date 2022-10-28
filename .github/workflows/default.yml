@@ -4,15 +4,15 @@ on:
   pull_request:
   push:
     branches:
-      - 'main'
-      - 'dbux-3'
+      - "main"
+      - "dbux-3"
 
 jobs:
   init:
     uses: ./.github/workflows/00-init.yml
 
   scan-secrets:
-    if: github.owner == 'db-ui'
+    if: github.event.pull_request == null || github.event.pull_request.head.repo.owner.login == 'db-ui'
     uses: ./.github/workflows/00-scan-secrets.yml
 
   lint:
@@ -27,7 +27,7 @@ jobs:
   build:
     uses: ./.github/workflows/01-build.yml
     needs: [init]
-    
+
   checks-done:
     runs-on: ubuntu-latest
     steps:
@@ -37,5 +37,5 @@ jobs:
 
   deploy:
     uses: ./.github/workflows/02-deploy-gh-pages.yml
-    if: ${{ github.actor != 'dependabot[bot]' && github.owner == 'db-ui' }}
+    if: ${{ github.actor != 'dependabot[bot]' && github.event.pull_request == null || github.event.pull_request.head.repo.owner.login == 'db-ui' }}
     needs: [lint, build]
