@@ -30,6 +30,9 @@
 			"icon": "car"
 		},
 		{
+			"icon": "carsharing"
+		},
+		{
 			"icon": "commuter_train"
 		},
 		{
@@ -64,6 +67,9 @@
 		},
 		{
 			"icon": "self-driving_side_view"
+		},
+		{
+			"icon": "shuttle"
 		},
 		{
 			"icon": "speedboat"
