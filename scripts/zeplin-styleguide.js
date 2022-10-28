@@ -1,6 +1,6 @@
 require('dotenv').config();
-const { ZeplinApi, Configuration } = require('@zeplin/sdk');
 const FS = require('fs');
+const { ZeplinApi, Configuration } = require('@zeplin/sdk');
 
 const zeplin = new ZeplinApi(
 	new Configuration({
@@ -16,6 +16,7 @@ const correctKey = (key) => {
 			correctKey = correctKey.replace(`${replacementNumber}-`, '');
 		}
 	}
+
 	return correctKey;
 };
 
@@ -24,6 +25,7 @@ const correctColor = (key) => {
 	if (correctKey.startsWith('on') && !correctKey.startsWith('on-')) {
 		correctKey = correctKey.replace('on', 'on-');
 	}
+
 	if (
 		!correctKey.endsWith('-enabled') &&
 		!correctKey.endsWith('-hover') &&
@@ -31,52 +33,40 @@ const correctColor = (key) => {
 	) {
 		correctKey = `${correctKey}-enabled`;
 	}
-	return correctKey.replace('background', 'bg');
-};
 
-const combineDataRecursive = (data, currentKey, keyArray, value) => {
-	const nextKey = keyArray.shift();
-	if (keyArray.length === 0) {
-		return { [nextKey]: value };
-	}
-	data[currentKey] = {
-		...data[currentKey],
-		[nextKey]: combineDataRecursive(
-			data[currentKey],
-			nextKey,
-			keyArray,
-			value
-		)
-	};
+	return correctKey.replace('background', 'bg');
 };
 
 const mergeData = (data) => {
 	const mData = {};
-	Object.keys(data).forEach((key) => {
+	for (const key of Object.keys(data)) {
 		const splitKeys = key.split('-');
 		if (splitKeys.length > 1 && splitKeys[0] === 'on') {
 			splitKeys[0] = splitKeys[1];
 			splitKeys[1] = 'on';
 		}
-		let tmpData = mData;
-		splitKeys.forEach((sKey, index) => {
+
+		let temporaryData = mData;
+		for (const [index, sKey] of splitKeys.entries()) {
 			if (index === splitKeys.length - 1) {
-				tmpData[sKey] = data[key];
+				temporaryData[sKey] = data[key];
 			} else {
-				if (!tmpData[sKey]) {
-					tmpData[sKey] = {};
+				if (!temporaryData[sKey]) {
+					temporaryData[sKey] = {};
 				}
-				tmpData = tmpData[sKey];
+
+				temporaryData = temporaryData[sKey];
 			}
-		});
-	});
+		}
+	}
+
 	return mData;
 };
 
 const convertColors = (data) => {
 	const keys = Object.keys(data.colors);
 	const newColors = {};
-	keys.forEach((key) => {
+	for (const key of keys) {
 		const color = data.colors[key];
 		newColors[correctColor(correctKey(key))] = {
 			value: color.value,
@@ -84,35 +74,36 @@ const convertColors = (data) => {
 				category: 'color'
 			}
 		};
-	});
+	}
+
 	data.colors = mergeData(newColors);
 };
 
-const alignments = ['left', 'center', 'right'];
+const alignments = new Set(['left', 'center', 'right']);
 
 const shortenTypographyRecursive = (data) => {
 	if (data instanceof Object) {
 		const result = {};
 		try {
 			const dataKeys = Object.keys(data);
-			dataKeys.forEach((topLvlKey) => {
+			for (const topLvlKey of dataKeys) {
 				const topLvlData = data[topLvlKey];
 				if (!topLvlData) {
-					return { [topLvlKey]: { value: 'error' } };
+					continue;
 				}
+
 				const secondLvKeys = Object.keys(topLvlData);
 				if (
-					secondLvKeys.length > 0 &&
-					secondLvKeys.find(
-						(sKey) => sKey === 'value' || alignments.includes(sKey)
+					secondLvKeys.some(
+						(sKey) => sKey.includes('value') || alignments.has(sKey)
 					)
 				) {
 					const foundValue =
 						secondLvKeys[0] === 'value'
-							? topLvlData['value']
-							: topLvlData[secondLvKeys[0]]['value'];
+							? topLvlData.value
+							: topLvlData[secondLvKeys[0]].value;
 					if (!foundValue) {
-						return { [topLvlKey]: { value: 'error' } };
+						continue;
 					}
 
 					result[topLvlKey] = {
@@ -133,13 +124,15 @@ const shortenTypographyRecursive = (data) => {
 				} else {
 					result[topLvlKey] = shortenTypographyRecursive(topLvlData);
 				}
-			});
-		} catch (e) {
-			console.error(e);
+			}
+		} catch (error) {
+			console.error(error);
 			console.log(data);
 		}
+
 		return result;
 	}
+
 	return { value: 'error' };
 };
 
@@ -147,10 +140,10 @@ const convertTextStyles = (data) => {
 	const keys = Object.keys(data.textStyles);
 
 	const newTextStyles = {};
-	keys.filter((key) => {
-		// some issue of old data?
+	for (const key of keys.filter((key) => {
+		// Some issue of old data?
 		return !key.startsWith('db-');
-	}).forEach((key) => {
+	})) {
 		const textStyle = data.textStyles[key];
 		delete textStyle.value.color;
 		const cKey = correctKey(key)
@@ -162,14 +155,15 @@ const convertTextStyles = (data) => {
 			.replace('button-button-', 'button-')
 			.replace('large-bold', 'bold-large');
 		newTextStyles[cKey] = { value: textStyle.value };
-	});
+	}
+
 	data.textStyles = shortenTypographyRecursive(mergeData(newTextStyles));
 };
 
 const convertSpacings = (data) => {
 	const keys = Object.keys(data.spacing);
 	const newSpacings = {};
-	keys.forEach((key) => {
+	for (const key of keys) {
 		const spacing = data.spacing[key];
 		const containsDot = key.split('-').length === 3;
 		let cKey = containsDot ? key.replace('-5', '.5') : key;
@@ -177,7 +171,8 @@ const convertSpacings = (data) => {
 		newSpacings[cKey] = {
 			value: `${spacing.value}px`
 		};
-	});
+	}
+
 	data.spacing = newSpacings;
 };
 
@@ -198,7 +193,7 @@ const convertSpacings = (data) => {
 				colors: data.colors
 			})
 		);
-	} catch (e) {
-		console.error(e);
+	} catch (error) {
+		console.error(error);
 	}
 })();

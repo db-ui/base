@@ -1,4 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 const getOnHeader = (header) => {
 	const splitHeader = header.split('-');
 	splitHeader.splice(1, 0, 'on');
@@ -43,7 +42,7 @@ const addListElement = (header, value) => {
 };
 
 const getTryoutElement = (
-	colorObj,
+	colorObject,
 	defaultBackground,
 	defaultForeground,
 	isBackground
@@ -51,16 +50,22 @@ const getTryoutElement = (
 	const stateElement = isBackground ? 'backgroundColor' : 'color';
 	return `<li>
 				<div class="sg-swatch"
-				onmousedown="this.style['${stateElement}']='${colorObj[colorStates[2]].value}'"
-				onmouseup="this.style['${stateElement}']='${colorObj[colorStates[1]].value}'"
-				onmouseover="this.style['${stateElement}']='${colorObj[colorStates[1]].value}'"
-				onmouseout="this.style['${stateElement}']='${colorObj[colorStates[0]].value}'"
+				onmousedown="this.style['${stateElement}']='${
+		colorObject[colorStates[2]].value
+	}'"
+				onmouseup="this.style['${stateElement}']='${colorObject[colorStates[1]].value}'"
+				onmouseover="this.style['${stateElement}']='${
+		colorObject[colorStates[1]].value
+	}'"
+				onmouseout="this.style['${stateElement}']='${
+		colorObject[colorStates[0]].value
+	}'"
 				style="background-color: ${
 					isBackground
-						? colorObj[colorStates[0]].value
+						? colorObject[colorStates[0]].value
 						: defaultBackground
 				};
-				color: ${isBackground ? defaultForeground : colorObj[colorStates[0]].value};"
+				color: ${isBackground ? defaultForeground : colorObject[colorStates[0]].value};"
 				>
 					<span class="sg-label">
 						<strong>My ${isBackground ? 'background' : 'foreground'}</strong>
@@ -78,11 +83,11 @@ const addList = (header, headerObject, keys) => {
 	let resultString = '';
 
 	let defaultForeground;
-	let defaultBackground = headerObject[colorStates[0]]?.value;
+	const defaultBackground = headerObject[colorStates[0]]?.value;
 	let onObject;
 
 	if (keys.includes('on')) {
-		onObject = headerObject['on'];
+		onObject = headerObject.on;
 		defaultForeground = onObject[colorStates[0]]?.value;
 	}
 
@@ -100,6 +105,7 @@ const addList = (header, headerObject, keys) => {
 				});
 			}
 		}
+
 		resultString += getTryoutElement(
 			headerObject,
 			defaultBackground,
@@ -124,6 +130,7 @@ const addList = (header, headerObject, keys) => {
 				});
 			}
 		}
+
 		resultString += getTryoutElement(
 			onObject,
 			defaultBackground,
@@ -140,58 +147,59 @@ module.exports = function (Handlebars) {
 	Handlebars.registerHelper('flat-colors', function (context) {
 		let resultString = '';
 
-		Object.keys(context.data.root.colors).forEach((header) => {
-			resultString += `<h2>${header}</h2>`; // e.g. neutral, primary
+		for (const header of Object.keys(context.data.root.colors)) {
+			resultString += `<h2>${header}</h2>`; // E.g. neutral, primary
 			const headerObject = context.data.root.colors[header];
 			if (headerObject) {
-				const headerObjKeysRest = Object.keys(headerObject).filter(
+				const headerObjectKeysRest = Object.keys(headerObject).filter(
 					(k) => k !== 'bg'
 				);
-				// neutral has no enabled color
+				// Neutral has no enabled color
 				if (context.data.root.colors[header].enabled) {
 					resultString += addList(
 						header,
 						headerObject,
-						headerObjKeysRest
+						headerObjectKeysRest
 					);
 				}
-				const onBgObject = headerObject['on'];
-				const bgObject = headerObject['bg'];
+
+				const onBgObject = headerObject.on;
+				const bgObject = headerObject.bg;
 				if (bgObject) {
 					let bgKeys = Object.keys(bgObject);
-					if (onBgObject['bg']) {
-						if (bgKeys.find((key) => key === 'enabled')) {
-							bgObject.on = onBgObject['bg'];
+					if (onBgObject.bg) {
+						if (bgKeys.some((key) => key.includes('enabled'))) {
+							bgObject.on = onBgObject.bg;
 						} else {
 							// Only happens in neutral colors
-							bgKeys.forEach((bgKey) => {
+							for (const bgKey of bgKeys) {
 								if (
-									Object.keys(bgObject[bgKey]).find(
-										(key) => key === 'enabled'
+									Object.keys(bgObject[bgKey]).some((key) =>
+										key.includes('enabled')
 									)
 								) {
 									bgObject[bgKey] = {
 										...bgObject[bgKey],
-										on: onBgObject['bg']
+										on: onBgObject.bg
 									};
 								} else {
-									Object.keys(bgObject[bgKey]).forEach(
-										(bgChildKey) => {
-											bgObject[`${bgKey}-${bgChildKey}`] =
-												{
-													...bgObject[bgKey][
-														bgChildKey
-													],
-													on: onBgObject['bg']
-												};
-										}
-									);
+									for (const bgChildKey of Object.keys(
+										bgObject[bgKey]
+									)) {
+										bgObject[`${bgKey}-${bgChildKey}`] = {
+											...bgObject[bgKey][bgChildKey],
+											on: onBgObject.bg
+										};
+									}
 								}
-							});
+							}
 						}
 					}
+
 					bgKeys = Object.keys(bgObject);
-					const defaultChildren = bgKeys.filter(isDefaultChild);
+					const defaultChildren = bgKeys.filter((key) =>
+						isDefaultChild(key)
+					);
 					const otherChildren = bgKeys.filter(
 						(key) => !isDefaultChild(key)
 					);
@@ -201,17 +209,17 @@ module.exports = function (Handlebars) {
 						bgObject,
 						defaultChildren
 					);
-					otherChildren.forEach((bgChildKey) => {
+					for (const bgChildKey of otherChildren) {
 						const bgChildObject = bgObject[bgChildKey];
 						resultString += addList(
 							`${header}-bg-${bgChildKey}`,
 							bgChildObject,
 							Object.keys(bgChildObject)
 						);
-					});
+					}
 				}
 			}
-		});
+		}
 
 		return new Handlebars.SafeString(resultString);
 	});

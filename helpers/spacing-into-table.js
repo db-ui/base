@@ -1,9 +1,9 @@
 module.exports = function (Handlebars) {
 	Handlebars.registerHelper('spacing-into-table', function (context) {
-		const SpacingSort = require('./spacing-sort');
-		const spacings = SpacingSort(context);
+		const spacingSort = require('./spacing-sort');
+		const spacings = spacingSort(context);
 
-		const tableObj = {
+		const tableObject = {
 			caption: 'Spacing overview',
 			headers: ['Token', 'Value', 'Ratio'],
 			rows: spacings.map((spacing) => ({
@@ -13,7 +13,10 @@ module.exports = function (Handlebars) {
 			}))
 		};
 
-		const tableStringify = JSON.stringify(tableObj).replace(/"/g, '&quot;');
+		const tableStringify = JSON.stringify(tableObject).replace(
+			/"/g,
+			'&quot;'
+		);
 		const table = `<db-table border="around" stripes="zebra" tabledata="${tableStringify}"></db-table>`;
 
 		return new Handlebars.SafeString(table);

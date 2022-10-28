@@ -10,18 +10,23 @@ const getShortSize = (size) => {
 	if (size === 'extralarge') {
 		return 'xl';
 	}
+
 	if (size === 'large') {
 		return 'lg';
 	}
+
 	if (size === 'medium') {
 		return 'md';
 	}
+
 	if (size === 'small') {
 		return 'sm';
 	}
+
 	if (size === 'xsmall') {
 		return 'xs';
 	}
+
 	if (size === 'xxsmall') {
 		return '2xs';
 	}
@@ -39,7 +44,15 @@ const getUtilityClass = (
 	let result = `
 ${utility ? '.' : '%'}${prefix}-typo-${typoType}-${getShortSize(size)}{
 `;
-	if (!missingMediaQuery) {
+	if (missingMediaQuery) {
+		result += '/* ERROR: Missing media queries*/';
+
+		result += `
+\tline-height: $${prefix}-typography-${typoType}-${size}-line-height;
+\tfont-size: $${prefix}-typography-${typoType}-${size}-font-size;
+\tfont-weight: $${prefix}-typography-${typoType}-${size}-font-weight;
+`;
+	} else {
 		result += `
 \tline-height: $${prefix}-typography-${typoType}-${size}-mobile-line-height;
 \tfont-size: $${prefix}-typography-${typoType}-${size}-mobile-font-size;
@@ -60,14 +73,6 @@ ${utility ? '.' : '%'}${prefix}-typo-${typoType}-${getShortSize(size)}{
 \t\tfont-weight: $${prefix}-typography-${typoType}-${size}-desktop-font-weight;
 \t}
 		`;
-	} else {
-		result += '/* ERROR: Missing media queries*/';
-
-		result += `
-\tline-height: $${prefix}-typography-${typoType}-${size}-line-height;
-\tfont-size: $${prefix}-typography-${typoType}-${size}-font-size;
-\tfont-weight: $${prefix}-typography-${typoType}-${size}-font-weight;
-`;
 	}
 
 	result += `
@@ -80,9 +85,9 @@ ${utility ? '.' : '%'}${prefix}-typo-${typoType}-${getShortSize(size)}{
 const generateClasses = (typography, screens, utility) => {
 	let allClasses = fileHeader;
 
-	Object.keys(typography).forEach((typoTypeKey) => {
+	for (const typoTypeKey of Object.keys(typography)) {
 		const typeObject = typography[typoTypeKey];
-		Object.keys(typeObject).forEach((sizeKey) => {
+		for (const sizeKey of Object.keys(typeObject)) {
 			const sizeObject = typeObject[sizeKey];
 			let missingMediaQuery = false;
 			if (
@@ -90,15 +95,16 @@ const generateClasses = (typography, screens, utility) => {
 			) {
 				missingMediaQuery = true;
 			}
-			allClasses += getUtilityClass(
+
+			allClasses += getUtilityClass({
 				utility,
 				screens,
 				typoTypeKey,
 				sizeKey,
 				missingMediaQuery
-			);
-		});
-	});
+			});
+		}
+	}
 
 	return allClasses;
 };
