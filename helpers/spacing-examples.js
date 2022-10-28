@@ -1,7 +1,7 @@
 module.exports = function (Handlebars) {
 	Handlebars.registerHelper('spacing-examples', function (context) {
-		const SpacingSort = require('./spacing-sort');
-		const spacings = SpacingSort(context);
+		const spacingSort = require('./spacing-sort');
+		const spacings = spacingSort(context);
 		const result = spacings
 			.map(
 				(spacing) =>

@@ -11,27 +11,35 @@ const getShortSize = (size) => {
 	if (size === '3xlarge') {
 		return '3xl';
 	}
+
 	if (size === '2xlarge') {
 		return '2xl';
 	}
+
 	if (size === 'xlarge') {
 		return 'xl';
 	}
+
 	if (size === 'large') {
 		return 'lg';
 	}
+
 	if (size === 'medium') {
 		return 'md';
 	}
+
 	if (size === 'small') {
 		return 'sm';
 	}
+
 	if (size === 'xsmall') {
 		return 'xs';
 	}
+
 	if (size === '2xsmall') {
 		return '2xs';
 	}
+
 	if (size === '3xsmall') {
 		return '3xs';
 	}
@@ -82,29 +90,29 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
 
-	// scaleTypeKey = [normal, functional, expressive]
-	Object.keys(typography).forEach((scaleTypeKey) => {
+	// ScaleTypeKey = [normal, functional, expressive]
+	for (const scaleTypeKey of Object.keys(typography)) {
 		const scaleObject = typography[scaleTypeKey];
 		const mediaQueryKeys = Object.keys(scaleObject);
 		if (mediaQueryKeys.length > 0) {
-			// desktop
+			// Desktop
 			const firstMediaQueryKey = mediaQueryKeys[0];
 			const firstMediaQueryObject = scaleObject[firstMediaQueryKey];
-			// textTypeKey = [headline, body]
-			Object.keys(firstMediaQueryObject).forEach((textTypeKey) => {
+			// TextTypeKey = [headline, body]
+			for (const textTypeKey of Object.keys(firstMediaQueryObject)) {
 				const textTypeObject = firstMediaQueryObject[textTypeKey];
-				// sizeKey = [3xlarge - 3xsmall]
-				Object.keys(textTypeObject).forEach((sizeKey) => {
+				// SizeKey = [3xlarge - 3xsmall]
+				for (const sizeKey of Object.keys(textTypeObject)) {
 					allClasses += getUtilityClass(
 						utility,
 						scaleTypeKey,
 						textTypeKey,
 						sizeKey
 					);
-				});
-			});
+				}
+			}
 		}
-	});
+	}
 
 	return allClasses;
 };

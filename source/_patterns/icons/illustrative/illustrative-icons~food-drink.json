@@ -7,6 +7,72 @@
 		},
 		{
 			"icon": "restaurant"
+		},
+		{
+			"icon": "lactose_free"
+		},
+		{
+			"icon": "gluten_free"
+		},
+		{
+			"icon": "egg_free"
+		},
+		{
+			"icon": "sustainable"
+		},
+		{
+			"icon": "low_carb"
+		},
+		{
+			"icon": "light_pleasure"
+		},
+		{
+			"icon": "energetic_strengthening"
+		},
+		{
+			"icon": "well_balanced"
+		},
+		{
+			"icon": "crustaceans_and_molluscs"
+		},
+		{
+			"icon": "fish"
+		},
+		{
+			"icon": "fish_and_molluscs"
+		},
+		{
+			"icon": "pork_and_beef"
+		},
+		{
+			"icon": "pork_and_poultry"
+		},
+		{
+			"icon": "beef_and_poultry"
+		},
+		{
+			"icon": "poultry"
+		},
+		{
+			"icon": "pork"
+		},
+		{
+			"icon": "venison"
+		},
+		{
+			"icon": "lamb"
+		},
+		{
+			"icon": "beef"
+		},
+		{
+			"icon": "rabbit"
+		},
+		{
+			"icon": "vegan"
+		},
+		{
+			"icon": "vegetarian"
 		}
 	]
 }

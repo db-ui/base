@@ -1,21 +1,23 @@
 module.exports = (context) => {
 	let spacings = [];
-	Object.keys(context.data.root.spacing).forEach((key) => {
+	for (const key of Object.keys(context.data.root.spacing)) {
 		spacings.push({
 			key,
 			value: context.data.root.spacing[key].value
 		});
-	});
+	}
 
 	spacings = spacings.sort((a, b) => {
-		const numA = Number(a.key);
-		const numB = Number(b.key);
-		if (numA < numB) {
+		const numberA = Number(a.key);
+		const numberB = Number(b.key);
+		if (numberA < numberB) {
 			return -1;
 		}
-		if (numA > numB) {
+
+		if (numberA > numberB) {
 			return 1;
 		}
+
 		return 0;
 	});
 	return spacings;

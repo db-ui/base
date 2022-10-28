@@ -8,6 +8,7 @@ module.exports = function (Handlebars) {
 
 			return new Handlebars.SafeString(table);
 		}
+
 		return '<span>ERROR TABLE</span>';
 	});
 };

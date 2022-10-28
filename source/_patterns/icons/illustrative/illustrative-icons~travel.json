@@ -18,6 +18,9 @@
 			"icon": "dog"
 		},
 		{
+			"icon": "hotel"
+		},
+		{
 			"icon": "id_card"
 		},
 		{
@@ -46,6 +49,9 @@
 		},
 		{
 			"icon": "transportation_advertising"
+		},
+		{
+			"icon": "travel_insurance"
 		},
 		{
 			"icon": "zuginformation"

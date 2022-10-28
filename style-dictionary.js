@@ -3,24 +3,24 @@ const StyleDictionary = require('style-dictionary').extend(
 );
 
 const minifyDictionary = require('style-dictionary/lib/common/formatHelpers/minifyDictionary');
+const transforms = require('style-dictionary/lib/common/transforms');
 const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
 const SCSSClasses = require('./scripts/color-classes-generator');
-const transforms = require('style-dictionary/lib/common/transforms');
 
-const GenerateClasses = require('./scripts/scss-typography-generator');
+const generateClasses = require('./scripts/scss-typography-generator');
 
 const modifyTailwind = (dictionary) => {
-	const colors = JSON.stringify(dictionary['colors']).replace(
+	const colors = JSON.stringify(dictionary.colors).replace(
 		/enabled/g,
 		'DEFAULT'
 	);
-	dictionary['colors'] = JSON.parse(colors);
-	delete dictionary['typography'];
+	dictionary.colors = JSON.parse(colors);
+	delete dictionary.typography;
 };
 
 StyleDictionary.registerFormat({
 	name: 'tailwind',
-	formatter: ({ dictionary }) => {
+	formatter({ dictionary }) {
 		const minifiedDic = minifyDictionary(dictionary.tokens);
 		modifyTailwind(minifiedDic);
 		return JSON.stringify(minifiedDic, null, 2);
@@ -29,23 +29,23 @@ StyleDictionary.registerFormat({
 
 StyleDictionary.registerFormat({
 	name: 'db-core-typography-classes',
-	formatter: function ({ dictionary }) {
+	formatter({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		return GenerateClasses(typography, true);
+		return generateClasses(typography, true);
 	}
 });
 
 StyleDictionary.registerFormat({
 	name: 'db-core-typography-placeholder',
-	formatter: function ({ dictionary }) {
+	formatter({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		return GenerateClasses(typography, false);
+		return generateClasses(typography, false);
 	}
 });
 
 StyleDictionary.registerFormat({
 	name: 'db-core-color-placeholder',
-	formatter: function ({ dictionary }) {
+	formatter({ dictionary }) {
 		const colors = dictionary.tokens.colors;
 		return SCSSPlaceholders.generateColorUtilitityPlaceholder(colors);
 	}
@@ -53,7 +53,7 @@ StyleDictionary.registerFormat({
 
 StyleDictionary.registerFormat({
 	name: 'db-core-color-classes',
-	formatter: function ({ dictionary }) {
+	formatter({ dictionary }) {
 		const colors = dictionary.tokens.colors;
 		return SCSSClasses.generateColorUtilitityClasses(colors);
 	}
@@ -72,7 +72,7 @@ const getPathTransform = (orgTransform, token, options) => {
 StyleDictionary.registerTransform({
 	type: `name`,
 	name: `name/dotty/pascal`,
-	transformer: (token, options) => {
+	transformer(token, options) {
 		return getPathTransform('name/cti/pascal', token, options);
 	}
 });
@@ -80,7 +80,7 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerTransform({
 	type: `name`,
 	name: `name/dotty/camel`,
-	transformer: (token, options) => {
+	transformer(token, options) {
 		return getPathTransform('name/cti/camel', token, options);
 	}
 });
@@ -89,7 +89,7 @@ StyleDictionary.registerTransform({
 	type: `value`,
 	name: `size/real/rem`,
 	matcher: (token) => token.attributes.category === 'dynamic-size',
-	transformer: (token) => {
+	transformer(token) {
 		return `${Number(token.value) / 16}rem`;
 	}
 });
