@@ -107,7 +107,6 @@ const shortenTypographyRecursive = (data) => {
 					}
 
 					result[topLvlKey] = {
-						// TODO: Fix values after update in zeplin
 						lineHeight: {
 							value:
 								Number(foundValue.lineHeight) /
@@ -137,7 +136,6 @@ const shortenTypographyRecursive = (data) => {
 
 const convertTextStyles = (data) => {
 	const keys = Object.keys(data.textStyles);
-
 	const newTextStyles = {};
 	for (const key of keys.filter((key) => {
 		return (
@@ -162,19 +160,32 @@ const convertTextStyles = (data) => {
 };
 
 const convertSpacings = (data) => {
-	const keys = Object.keys(data.spacing);
-	const newSpacings = {};
+	const keys = Object.keys(data.spacing).filter(
+		(key) => !key.includes('-base')
+	);
+	const spacings = {};
+	const sizes = {};
 	for (const key of keys) {
 		const spacing = data.spacing[key];
-		const containsDot = key.split('-').length === 3;
-		let cKey = containsDot ? key.replace('-5', '.5') : key;
-		cKey = cKey.replace('spacing-', '');
-		newSpacings[cKey] = {
-			value: `${spacing.value}px`
-		};
+		if (key?.includes('sizing')) {
+			sizes[key.replace('sizing-', '')] = {
+				value: `${spacing.value}`,
+				attributes: {
+					category: 'dynamic-size'
+				}
+			};
+		} else {
+			spacings[key.replace('spacing-', '')] = {
+				value: `${spacing.value}`,
+				attributes: {
+					category: 'dynamic-size'
+				}
+			};
+		}
 	}
 
-	data.spacing = newSpacings;
+	data.sizing = mergeData(sizes);
+	data.spacing = mergeData(spacings);
 };
 
 (async () => {
@@ -182,6 +193,7 @@ const convertSpacings = (data) => {
 		const { data } = await zeplin.designTokens.getStyleguideDesignTokens(
 			'63037ab49bdcb913c9228718'
 		);
+
 		convertColors(data);
 		convertTextStyles(data);
 		convertSpacings(data);
@@ -189,8 +201,9 @@ const convertSpacings = (data) => {
 		FS.writeFileSync(
 			'./tokens/zeplin.json',
 			JSON.stringify({
-				typography: data.textStyles,
 				spacing: data.spacing,
+				sizing: data.sizing,
+				typography: data.textStyles,
 				colors: data.colors
 			})
 		);

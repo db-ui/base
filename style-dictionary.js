@@ -8,6 +8,7 @@ const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
 const SCSSClasses = require('./scripts/color-classes-generator');
 
 const generateClasses = require('./scripts/scss-typography-generator');
+const generateScaling = require('./scripts/scss-scaling-generator');
 
 const modifyTailwind = (dictionary) => {
 	const colors = JSON.stringify(dictionary.colors).replace(
@@ -40,6 +41,20 @@ StyleDictionary.registerFormat({
 	formatter({ dictionary }) {
 		const typography = dictionary.tokens.typography;
 		return generateClasses(typography, false);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-scaling-classes',
+	formatter() {
+		return generateScaling(true);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-scaling-placeholder',
+	formatter() {
+		return generateScaling(false);
 	}
 });
 

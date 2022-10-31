@@ -1,14 +1,10 @@
-@import "../../build/scss/variables";
-@import "../../build/scss/font-faces";
-@import "../../build/scss/typography-placeholder";
+@import "../../build/scss/db-ui";
 @import "../../build/scss/typography-classes";
 @import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
-@import "../../build/scss/db-ui";
 
 body {
 	@extend %db-ui-functional;
-	font-family: $db-font-family-sans;
 }
 
 /* ugly workaround for db-ui-core components */
@@ -19,15 +15,6 @@ input,
 select,
 textarea {
 	font-size: inherit !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $db-font-family-head;
 }
 
 @import "../_patterns/icons/icons.demonstration";
