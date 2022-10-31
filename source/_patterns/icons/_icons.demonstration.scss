@@ -1,6 +1,6 @@
 .DO-NOT-COPY-THIS-CLASS-example-icon-list {
 	&,
-	ul {
+	ol {
 		list-style: none;
 
 		padding-left: 0;
@@ -16,8 +16,38 @@
 			min-width: 250px;
 		}
 		.DO-NOT-COPY-THIS-CLASS-example-bg-variants-regular {
-			ul {
+			ol {
 				justify-content: flex-end;
+			}
+		}
+	}
+
+	details {
+		summary {
+			cursor: pointer;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			// Remove existing marker
+			&::-webkit-details-marker {
+				display: none;
+			}
+			// … and using some other declaration for Mozilla Firefox
+			&:first-of-type {
+				list-style-type: none;
+			}
+
+			h4 {
+				order: 1;
+			}
+		}
+
+		ul {
+			li {
+				display: list-item;
+				padding: initial;
 			}
 		}
 	}
@@ -26,8 +56,8 @@
 		display: flex;
 	}
 
-	&.icons {
-		ul {
+	&:where(.icons) {
+		ol {
 			color: $db-color-cool-gray-700;
 		}
 
@@ -74,7 +104,7 @@
 		}
 	}
 	&.functional {
-		ul {
+		ol {
 			display: flex;
 			align-items: center;
 		}
