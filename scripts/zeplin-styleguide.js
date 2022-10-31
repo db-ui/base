@@ -107,7 +107,6 @@ const shortenTypographyRecursive = (data) => {
 					}
 
 					result[topLvlKey] = {
-						// TODO: Fix values after update in zeplin
 						lineHeight: {
 							value:
 								Number(foundValue.lineHeight) /
@@ -161,19 +160,26 @@ const convertTextStyles = (data) => {
 };
 
 const convertSpacings = (data) => {
-	const keys = Object.keys(data.spacing);
+	const keys = Object.keys(data.spacing).filter(
+		(key) => !key.includes('-base')
+	);
 	const spacings = {};
 	const sizes = {};
 	for (const key of keys) {
 		const spacing = data.spacing[key];
 		if (key?.includes('sizing')) {
-			console.log(key);
 			sizes[key.replace('sizing-', '')] = {
-				value: `${spacing.value}px`
+				value: `${spacing.value}`,
+				attributes: {
+					category: 'dynamic-size'
+				}
 			};
 		} else {
 			spacings[key.replace('spacing-', '')] = {
-				value: `${spacing.value}px`
+				value: `${spacing.value}`,
+				attributes: {
+					category: 'dynamic-size'
+				}
 			};
 		}
 	}

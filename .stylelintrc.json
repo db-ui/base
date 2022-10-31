@@ -4,6 +4,7 @@
 		"stylelint-config-prettier"
 	],
 	"rules": {
-		"max-nesting-depth": null
+		"max-nesting-depth": null,
+		"order/order": null
 	}
 }
