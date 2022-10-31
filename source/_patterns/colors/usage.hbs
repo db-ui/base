@@ -1,0 +1,93 @@
+<main>
+	<section>
+		<h1>Colors Usage</h1>
+		<p>
+		The defined color palette specifies colors in three dimensions: background, foreground (e.g. text, icons) and specific states as :hover and :active. 
+		For each key color (primary, secondary, etc.) and each background color including neutral color palette DB UI Base provides SCSS utility classes and 
+		placeholders to ensure correct use of defined color combinations.
+		</p>
+
+		<db-tab-bar>
+		<db-tab label="SCSS" name="tab-bar" active>
+			<h2>With placeholders</h2>
+			<pre>
+<code class="language-scss">/* ./index.scss */
+@import "@db-ui-base/build/scss/variables";
+@import "@db-ui-base/build/scss/color-placeholder";
+
+// placeholder defines background-color and color according to current key color
+.background-element-information {
+  @extend %db-bg-information;
+}
+
+// interactive mode enables :hover and :active states
+.background-element-information--interactive {
+  @extend %db-bg-information-ia;
+}
+
+// background light
+.background-element-information-light {
+  @extend %db-bg-information-light;
+}
+
+// background semi transparent
+.background-element-information-transparent-semi {
+  @extend %db-bg-information-transparent-semi;
+}
+
+// accent color (primary, success, etc.) for text only
+p {
+  @extend %db-text-success;
+}
+
+// custom interactive text elements (a elements are interactive by default)
+// ineractivity can also be reached via [data-variant="ia"]
+p.copy-text--interactive {
+  @extend %db-text-warning--ia;
+}
+</code>
+			</pre>
+
+			<h2>With utility classes</h2>
+			<p>Applies all </p>
+			<pre>
+<code class="language-scss">/* ./index.scss */
+@import "@db-ui-base/build/scss/variables";
+@import "@db-ui-base/build/scss/color-placeholder";
+@import "@db-ui-base/build/scss/color-classes";
+</code>
+			</pre>
+
+			<div class="db-bg-neutral-0" style="display: flex;">
+				<div class="DO-NOT-COPY-THIS-CLASS-example-color-container">
+					<label class="db-weak">.db-bg-information</label>
+					<aside class="db-bg-information">
+						<small>Background with key color information and correct text color</small><br>
+						<small><a href="#">Example Link</a></small>
+					</aside>
+				</div>
+				<div class="DO-NOT-COPY-THIS-CLASS-example-color-container">
+					<label class="db-weak">.db-bg-information data-variant="ia"</label>
+					<aside class="db-bg-information" data-variant="ia">
+						<small>Interactive background with key color information and correct text color and
+						:hover and :active states.</small>
+					</aside>
+				</div>
+				<div class="DO-NOT-COPY-THIS-CLASS-example-color-container">
+					<label class="db-weak">.db-bg-information-light</label>
+					<aside class="db-bg-information-light">
+						<small>On light background</small><br>
+						<small class="db-weak">Weak Text for light backgrounds with class="db-weak"</small>
+					</aside>
+					
+				</div>
+				<div class="DO-NOT-COPY-THIS-CLASS-example-color-container">
+					<label class="db-weak">.db-bg-information-transparent-semi-ia</label>
+					<aside class="db-bg-information-transparent-semi" data-variant="ia">
+						<small>Semi transparent background with key color information and correct text color</small>
+					</aside>					
+				</div>
+			</div>
+		</db-tab>		
+	</section>
+</main>

@@ -1,6 +1,7 @@
 @import "../../build/scss/variables";
 @import "../../build/scss/font-faces";
 @import "../../build/scss/typography-classes";
+@import "../../build/scss/typography-placeholder";
 @import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
 
@@ -14,6 +15,8 @@ optgroup,
 select,
 textarea {
 	font-family: $db-font-family-sans;
+
+	@extend %db-typo-body-md;
 }
 
 strong,
@@ -33,6 +36,7 @@ h6 {
 @import "../_patterns/icons/icons.demonstration";
 @import "../_patterns/logo/examples.demonstration";
 @import "../_patterns/spacings/examples.demonstration";
+@import "../_patterns/colors/usage.demonstration";
 
 main {
 	padding: $db-spacing-1 $db-spacing-3;
