@@ -27,24 +27,12 @@
 			<p>Applies all font-faces to body and headlines:</p>
 			<pre>
 <code class="language-scss">/* ./index.scss */
-@import "@db-ui-base/build/scss/variables";
-@import "@db-ui-base/build/scss/font-faces";
-@import "@db-ui-base/build/scss/typography-placeholder";
-@import "@db-ui-base/build/scss/scale";
+@import "@db-ui-base/build/scss/db-ui";
 
 body {
-	@extend %db-scale-functional;
-	font-family: $db-font-family-sans;
+	@extend %db-ui-functional;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $db-font-family-head;
-}
 </code>
 			</pre>
 

@@ -23,13 +23,22 @@
 			<p>TODO</p>
 		</db-tab>
 		<db-tab label="SCSS" name="tab-bar" active>
-			<p>Applies spacing as padding (16px) to a class</p>
 			<pre>
 <code class="language-scss">/* ./index.scss */
-@import "@db-ui-base/build/scss/variables";
+@import "@db-ui-base/build/scss/db-ui";
 
-.my-awesome-class {
-	padding: $db-spacing-2;
+body {
+	@extend %db-ui-functional;
+}
+
+.my-awesome-custom-button {
+	/* we don't like padding for button to be responsive */
+	padding: $db-spacing-fixed-md;
+}
+
+.my-awesome-container {
+	/* all elements inside this container should be responsive */
+	padding: $db-spacing-responsive-md;
 }
 </code>
 			</pre>
