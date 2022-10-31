@@ -1,4 +1,5 @@
 @import "variables";
+@import "font-faces";
 @import "typography-placeholder";
 @import "scaling-placeholder";
 
@@ -23,6 +24,17 @@
 	$db-spacing-responsive-md: var(--db-spacing-responsive-md);
 	$db-spacing-responsive-lg: var(--db-spacing-responsive-lg);
 	$db-spacing-responsive-xl: var(--db-spacing-responsive-xl);
+
+	font-family: $db-font-family-sans;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $db-font-family-head;
+	}
 }
 
 @mixin styles($styles...) {

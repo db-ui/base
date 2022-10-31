@@ -4,10 +4,70 @@
 		Please find a lot of more information regarding our spacings and how to use it within the <a target="_blank" rel="nofollow" href="https://marketingportal.extranet.deutschebahn.com/de/brandguide/layout">Marketingportal</a>
 	</p>
 
-	<h3>
-		Table of all spacings
-	</h3>
+	<db-tab-bar>
+		<db-tab label="All" name="tab-bar" active>
+			<h3>
+				Tables of all "normal" styles
+			</h3>
 
-	{{spacing-into-table "spacings" "responsive-normal-desktop" "responsive-normal-desktop"}}
+			<div style="display: flex; flex-direction: column; gap: 8px">
+				{{spacing-into-table @root "spacings" "Normal Desktop" "responsive-normal-desktop"}}
+				{{spacing-into-table @root "spacings" "Normal Tablet" "responsive-normal-tablet"}}
+				{{spacing-into-table @root "spacings" "Normal Mobile" "responsive-normal-mobile"}}
+				{{spacing-into-table @root "spacings" "Normal Fixed" "fixed-normal"}}
+			</div>
+
+
+			<h3>
+				Tables of all "functional" styles
+			</h3>
+
+			<div style="display: flex; flex-direction: column; gap: 8px">
+				{{spacing-into-table @root "spacings" "Functional Desktop" "responsive-functional-desktop"}}
+				{{spacing-into-table @root "spacings" "Functional Tablet" "responsive-functional-tablet"}}
+				{{spacing-into-table @root "spacings" "Functional Mobile" "responsive-functional-mobile"}}
+				{{spacing-into-table @root "spacings" "Functional Fixed" "fixed-functional"}}
+			</div>
+
+
+			<h3>
+				Tables of all "expressive" styles
+			</h3>
+
+			<div style="display: flex; flex-direction: column; gap: 8px">
+				{{spacing-into-table @root "spacings" "Expressive Desktop" "responsive-expressive-desktop"}}
+				{{spacing-into-table @root "spacings" "Expressive Tablet" "responsive-expressive-tablet"}}
+				{{spacing-into-table @root "spacings" "Expressive Mobile" "responsive-expressive-mobile"}}
+				{{spacing-into-table @root "spacings" "Expressive Fixed" "fixed-expressive"}}
+			</div>
+		</db-tab>
+		<db-tab label="Normal" name="tab-bar">
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-into-table @root "spacings" "Normal Desktop" "responsive-normal-desktop"}}
+				{{spacing-into-table @root "spacings" "Normal Tablet" "responsive-normal-tablet"}}
+				{{spacing-into-table @root "spacings" "Normal Mobile" "responsive-normal-mobile"}}
+				{{spacing-into-table @root "spacings" "Normal Fixed" "fixed-normal"}}
+			</div>
+		</db-tab>
+		<db-tab label="Functional" name="tab-bar">
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-into-table @root "spacings" "Functional Desktop" "responsive-functional-desktop"}}
+				{{spacing-into-table @root "spacings" "Functional Tablet" "responsive-functional-tablet"}}
+				{{spacing-into-table @root "spacings" "Functional Mobile" "responsive-functional-mobile"}}
+				{{spacing-into-table @root "spacings" "Functional Fixed" "fixed-functional"}}
+			</div>
+		</db-tab>
+		<db-tab label="Expressive" name="tab-bar">
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-into-table @root "spacings" "Expressive Desktop" "responsive-expressive-desktop"}}
+				{{spacing-into-table @root "spacings" "Expressive Tablet" "responsive-expressive-tablet"}}
+				{{spacing-into-table @root "spacings" "Expressive Mobile" "responsive-expressive-mobile"}}
+				{{spacing-into-table @root "spacings" "Expressive Fixed" "fixed-expressive"}}
+			</div>
+		</db-tab>
+	</db-tab-bar>
+
+
+
 
 </main>

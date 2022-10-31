@@ -1,6 +1,70 @@
 <main>
 	<h1>Spacings Examples</h1>
 
-	{{spacing-examples "spacings" "responsive-normal-desktop" "responsive-normal-desktop"}}
+	<db-tab-bar>
+		<db-tab label="All" name="tab-bar" active>
+			<h3>
+				Tables of all "normal" styles
+			</h3>
+
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-examples @root "spacings" "Normal Desktop" "responsive-normal-desktop"}}
+				{{spacing-examples @root "spacings" "Normal Tablet" "responsive-normal-tablet"}}
+				{{spacing-examples @root "spacings" "Normal Mobile" "responsive-normal-mobile"}}
+				{{spacing-examples @root "spacings" "Normal Fixed" "fixed-normal"}}
+			</div>
+
+
+			<h3>
+				Tables of all "functional" styles
+			</h3>
+
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-examples @root "spacings" "Functional Desktop" "responsive-functional-desktop"}}
+				{{spacing-examples @root "spacings" "Functional Tablet" "responsive-functional-tablet"}}
+				{{spacing-examples @root "spacings" "Functional Mobile" "responsive-functional-mobile"}}
+				{{spacing-examples @root "spacings" "Functional Fixed" "fixed-functional"}}
+			</div>
+
+
+			<h3>
+				Tables of all "expressive" styles
+			</h3>
+
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-examples @root "spacings" "Expressive Desktop" "responsive-expressive-desktop"}}
+				{{spacing-examples @root "spacings" "Expressive Tablet" "responsive-expressive-tablet"}}
+				{{spacing-examples @root "spacings" "Expressive Mobile" "responsive-expressive-mobile"}}
+				{{spacing-examples @root "spacings" "Expressive Fixed" "fixed-expressive"}}
+			</div>
+		</db-tab>
+
+		<db-tab label="Normal" name="tab-bar">
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-examples @root "spacings" "Normal Desktop" "responsive-normal-desktop"}}
+				{{spacing-examples @root "spacings" "Normal Tablet" "responsive-normal-tablet"}}
+				{{spacing-examples @root "spacings" "Normal Mobile" "responsive-normal-mobile"}}
+				{{spacing-examples @root "spacings" "Normal Fixed" "fixed-normal"}}
+			</div>
+		</db-tab>
+
+		<db-tab label="Functional" name="tab-bar">
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-examples @root "spacings" "Functional Desktop" "responsive-functional-desktop"}}
+				{{spacing-examples @root "spacings" "Functional Tablet" "responsive-functional-tablet"}}
+				{{spacing-examples @root "spacings" "Functional Mobile" "responsive-functional-mobile"}}
+				{{spacing-examples @root "spacings" "Functional Fixed" "fixed-functional"}}
+			</div>
+		</db-tab>
+
+		<db-tab label="Expressive" name="tab-bar">
+			<div style="display: flex; flex-wrap: wrap; gap: 8px">
+				{{spacing-examples @root "spacings" "Expressive Desktop" "responsive-expressive-desktop"}}
+				{{spacing-examples @root "spacings" "Expressive Tablet" "responsive-expressive-tablet"}}
+				{{spacing-examples @root "spacings" "Expressive Mobile" "responsive-expressive-mobile"}}
+				{{spacing-examples @root "spacings" "Expressive Fixed" "fixed-expressive"}}
+			</div>
+		</db-tab>
+	</db-tab-bar>
 
 </main>

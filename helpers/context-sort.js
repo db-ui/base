@@ -38,12 +38,16 @@ const getValueRecursive = (initData, results, fullKeyString) => {
 };
 
 module.exports = (context) => {
-	let spacings = getValueRecursive(context.data.root.spacing, [], '').map(
+	if (!context.spacing || !context.sizing) {
+		return undefined;
+	}
+	let spacings = getValueRecursive(context.spacing, [], '').map(
 		(spacing) => ({ ...spacing, key: `db-spacing${spacing.key}` })
 	);
-	let sizings = getValueRecursive(context.data.root.sizing, [], '').map(
-		(sizing) => ({ ...sizing, key: `db-sizing${sizing.key}` })
-	);
+	let sizings = getValueRecursive(context.sizing, [], '').map((sizing) => ({
+		...sizing,
+		key: `db-sizing${sizing.key}`
+	}));
 
 	spacings = sort(spacings);
 	sizings = sort(sizings);

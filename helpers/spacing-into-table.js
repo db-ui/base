@@ -5,13 +5,17 @@ module.exports = function (Handlebars) {
 			const contextSort = require('./context-sort');
 			const cSort = contextSort(context);
 
+			if (!cSort) {
+				return 'Error';
+			}
+
 			const tableObject = {
 				caption: tableHeader,
 				headers: ['Token', 'Value', 'Ratio'],
 				rows: cSort[contextObjName]
 					.filter((s) => s.key.includes(filterKey))
 					.map((spacing) => ({
-						Token: [null, `spacing-${spacing.key}`],
+						Token: [null, `${spacing.key}`],
 						Value: [null, `${Number(spacing.value) / 16} rem`],
 						Ratio: [null, Number(spacing.value) / 8]
 					}))
