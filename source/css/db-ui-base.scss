@@ -1,6 +1,5 @@
 @import "../../build/scss/db-ui";
 @import "../../build/scss/typography-classes";
-@import "../../build/scss/color-placeholder";
 @import "../../build/scss/color-classes";
 
 body {
@@ -22,11 +21,11 @@ textarea {
 @import "../_patterns/spacings/examples.demonstration";
 
 main {
-	padding: 8px 24px;
+	padding: $db-spacing-fixed-normal-xs $db-spacing-fixed-normal-l;
 }
 
 .typography-table {
 	tr > td {
-		padding: 4px 8px;
+		padding: $db-spacing-fixed-normal-2xs $db-spacing-fixed-normal-xs;
 	}
 }
