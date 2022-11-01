@@ -13,3 +13,11 @@ source/_meta/_foot.mustache
 
 tailwind.config.js
 /.env
+
+# vim files
+*.swp
+*.swo
+tags
+ctags.tmp
+[._]*.un~
+
