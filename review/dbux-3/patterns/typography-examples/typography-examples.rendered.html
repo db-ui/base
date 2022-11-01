@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../css/db-ui-base.css?1665664908622" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1665664908622" media="all" />
-    <link rel="stylesheet" href="https://db-ui.github.io/core/css/pattern-scaffolding-project-specific.css?1665664908622" media="all" />
+    <link rel="stylesheet" href="../../css/db-ui-base.css?1667302412908" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1667302412908" media="all" />
+    <link rel="stylesheet" href="https://db-ui.github.io/core/css/pattern-scaffolding-project-specific.css?1667302412908" media="all" />
 
 	  <script type="module">
 		  import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@db-ui/elements/loader/index.es2017.js';
@@ -32,14 +32,24 @@
 <main>
 	<h1>Typography Examples</h1>
 
+	<p>All text-sizes are inherited by the scale placeholder (functional) from body tag!</p>
+
 	<db-tab-bar>
-		<db-tab label="Headlines" name="tab-bar" active>
+		<db-tab label="Headlines black" name="tab-bar" active>
 			<h1>Headline 1</h1>
 			<h2>Headline 2</h2>
 			<h3>Headline 3</h3>
 			<h4>Headline 4</h4>
 			<h5>Headline 5</h5>
 			<h6>Headline 6</h6>
+		</db-tab>
+		<db-tab label="Headlines light" name="tab-bar" active>
+			<h1 data-variant="light">Headline 1</h1>
+			<h2 data-variant="light">Headline 2</h2>
+			<h3 data-variant="light">Headline 3</h3>
+			<h4 data-variant="light">Headline 4</h4>
+			<h5 data-variant="light">Headline 5</h5>
+			<h6 data-variant="light">Headline 6</h6>
 		</db-tab>
 		<db-tab label="Body" name="tab-bar">
 			<p>Primary font: "DB Screen Sans", "Helvetica", "Arial", sans-serif;</p>
@@ -92,10 +102,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1665664908622">
+<script id="pl-js-polyfill-insert-1667302412908">
   (function() {
     if (self != top) {
-      var cb = '1665664908622';
+      var cb = '1667302412908';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -108,7 +118,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1665664908622" nomodule>
+<script id="pl-js-insert-1667302412908" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
