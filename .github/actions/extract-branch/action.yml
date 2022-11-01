@@ -14,16 +14,10 @@ runs:
       with:
         result-encoding: string
         script: |
-          const branchName = (
+          return (
           context?.payload?.pull_request?.head?.ref ||
-          context?.payload?.ref
-          )
-
-          if(!branchName){
-            return ""
-          }
-
-          return branchName.replace("refs/heads/","");
+          context?.payload?.ref || "
+          ).replace("refs/heads/","");
     - name: 🪑 Set output
       id: branch-name
       run: echo "::set-output name=branch-name::$(echo $BRANCH_NAME)"
