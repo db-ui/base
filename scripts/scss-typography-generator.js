@@ -3,11 +3,20 @@ const prefix = 'db';
 const fileHeader =
 	'\n' +
 	'// Do not edit directly\n' +
-	'// Generated on Thu, 29 Sep 2022 07:59:43 GMT' +
+	'// Generated on ' +
+	new Date().toString() +
 	'\n';
 
 const getShortSize = (size) => {
-	if (size === 'extralarge') {
+	if (size === '3xlarge') {
+		return '3xl';
+	}
+
+	if (size === '2xlarge') {
+		return '2xl';
+	}
+
+	if (size === 'xlarge') {
 		return 'xl';
 	}
 
@@ -27,53 +36,49 @@ const getShortSize = (size) => {
 		return 'xs';
 	}
 
-	if (size === 'xxsmall') {
+	if (size === '2xsmall') {
 		return '2xs';
+	}
+
+	if (size === '3xsmall') {
+		return '3xs';
 	}
 
 	return size;
 };
 
-const getUtilityClass = (
-	utility,
-	screens,
-	typoType,
-	size,
-	missingMediaQuery
-) => {
+const getUtilityClass = (utility, scale, textType, size) => {
+	const isHeadline = textType === 'headline';
+
 	let result = `
-${utility ? '.' : '%'}${prefix}-typo-${typoType}-${getShortSize(size)}{
+${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 `;
-	if (missingMediaQuery) {
-		result += '/* ERROR: Missing media queries*/';
-
-		result += `
-\tline-height: $${prefix}-typography-${typoType}-${size}-line-height;
-\tfont-size: $${prefix}-typography-${typoType}-${size}-font-size;
-\tfont-weight: $${prefix}-typography-${typoType}-${size}-font-weight;
-`;
-	} else {
-		result += `
-\tline-height: $${prefix}-typography-${typoType}-${size}-mobile-line-height;
-\tfont-size: $${prefix}-typography-${typoType}-${size}-mobile-font-size;
-\tfont-weight: $${prefix}-typography-${typoType}-${size}-mobile-font-weight;
+	result += `
+\tline-height: $${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height;
+\tfont-size: $${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size;
 `;
 
+	if (isHeadline) {
 		result += `
-\t@media only screen and (min-width: ${screens.md.value}) {
-\t\tline-height: $${prefix}-typography-${typoType}-${size}-tablet-line-height;
-\t\tfont-size: $${prefix}-typography-${typoType}-${size}-tablet-font-size;
-\t\tfont-weight: $${prefix}-typography-${typoType}-${size}-tablet-font-weight;
+    &-light,
+    &[data-variant="light"] {
+        font-weight: 300;
+    }
+	`;
+	}
+
+	result += `
+\t@media only screen and (min-width: $db-screens-md) {
+\t\tline-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height;
+\t\tfont-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size;
 \t}\n`;
 
-		result += `
-\t@media only screen and (min-width: ${screens.lg.value}) {
-\t\tline-height: $${prefix}-typography-${typoType}-${size}-desktop-line-height;
-\t\tfont-size: $${prefix}-typography-${typoType}-${size}-desktop-font-size;
-\t\tfont-weight: $${prefix}-typography-${typoType}-${size}-desktop-font-weight;
+	result += `
+\t@media only screen and (min-width: $db-screens-lg) {
+\t\tline-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height;
+\t\tfont-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size;
 \t}
 		`;
-	}
 
 	result += `
 }
@@ -82,27 +87,30 @@ ${utility ? '.' : '%'}${prefix}-typo-${typoType}-${getShortSize(size)}{
 	return result;
 };
 
-const generateClasses = (typography, screens, utility) => {
+const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
 
-	for (const typoTypeKey of Object.keys(typography)) {
-		const typeObject = typography[typoTypeKey];
-		for (const sizeKey of Object.keys(typeObject)) {
-			const sizeObject = typeObject[sizeKey];
-			let missingMediaQuery = false;
-			if (
-				!(sizeObject.mobile && sizeObject.tablet && sizeObject.desktop)
-			) {
-				missingMediaQuery = true;
+	// ScaleTypeKey = [normal, functional, expressive]
+	for (const scaleTypeKey of Object.keys(typography)) {
+		const scaleObject = typography[scaleTypeKey];
+		const mediaQueryKeys = Object.keys(scaleObject);
+		if (mediaQueryKeys.length > 0) {
+			// Desktop
+			const firstMediaQueryKey = mediaQueryKeys[0];
+			const firstMediaQueryObject = scaleObject[firstMediaQueryKey];
+			// TextTypeKey = [headline, body]
+			for (const textTypeKey of Object.keys(firstMediaQueryObject)) {
+				const textTypeObject = firstMediaQueryObject[textTypeKey];
+				// SizeKey = [3xlarge - 3xsmall]
+				for (const sizeKey of Object.keys(textTypeObject)) {
+					allClasses += getUtilityClass(
+						utility,
+						scaleTypeKey,
+						textTypeKey,
+						sizeKey
+					);
+				}
 			}
-
-			allClasses += getUtilityClass({
-				utility,
-				screens,
-				typoTypeKey,
-				sizeKey,
-				missingMediaQuery
-			});
 		}
 	}
 

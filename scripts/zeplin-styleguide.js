@@ -108,18 +108,16 @@ const shortenTypographyRecursive = (data) => {
 
 					result[topLvlKey] = {
 						lineHeight: {
-							value: foundValue.lineHeight,
-							attributes: {
-								category: 'size'
-							}
+							value:
+								Number(foundValue.lineHeight) /
+								Number(foundValue.font.size)
 						},
 						fontSize: {
 							value: `${foundValue.font.size}`,
 							attributes: {
-								category: 'size'
+								category: 'dynamic-size'
 							}
-						},
-						fontWeight: { value: foundValue.font.weight }
+						}
 					};
 				} else {
 					result[topLvlKey] = shortenTypographyRecursive(topLvlData);
@@ -138,22 +136,23 @@ const shortenTypographyRecursive = (data) => {
 
 const convertTextStyles = (data) => {
 	const keys = Object.keys(data.textStyles);
-
 	const newTextStyles = {};
 	for (const key of keys.filter((key) => {
-		// Some issue of old data?
-		return !key.startsWith('db-');
+		return (
+			key.includes('token') &&
+			// We don't need bold and light
+			!key.includes('bold') &&
+			!key.includes('light')
+		);
 	})) {
 		const textStyle = data.textStyles[key];
 		delete textStyle.value.color;
 		const cKey = correctKey(key)
 			.replace('foundation-', '')
 			.replace('typography-', '')
-			.replace('autowidth-', '')
-			.replace('autoheight-', '')
-			.replace('link-link-', 'link-')
-			.replace('button-button-', 'button-')
-			.replace('large-bold', 'bold-large');
+			.replace('token-', '')
+			.replace('regular-', '')
+			.replace('black-', '');
 		newTextStyles[cKey] = { value: textStyle.value };
 	}
 
@@ -161,19 +160,32 @@ const convertTextStyles = (data) => {
 };
 
 const convertSpacings = (data) => {
-	const keys = Object.keys(data.spacing);
-	const newSpacings = {};
+	const keys = Object.keys(data.spacing).filter(
+		(key) => !key.includes('-base')
+	);
+	const spacings = {};
+	const sizes = {};
 	for (const key of keys) {
 		const spacing = data.spacing[key];
-		const containsDot = key.split('-').length === 3;
-		let cKey = containsDot ? key.replace('-5', '.5') : key;
-		cKey = cKey.replace('spacing-', '');
-		newSpacings[cKey] = {
-			value: `${spacing.value}px`
-		};
+		if (key?.includes('sizing')) {
+			sizes[key.replace('sizing-', '')] = {
+				value: `${spacing.value}`,
+				attributes: {
+					category: 'dynamic-size'
+				}
+			};
+		} else {
+			spacings[key.replace('spacing-', '')] = {
+				value: `${spacing.value}`,
+				attributes: {
+					category: 'dynamic-size'
+				}
+			};
+		}
 	}
 
-	data.spacing = newSpacings;
+	data.sizing = mergeData(sizes);
+	data.spacing = mergeData(spacings);
 };
 
 (async () => {
@@ -181,6 +193,7 @@ const convertSpacings = (data) => {
 		const { data } = await zeplin.designTokens.getStyleguideDesignTokens(
 			'63037ab49bdcb913c9228718'
 		);
+
 		convertColors(data);
 		convertTextStyles(data);
 		convertSpacings(data);
@@ -188,8 +201,9 @@ const convertSpacings = (data) => {
 		FS.writeFileSync(
 			'./tokens/zeplin.json',
 			JSON.stringify({
-				typography: data.textStyles,
 				spacing: data.spacing,
+				sizing: data.sizing,
+				typography: data.textStyles,
 				colors: data.colors
 			})
 		);

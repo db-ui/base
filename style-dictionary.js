@@ -8,6 +8,7 @@ const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
 const SCSSClasses = require('./scripts/color-classes-generator');
 
 const generateClasses = require('./scripts/scss-typography-generator');
+const generateScaling = require('./scripts/scss-scaling-generator');
 
 const modifyTailwind = (dictionary) => {
 	const colors = JSON.stringify(dictionary.colors).replace(
@@ -31,8 +32,7 @@ StyleDictionary.registerFormat({
 	name: 'db-core-typography-classes',
 	formatter({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		const screens = dictionary.tokens.screens;
-		return generateClasses(typography, screens, true);
+		return generateClasses(typography, true);
 	}
 });
 
@@ -40,8 +40,21 @@ StyleDictionary.registerFormat({
 	name: 'db-core-typography-placeholder',
 	formatter({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		const screens = dictionary.tokens.screens;
-		return generateClasses(typography, screens, false);
+		return generateClasses(typography, false);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-scaling-classes',
+	formatter() {
+		return generateScaling(true);
+	}
+});
+
+StyleDictionary.registerFormat({
+	name: 'db-core-scaling-placeholder',
+	formatter() {
+		return generateScaling(false);
 	}
 });
 
@@ -87,6 +100,15 @@ StyleDictionary.registerTransform({
 	}
 });
 
+StyleDictionary.registerTransform({
+	type: `value`,
+	name: `size/real/rem`,
+	matcher: (token) => token.attributes.category === 'dynamic-size',
+	transformer(token) {
+		return `${Number(token.value) / 16}rem`;
+	}
+});
+
 StyleDictionary.registerTransformGroup({
 	name: 'JSDotty',
 	transforms: ['attribute/cti', 'name/dotty/pascal', 'size/px', 'color/hex']
@@ -105,6 +127,7 @@ StyleDictionary.registerTransformGroup({
 		'time/seconds',
 		'content/icon',
 		'size/px',
+		'size/real/rem',
 		'color/css'
 	]
 });
@@ -117,6 +140,7 @@ StyleDictionary.registerTransformGroup({
 		'time/seconds',
 		'content/icon',
 		'size/px',
+		'size/real/rem',
 		'color/css'
 	]
 });
