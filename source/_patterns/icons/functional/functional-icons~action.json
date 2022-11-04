@@ -533,7 +533,35 @@
 			]
 		},
 		{
+			"icon": "face_neutral",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "face_sad",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "face_smiling",
 			"variants": [
 				{
 					"size": 32
