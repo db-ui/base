@@ -2,3 +2,7 @@
 @import "variables.global";
 @import "color-placeholder";
 @import "typescale";
+
+:root {
+	@extend %db-ui-normal;
+}
