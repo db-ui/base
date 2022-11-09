@@ -111,6 +111,10 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
 
+	if (utility) {
+		allClasses += `@import "variables";\n@import "typography-placeholder";\n`;
+	}
+
 	// ScaleTypeKey = [normal, functional, expressive]
 	for (const scaleTypeKey of Object.keys(typography)) {
 		const scaleObject = typography[scaleTypeKey];

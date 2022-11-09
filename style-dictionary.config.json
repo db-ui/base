@@ -99,7 +99,7 @@
 			"buildPath": "build/scss/",
 			"files": [
 				{
-					"destination": "_typography-classes.scss",
+					"destination": "typography-classes.scss",
 					"format": "db-core-typography-classes"
 				}
 			]
@@ -119,7 +119,7 @@
 			"buildPath": "build/scss/",
 			"files": [
 				{
-					"destination": "_scaling-classes.scss",
+					"destination": "scaling-classes.scss",
 					"format": "db-core-scaling-classes"
 				}
 			]
@@ -149,7 +149,7 @@
 			"buildPath": "build/scss/",
 			"files": [
 				{
-					"destination": "_color-classes.scss",
+					"destination": "color-classes.scss",
 					"format": "db-core-color-classes"
 				}
 			]
