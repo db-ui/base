@@ -1,7 +1,7 @@
 const prefix = 'db';
 
 const fileHeader =
-	'@use "sass:math";\n' +
+	'@import "icon-family-calc";\n' +
 	'// Do not edit directly\n' +
 	'// Generated on ' +
 	new Date().toString() +
@@ -68,8 +68,8 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 	} else {
 		result += `
 	--db-base-icon-font-size: #{$${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size};
-	--db-base-icon-font-family: #{"icons-" + (math.div($${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size, 1rem)
-	* 16 * $${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height) + "-outline"},"missing-icons" !important;
+	--db-base-icon-font-family: #{get-icon-family($${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size,
+	$${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height)};
 		`;
 	}
 
@@ -80,8 +80,8 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 	if (!isHeadline) {
 		result += `
 		--db-base-icon-font-size: #{$${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size};
-		--db-base-icon-font-family: #{"icons-" + (math.div($${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size, 1rem)
-		* 16 * $${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height) + "-outline"},"missing-icons" !important;
+		--db-base-icon-font-family: #{get-icon-family($${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size,
+		$${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height)};
 		`;
 	}
 
@@ -94,8 +94,8 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 	if (!isHeadline) {
 		result += `
 		--db-base-icon-font-size: #{$${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size};
-		--db-base-icon-font-family: #{"icons-" + (math.div($${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size, 1rem)
-		* 16 * $${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height) + "-outline"},"missing-icons" !important;
+		--db-base-icon-font-family: #{get-icon-family($${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size,
+		$${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height)};
 		`;
 	}
 
