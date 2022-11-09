@@ -20,18 +20,8 @@ const generateBGVariants = (value, index) => {
         @extend %${prefix}-bg-${value}-${index}-ia;
     }
 
-    a {
-         @extend %${prefix}-bg-${value}-${index}-text-ia;
-    }
-
     .db-weak {
         @extend %weak;
-
-        &-ia,
-        &[data-variant="ia"],
-        a {
-             @extend %weak-ia;
-        }
     }
 }
 `;
@@ -45,7 +35,7 @@ const generateBGVariants = (value, index) => {
  * @returns scss string
  */
 exports.generateColorUtilitityClasses = (colorToken) => {
-	let output = '';
+	let output = '@import "variables";\n@import "color-placeholder";\n';
 
 	for (const [, value] of Object.keys(colorToken).entries()) {
 		output += `/**
@@ -55,27 +45,12 @@ exports.generateColorUtilitityClasses = (colorToken) => {
 		// Text colors with interactive variant, e.g. primary
 		if (colorToken[value].enabled) {
 			output += `
-.${prefix}-text-${value} {
-    @extend %${prefix}-text-${value};
-
-    &-ia,
-    &[data-variant="ia"],
-    a {
-        @extend %${prefix}-text-${value}-ia;
-    }
-}`;
-
-			output += `
 .${prefix}-bg-${value} {
     @extend %${prefix}-bg-${value};
 
     &-ia,
     &[data-variant="ia"] {
         @extend %${prefix}-bg-${value}-ia;
-    }
-
-    a {
-        @extend %${prefix}-bg-${value}-text-ia;
     }
 }`;
 		}

@@ -8,6 +8,10 @@ const fileHeader =
 const generateSpacings = (utility) => {
 	let allClasses = fileHeader;
 
+	if (utility) {
+		allClasses += `@import "variables";\n@import "scaling-placeholder";\n`;
+	}
+
 	const scaleTypeKey = ['normal', 'functional', 'expressive'];
 
 	for (const scale of scaleTypeKey) {

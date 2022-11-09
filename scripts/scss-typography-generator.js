@@ -1,7 +1,7 @@
 const prefix = 'db';
 
 const fileHeader =
-	'\n' +
+	'@use "sass:math";\n' +
 	'// Do not edit directly\n' +
 	'// Generated on ' +
 	new Date().toString() +
@@ -54,8 +54,8 @@ const getUtilityClass = (utility, scale, textType, size) => {
 ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 `;
 	result += `
-\tline-height: $${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height;
-\tfont-size: $${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size;
+	line-height: $${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height;
+	font-size: $${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size;
 `;
 
 	if (isHeadline) {
@@ -65,20 +65,41 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
         font-weight: 300;
     }
 	`;
+	} else {
+		result += `
+	--db-base-icon-font-size: #{$${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size};
+	--db-base-icon-font-family: #{"icons-" + (math.div($${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size, 1rem)
+	* 16 * $${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height) + "-outline"},"missing-icons" !important;
+		`;
 	}
 
 	result += `
-\t@media only screen and (min-width: $db-screens-md) {
-\t\tline-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height;
-\t\tfont-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size;
-\t}\n`;
+	@media only screen and (min-width: $db-screens-md) {
+		line-height: $${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height;
+		font-size: $${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size;`;
+	if (!isHeadline) {
+		result += `
+		--db-base-icon-font-size: #{$${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size};
+		--db-base-icon-font-family: #{"icons-" + (math.div($${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size, 1rem)
+		* 16 * $${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height) + "-outline"},"missing-icons" !important;
+		`;
+	}
+
+	result += `}\n`;
 
 	result += `
-\t@media only screen and (min-width: $db-screens-lg) {
-\t\tline-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height;
-\t\tfont-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size;
-\t}
+	@media only screen and (min-width: $db-screens-lg) {
+		line-height: $${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height;
+		font-size: $${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size;`;
+	if (!isHeadline) {
+		result += `
+		--db-base-icon-font-size: #{$${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size};
+		--db-base-icon-font-family: #{"icons-" + (math.div($${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size, 1rem)
+		* 16 * $${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height) + "-outline"},"missing-icons" !important;
 		`;
+	}
+
+	result += `}`;
 
 	result += `
 }
@@ -89,6 +110,10 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 
 const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
+
+	if (utility) {
+		allClasses += `@import "variables";\n@import "typography-placeholder";\n`;
+	}
 
 	// ScaleTypeKey = [normal, functional, expressive]
 	for (const scaleTypeKey of Object.keys(typography)) {

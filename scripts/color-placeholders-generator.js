@@ -7,12 +7,16 @@ const prefix = 'db';
 
 const generateInteractiveVariants = (currentColorObject, cssProp) => {
 	return `
-        &:hover {
-            ${cssProp}: $${prefix}-${currentColorObject.hover.name};
-        }
+		&:not(:disabled) {
+			&:hover {
+				${cssProp}: $${prefix}-${currentColorObject.hover.name};
+    			--db-current-${cssProp}: #{$${prefix}-${currentColorObject.hover.name}};
+			}
 
-        &:active {
-            ${cssProp}: $${prefix}-${currentColorObject.pressed.name};
+			&:active {
+				${cssProp}: $${prefix}-${currentColorObject.pressed.name};
+				--db-current-${cssProp}: #{$${prefix}-${currentColorObject.pressed.name}};
+			}
         }
         `;
 };
@@ -24,38 +28,54 @@ const generateInteractiveVariants = (currentColorObject, cssProp) => {
 
 const generateBGVariants = (
 	value,
-	index,
+	variant,
 	currentColorObject,
 	baseColorObject
 ) => {
-	return `
-%${prefix}-bg-${value}-${index} {
+	const placeholderName = `${prefix}-bg-${value}${
+		variant ? `-${variant}` : ''
+	}`;
+	let result = `
+%${placeholderName}-ia-states {
+	${generateInteractiveVariants(currentColorObject, 'background-color')}
+}
+%${placeholderName} {
     background-color: $${prefix}-${currentColorObject.enabled.name};
     color: $${prefix}-${baseColorObject.enabled.name};
 
-    &-ia,
-    &[data-variant="ia"] {
-        @extend %${prefix}-bg-${value}-${index};
-        ${generateInteractiveVariants(currentColorObject, 'background-color')}
+    --db-current-background-color: #{$${prefix}-${
+		currentColorObject.enabled.name
+	}};
+    --db-current-color: #{$${prefix}-${baseColorObject.enabled.name}};
+
+    &-ia, &[data-variant="ia"] {
+		@extend %${placeholderName};
+		@extend %${placeholderName}-ia-states;
     }
 
-    &-text-ia,
-    &[data-variant="text-ia"] {
-        color: $${prefix}-${baseColorObject.enabled.name};
-         ${generateInteractiveVariants(baseColorObject, 'color')}
+    button {
+		@extend %${placeholderName}-ia-states;
     }
 
+    a {
+       ${generateInteractiveVariants(baseColorObject, 'color')}
+    }
+
+`;
+	if (baseColorObject.weak) {
+		result += `
     %weak {
         color: $${prefix}-${baseColorObject.weak.enabled.name};
 
-        &-ia,
-        &[data-variant="ia"] {
-            color: $${prefix}-${baseColorObject.weak.enabled.name};
-            ${generateInteractiveVariants(baseColorObject.weak, 'color')}
-        }
+		a {
+		   ${generateInteractiveVariants(baseColorObject.weak, 'color')}
+		}
     }
-}
 `;
+	}
+
+	result += `}`;
+	return result;
 };
 
 /**
@@ -75,35 +95,13 @@ exports.generateColorUtilitityPlaceholder = (colorToken) => {
 `;
 		// Text colors with interactive variant, e.g. primary
 		if (colorToken[value].enabled) {
-			output += `%${prefix}-text-${value} {
-    color: $${prefix}-${colorToken[value].enabled.name};
-
-    &-ia,
-    &[data-variant="ia"] {
-        color: $${prefix}-${colorToken[value].enabled.name};
-        ${generateInteractiveVariants(colorToken[value], 'color')}
-    }
-}
-`;
-
 			// Text and background colors
-			output += `
-%${prefix}-bg-${value} {
-    background-color: $${prefix}-${colorToken[value].enabled.name};
-    color: $${prefix}-${colorToken[value].on.enabled.name};
-
-    &-ia,
-    &[data-variant="ia"] {
-        @extend %${prefix}-bg-${value};
-        ${generateInteractiveVariants(colorToken[value], 'background-color')}
-    }
-
-    &-text-ia,
-    &[data-variant="text-ia"] {
-       color: $${prefix}-${colorToken[value].on.enabled.name};
-        ${generateInteractiveVariants(colorToken[value].on, 'color')}
-    }
-}`;
+			output += generateBGVariants(
+				value,
+				undefined,
+				colorToken[value],
+				colorToken[value].on
+			);
 		}
 
 		for (const variant of Object.keys(colorToken[value].bg)) {
