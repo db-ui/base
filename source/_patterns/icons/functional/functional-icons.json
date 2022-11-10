@@ -7,5 +7,6 @@
 			"variant": "dark"
 		}
 	],
-	"icon-size": "24"
+	"icon-size": "24",
+	"icon-style": "outline"
 }
