@@ -3,43 +3,47 @@
 	{{#each icons }}<li>
 		<details>
 			<summary>
-				<h4>{{ icon }}{{#if style }}_{{ style }}{{/if }}</h4>
-				{{#if_eq @root.category "transportation"}}
-					<svg xmlns="http://www.w3.org/2000/svg" width="{{ @root.icon-size }}" height="{{ @root.icon-size }}" aria-hidden="true">
-						<use href="../../icons/functional/images/{{ @root.category }}/{{#if style}}{{style}}{{else}}regular{{/if }}/db_ic_{{ icon }}{{#if style }}_{{ style }}{{/if }}_20.svg#icon"></use>
-					</svg>
-				{{else}}
-					<svg xmlns="http://www.w3.org/2000/svg" width="{{ @root.icon-size }}" height="{{ @root.icon-size }}" aria-hidden="true">
-						<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ icon }}{{#if style }}_{{ style }}{{/if }}_20.svg#icon"></use>
-					</svg>
-				{{/if_eq}}
+				<figure>
+					{{#if_eq @root.category "transportation"}}
+						<svg xmlns="http://www.w3.org/2000/svg" width="{{ @root.icon-size }}" height="{{ @root.icon-size }}" aria-hidden="true">
+							<use href="../../icons/functional/images/{{ @root.category }}/{{#if style}}{{style}}{{else}}regular{{/if }}/db_ic_{{ icon }}{{#if style }}_{{ style }}{{/if }}_20.svg#icon"></use>
+						</svg>
+					{{else}}
+						<svg xmlns="http://www.w3.org/2000/svg" width="{{ @root.icon-size }}" height="{{ @root.icon-size }}" aria-hidden="true">
+							<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ icon }}{{#if style }}_{{ style }}{{/if }}_20.svg#icon"></use>
+						</svg>
+					{{/if_eq}}
+					<figcaption>{{ icon }}{{#if style }}_{{ style }}{{/if }}</figcaption>
+				</figure>
 			</summary>
-			<ol>
-				{{#each @root.example-bgs }}
-					<li class="DO-NOT-COPY-THIS-CLASS-example-bg-variants-{{ variant }}">
-						<ol>
-							{{#each ../variants }}
-								{{#if_eq @root.category "transportation"}}
-									<li>
-										<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
-											<use href="../../icons/functional/images/{{ @root.category }}/{{#if style}}{{style}}{{else}}regular{{/if }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
-										</svg>
-									</li>
-								{{else}}
-									<li>
-										<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
-											<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
-										</svg>
-									</li>
-								{{/if_eq}}
-							{{/each }}
-						</ol>
-					</li>
-				{{/each }}
-			</ol>
-			<ul>
-				<li>SCSS: <code>@include icon(glyph({{ icon }}))</code></li>
-				<li>HTML: <code>data-icon="{{ icon }}"</code></li>
-			</ul>
+			<aside>
+				<ol>
+					{{#each @root.example-bgs }}
+						<li class="DO-NOT-COPY-THIS-CLASS-example-bg-variants-{{ variant }}">
+							<ol>
+								{{#each ../variants }}
+									{{#if_eq @root.category "transportation"}}
+										<li>
+											<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
+												<use href="../../icons/functional/images/{{ @root.category }}/{{#if style}}{{style}}{{else}}regular{{/if }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
+											</svg>
+										</li>
+									{{else}}
+										<li>
+											<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
+												<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
+											</svg>
+										</li>
+									{{/if_eq}}
+								{{/each }}
+							</ol>
+						</li>
+					{{/each }}
+				</ol>
+				<ul>
+					<li>SCSS: <code>@include icon(glyph({{ icon }}))</code></li>
+					<li>HTML: <code>data-icon="{{ icon }}"</code></li>
+				</ul>
+			</aside>
 	</li>{{/each }}
 </ol>
