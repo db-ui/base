@@ -50,6 +50,32 @@
 				padding: initial;
 			}
 		}
+
+		// Icon details
+		aside {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;
+
+			min-width: 100vw;
+
+			background-color: $db-color-cool-gray-100;
+
+			padding: 1rem;
+		}
+
+		// Achieving a full viewport clickarea for closing the overflow menu
+		&[open] summary::after {
+			content: "\00A0";
+			display: inline-block;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100vw;
+			z-index: 5;
+		}
 	}
 
 	& > li {
