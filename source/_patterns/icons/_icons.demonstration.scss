@@ -54,13 +54,13 @@
 		// Icon details
 		aside {
 			position: fixed;
-			top: 0;
-			left: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 			z-index: 10;
 
-			min-width: 100vw;
-
-			background-color: $db-color-cool-gray-100;
+			background-color: #fff;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
 			padding: 1rem;
 		}
