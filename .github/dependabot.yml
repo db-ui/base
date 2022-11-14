@@ -9,8 +9,6 @@ updates:
       timezone: "Europe/Berlin"
     pull-request-branch-name:
       separator: "-"
-    reviewers:
-      - "github-actions"
 
   # Daily: Check minor and patch updates
   - package-ecosystem: "npm"
@@ -24,5 +22,3 @@ updates:
       separator: "-"
     # https://github.com/dependabot/dependabot-core/issues/5226#issuecomment-1179434437
     versioning-strategy: increase
-    reviewers:
-      - "github-actions"
