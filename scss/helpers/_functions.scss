@@ -10,6 +10,7 @@
 	@return #{$pxValue * 0.0625}em;
 }
 
+// TODO: We might be able to simplify the following placeholder/mixins afterwards by partial construct out of DB UI Core
 // Mixin wrappers around the SCSS placeholders
 @mixin a11y-visually-hidden($partial: false) {
 	@if $partial {
