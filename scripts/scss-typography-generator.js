@@ -1,11 +1,12 @@
 const prefix = 'db';
 
-const fileHeader =
-	'@use "variables" as *;\n@use "icon/icon-family-calc" as *;\n' +
-	'// Do not edit directly\n' +
-	'// Generated on ' +
-	new Date().toString() +
-	'\n';
+const fileHeader = `
+	@use "variables" as *;
+	@use "icon/icon-family-calc" as *;
+	// Do not edit directly
+	// Generated on
+	${new Date().toString()}
+	`;
 
 const getShortSize = (size) => {
 	if (size === '3xlarge') {
