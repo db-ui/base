@@ -5,7 +5,7 @@ const fileHeader = `
 	@use "icon/icon-family-calc" as *;
 	// Do not edit directly
 	// Generated on
-	${new Date().toString()}
+	// ${new Date().toString()}
 	`;
 
 const getShortSize = (size) => {
