@@ -1,5 +1,5 @@
 const fileHeader =
-	'\n' +
+	'@use "variables" as *;\n' +
 	'// Do not edit directly\n' +
 	'// Generated on ' +
 	new Date().toString() +
@@ -9,7 +9,7 @@ const generateSpacings = (utility) => {
 	let allClasses = fileHeader;
 
 	if (utility) {
-		allClasses += `@import "variables";\n@import "scaling-placeholder";\n`;
+		allClasses += `@use "scaling-placeholder" as *;\n`;
 	}
 
 	const scaleTypeKey = ['normal', 'functional', 'expressive'];

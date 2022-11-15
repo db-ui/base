@@ -1,6 +1,7 @@
-@import "font-faces";
-@import "typography-placeholder";
-@import "scaling-placeholder";
+@use "variables" as *;
+@use "font-faces" as *;
+@use "typography-placeholder" as *;
+@use "scaling-placeholder" as *;
 
 :root {
 	font-family: $db-font-family-sans;

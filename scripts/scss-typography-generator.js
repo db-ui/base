@@ -1,7 +1,7 @@
 const prefix = 'db';
 
 const fileHeader =
-	'@import "icon-family-calc";\n' +
+	'@use "variables" as *;\n@use "icon/icon-family-calc" as *;\n' +
 	'// Do not edit directly\n' +
 	'// Generated on ' +
 	new Date().toString() +
@@ -112,7 +112,7 @@ const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
 
 	if (utility) {
-		allClasses += `@import "variables";\n@import "typography-placeholder";\n`;
+		allClasses += `@use "variables" as *;\n@use "typography-placeholder" as *;\n`;
 	}
 
 	// ScaleTypeKey = [normal, functional, expressive]

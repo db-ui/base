@@ -1,10 +1,13 @@
+@use "variables" as *;
+@use "default.assets-paths" as *;
+
 @font-face {
 	font-family: $db-font-db-screenhead-light-font-family;
 	font-style: normal;
 	font-weight: $db-font-db-screenhead-light-font-weight;
 	src: local($db-font-db-screenhead-light-name),
-		url($db-font-db-screenhead-light-woff2) format("woff2"),
-		url($db-font-db-screenhead-light-woff) format("woff");
+		url($fonts-path + $db-font-db-screenhead-light-woff2) format("woff2"),
+		url($fonts-path + $db-font-db-screenhead-light-woff) format("woff");
 }
 
 @font-face {
@@ -12,8 +15,8 @@
 	font-style: normal;
 	font-weight: $db-font-db-screenhead-black-font-weight;
 	src: local($db-font-db-screenhead-black-name),
-		url($db-font-db-screenhead-black-woff2) format("woff2"),
-		url($db-font-db-screenhead-black-woff) format("woff");
+		url($fonts-path + $db-font-db-screenhead-black-woff2) format("woff2"),
+		url($fonts-path + $db-font-db-screenhead-black-woff) format("woff");
 }
 
 @font-face {
@@ -21,8 +24,8 @@
 	font-style: normal;
 	font-weight: $db-font-db-screensans-regular-font-weight;
 	src: local($db-font-db-screensans-regular-name),
-		url($db-font-db-screensans-regular-woff2) format("woff2"),
-		url($db-font-db-screensans-regular-woff) format("woff");
+		url($fonts-path + $db-font-db-screensans-regular-woff2) format("woff2"),
+		url($fonts-path + $db-font-db-screensans-regular-woff) format("woff");
 }
 
 @font-face {
@@ -30,6 +33,6 @@
 	font-style: normal;
 	font-weight: $db-font-db-screensans-bold-font-weight;
 	src: local($db-font-db-screensans-bold-name),
-		url($db-font-db-screensans-bold-woff2) format("woff2"),
-		url($db-font-db-screensans-bold-woff) format("woff");
+		url($fonts-path + $db-font-db-screensans-bold-woff2) format("woff2"),
+		url($fonts-path + $db-font-db-screensans-bold-woff) format("woff");
 }
