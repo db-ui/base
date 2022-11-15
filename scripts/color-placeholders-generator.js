@@ -86,7 +86,7 @@ const generateBGVariants = (
  * @returns scss string
  */
 exports.generateColorUtilitityPlaceholder = (colorToken) => {
-	let output = '';
+	let output = '@use "variables" as *;\n';
 
 	for (const [, value] of Object.keys(colorToken).entries()) {
 		output += `/**

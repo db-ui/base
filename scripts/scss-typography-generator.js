@@ -1,11 +1,12 @@
 const prefix = 'db';
 
-const fileHeader =
-	'@import "icon-family-calc";\n' +
-	'// Do not edit directly\n' +
-	'// Generated on ' +
-	new Date().toString() +
-	'\n';
+const fileHeader = `
+	@use "variables" as *;
+	@use "icon/icon-family-calc" as *;
+	// Do not edit directly
+	// Generated on
+	// ${new Date().toString()}
+	`;
 
 const getShortSize = (size) => {
 	if (size === '3xlarge') {
@@ -112,7 +113,7 @@ const generateClasses = (typography, utility) => {
 	let allClasses = fileHeader;
 
 	if (utility) {
-		allClasses += `@import "variables";\n@import "typography-placeholder";\n`;
+		allClasses += `@use "variables" as *;\n@use "typography-placeholder" as *;\n`;
 	}
 
 	// ScaleTypeKey = [normal, functional, expressive]

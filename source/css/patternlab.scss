@@ -1,6 +1,7 @@
-@import "../../build/scss/db-ui-base";
-@import "../../build/scss/typography-classes";
-@import "../../build/scss/color-classes";
+@use "../../build/scss/variables" as *;
+@use "../../build/scss/db-ui-base" as *;
+@use "../../build/scss/typography-classes" as *;
+@use "../../build/scss/color-classes" as *;
 
 body {
 	@extend %db-ui-functional;

@@ -1,6 +1,7 @@
-@import "font-faces";
-@import "typography-placeholder";
-@import "scaling-placeholder";
+@use "variables" as *;
+@use "font-faces" as *;
+@use "typography-placeholder" as *;
+@use "scaling-placeholder" as *;
 
 :root {
 	font-family: $db-font-family-sans;
@@ -21,13 +22,13 @@
 		.db-ui-#{nth($styles, $i + 1)} {
 			@extend %db-scaling-#{nth($styles, $i + 1)};
 
-			[data-size="large"] {
-				@extend %db-#{nth($styles, $i + 1)}-body-lg;
-			}
-
-			:not(small),
+			*,
 			[data-size="medium"] {
 				@extend %db-#{nth($styles, $i + 1)}-body-md;
+			}
+
+			[data-size="large"] {
+				@extend %db-#{nth($styles, $i + 1)}-body-lg;
 			}
 
 			small,
