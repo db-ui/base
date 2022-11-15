@@ -26,12 +26,7 @@
 				@extend %db-#{nth($styles, $i + 1)}-body-lg;
 			}
 
-			body,
-			button,
-			input,
-			optgroup,
-			select,
-			textarea,
+			:not(small),
 			[data-size="medium"] {
 				@extend %db-#{nth($styles, $i + 1)}-body-md;
 			}
