@@ -22,7 +22,7 @@
 		.db-ui-#{nth($styles, $i + 1)} {
 			@extend %db-scaling-#{nth($styles, $i + 1)};
 
-			*,
+			*, // TODO: let's check whether we could even also enable this without the asterisk just by inheriting line-height and font-size on non-inheriting elements like buttons
 			[data-size="medium"] {
 				@extend %db-#{nth($styles, $i + 1)}-body-md;
 			}
