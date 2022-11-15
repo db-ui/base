@@ -25,7 +25,7 @@
 				@extend %db-#{nth($styles, $i + 1)}-body-lg;
 			}
 
-			*:not(small),
+			:not(small),
 			[data-size="medium"] {
 				@extend %db-#{nth($styles, $i + 1)}-body-md;
 			}
