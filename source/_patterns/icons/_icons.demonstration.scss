@@ -2,7 +2,7 @@
 
 .DO-NOT-COPY-THIS-CLASS-example-icon-list {
 	&,
-	ul {
+	ol {
 		list-style: none;
 
 		padding-left: 0;
@@ -18,9 +18,65 @@
 			min-width: 250px;
 		}
 		.DO-NOT-COPY-THIS-CLASS-example-bg-variants-regular {
-			ul {
+			ol {
 				justify-content: flex-end;
 			}
+		}
+	}
+
+	details {
+		summary {
+			cursor: pointer;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			// Remove existing marker
+			&::-webkit-details-marker {
+				display: none;
+			}
+			// … and using some other declaration for Mozilla Firefox
+			&:first-of-type {
+				list-style-type: none;
+			}
+
+			figure {
+				text-align: center;
+			}
+		}
+
+		ul {
+			li {
+				display: list-item;
+				padding: initial;
+			}
+		}
+
+		// Icon details
+		aside {
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 10;
+
+			background-color: #fff;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+			padding: 1rem;
+		}
+
+		// Achieving a full viewport clickarea for closing the overflow menu
+		&[open] summary::after {
+			content: "\00A0";
+			display: inline-block;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100vw;
+			z-index: 5;
 		}
 	}
 
@@ -28,8 +84,8 @@
 		display: flex;
 	}
 
-	&.icons {
-		ul {
+	&:where(.icons) {
+		ol {
 			color: $db-colors-secondary-enabled;
 		}
 
@@ -70,7 +126,7 @@
 		}
 	}
 	&.functional {
-		ul {
+		ol {
 			display: flex;
 			align-items: center;
 		}
