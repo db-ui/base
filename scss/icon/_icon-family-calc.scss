@@ -15,19 +15,19 @@ $all-icon-sizes: (
 	$icon-size: (math.div($font-size, 1rem) * 16 * $line-height);
 	$valid-sizes: "";
 
-	@if ($icon-size<18) {
+	@if ($icon-size<20) {
 		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 16));
 	}
-	@if ($icon-size<22) {
+	@if ($icon-size<24) {
 		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 20));
 	}
-	@if ($icon-size<28) {
+	@if ($icon-size<32) {
 		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 24));
 	}
-	@if ($icon-size<40) {
+	@if ($icon-size<48) {
 		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 32));
 	}
-	@if ($icon-size<56) {
+	@if ($icon-size<64) {
 		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 48));
 	}
 	$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 64));
