@@ -1,11 +1,9 @@
-// @import "icons.variables";
-
-@use "icons.variables" as *;
-@use "icons.attributes-mappings" as *;
 @use "icons.helpers" as *;
-@use "icons.custom-properties" as *;
-@use "icons.font-faces" as *;
+@use "icons.variables" as *;
 @use "icons.placeholder" as *;
+@forward "icons.attributes-mappings";
+@forward "icons.custom-properties";
+@forward "icons.font-faces";
 
 [data-icon],
 [data-icon-before] {
