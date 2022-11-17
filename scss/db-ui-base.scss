@@ -1,9 +1,9 @@
+@use "normalize" as *;
+
 @use "variables" as *;
 @use "variables.global" as *;
 @use "color-placeholder" as *;
 @use "tonality" as *;
-
-@import "@csstools/normalize.css/normalize.css";
 
 :root {
 	@extend %db-ui-normal;
