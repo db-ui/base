@@ -1,0 +1,45 @@
+@use "../../../build/scss/variables" as *;
+@use "../../../build/scss/variables.global" as *;
+
+%elevation-placeholder {
+	width: 15rem;
+	height: $db-sizing-lg;
+	padding: $db-spacing-responsive-sm $db-spacing-responsive-md;
+	border-radius: 8px;
+	background-color: $db-colors-neutral-bg-0-enabled;
+}
+
+.DO-NOT-COPY-THIS-CLASS-elevation-background {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $db-spacing-responsive-md;
+	padding: $db-spacing-fixed-md;
+	background-color: $db-colors-neutral-bg-1-enabled;
+}
+
+$list: "", $db-elevation-1, $db-elevation-2, $db-elevation-3, $db-elevation-4,
+	$db-elevation-8, $db-elevation-12, $db-elevation-24;
+
+@mixin elevation() {
+	@for $i from 0 to length($list) {
+		$className: $i;
+		@if ($i==5) {
+			$className: 8;
+		}
+		@if ($i==6) {
+			$className: 12;
+		}
+		@if ($i==7) {
+			$className: 24;
+		}
+		.DO-NOT-COPY-THIS-CLASS-elevation-#{$className} {
+			@extend %elevation-placeholder;
+
+			@if ($i != 0) {
+				box-shadow: nth($list, $i + 1);
+			}
+		}
+	}
+}
+
+@include elevation();
