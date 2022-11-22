@@ -5,7 +5,6 @@
 		"import/extensions": 0,
 		"max-depth": 0,
 		"n/prefer-global/process": 0,
-		"max-params": 0,
-		"prettier/prettier": 0
+		"max-params": 0
 	}
 }
