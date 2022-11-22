@@ -1,3 +1,5 @@
+@use "../../../build/scss/variables" as *;
+
 .DO-NOT-COPY-THIS-CLASS-example-icon-list {
 	&,
 	ol {
@@ -84,7 +86,7 @@
 
 	&:where(.icons) {
 		ol {
-			color: $db-color-cool-gray-700;
+			color: $db-colors-secondary-enabled;
 		}
 
 		li {
@@ -94,33 +96,27 @@
 			padding: 1rem 0.25rem;
 			border-radius: 4px;
 
-			color: $db-color-cool-gray-700;
+			color: $db-colors-secondary-enabled;
 
 			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-turquoise {
-				background-color: $db-color-turquoise-400;
-
-				// Special green icons
-				use[href*="icons/illustrative/food/db_ic_il_vegan.svg#icon"],
-				use[href*="icons/illustrative/food/db_ic_il_vegetarian.svg#icon"],
-				use[href*="icons/illustrative/food/db_ic_il_sustainable.svg#icon"] {
-					--db-icon-pulse-color: #{$db-color-cool-gray-700};
-				}
+				background-color: $db-colors-success-enabled;
+				--db-icon-color: rgb(255, 255, 255);
 			}
 			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-red {
-				background-color: $db-color-red-500;
+				background-color: $db-colors-primary-enabled;
 
-				--db-icon-color: #fff;
-				--db-icon-pulse-color: #fff;
+				--db-icon-color: rgb(255, 255, 255);
+				--db-icon-pulse-color: rgb(255, 255, 255);
 			}
 			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-cyan {
-				background-color: $db-color-cyan-200;
+				background-color: $db-colors-information-enabled;
 
-				--db-icon-pulse-color: currentColor;
+				--db-icon-color: rgb(255, 255, 255);
 			}
 			&.DO-NOT-COPY-THIS-CLASS-example-bg-variants-dark {
-				background-color: #272d37; // TODO: richtige Farbvariable raus suchen
+				background-color: $db-colors-secondary-enabled;
 
-				--db-icon-color: #fff;
+				--db-icon-color: rgb(255, 255, 255);
 			}
 		}
 	}

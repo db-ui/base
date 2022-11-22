@@ -1,0 +1,44 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+
+$all-icon-sizes: (
+	16: "icons-16-outline",
+	20: "icons-20-outline",
+	24: "icons-24-outline",
+	32: "icons-32-outline",
+	48: "icons-48-outline",
+	64: "icons-64-outline"
+);
+
+@function get-icon-family($font-size, $line-height) {
+	$icon-size: (math.div($font-size, 1rem) * 16 * $line-height);
+	$valid-sizes: "";
+
+	@if ($icon-size<20) {
+		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 16));
+	}
+	@if ($icon-size<24) {
+		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 20));
+	}
+	@if ($icon-size<32) {
+		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 24));
+	}
+	@if ($icon-size<48) {
+		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 32));
+	}
+	@if ($icon-size<64) {
+		$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 48));
+	}
+	$valid-sizes: append($valid-sizes, map.get($all-icon-sizes, 64));
+
+	$result-string: "";
+	@each $size in $valid-sizes {
+		@if ($size != "") {
+			$result-string: $result-string + '"' + $size + '"' + ",";
+		}
+	}
+
+	$result-string: $result-string + '"missing-icons"';
+	@return $result-string;
+}

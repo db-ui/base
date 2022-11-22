@@ -1,16 +1,43 @@
 {
 	"font": {
+		"db-screensans-regular": {
+			"name": { "value": "'DB Screen Sans Regular'" },
+			"font-family": { "value": "'DB Screen Sans'" },
+			"font-weight": { "value": "400" },
+			"woff": { "value": "'dbscreensans-regular.woff'" },
+			"woff2": { "value": "'dbscreensans-regular.woff2'" }
+		},
+		"db-screensans-bold": {
+			"name": { "value": "'DB Screen Sans Bold'" },
+			"font-family": { "value": "'DB Screen Sans'" },
+			"font-weight": { "value": "700" },
+			"woff": { "value": "'dbscreensans-bold.woff'" },
+			"woff2": { "value": "'dbscreensans-bold.woff2'" }
+		},
+		"db-screenhead-light": {
+			"name": { "value": "'DB Screen Head Light'" },
+			"font-family": { "value": "'DB Screen Head'" },
+			"font-weight": { "value": "300" },
+			"woff": { "value": "'dbscreenhead-light.woff'" },
+			"woff2": { "value": "'dbscreenhead-light.woff2'" }
+		},
+		"db-screenhead-black": {
+			"name": { "value": "'DB Screen Head Black'" },
+			"font-family": { "value": "'DB Screen Head'" },
+			"font-weight": { "value": "900" },
+			"woff": { "value": "'dbscreenhead-black.woff'" },
+			"woff2": { "value": "'dbscreenhead-black.woff2'" }
+		},
 		"family": {
-			// These first two ones are the only two that are necessary tokens, the three at the end are only relevant for tailwind
-			"base": {
-				"value": "'{asset.font.db-screensans-regular.fontfamily.value}', Helvetica, Arial, sans-serif"
+			"sans": {
+				"value": "{font.db-screensans-regular.font-family.value}, Helvetica, Arial, sans-serif"
 			},
-			"headline": {
-				"value": "'{asset.font.db-screenhead.fontfamily.value}', Helvetica, Arial, sans-serif"
+			"head": {
+				"value": "{font.db-screenhead-black.font-family.value}, Helvetica, Arial, sans-serif"
 			},
-			"sans": "'{asset.font.db-screensans-regular.name.value}', Helvetica, Arial, sans-serif",
-			"bold": "'{asset.font.db-screensans-bold.name.value}', Helvetica, Arial, sans-serif",
-			"head": "'{asset.font.db-screenhead.name.value}', Helvetica, Arial, sans-serif"
+			"bold": {
+				"value": "{font.db-screensans-bold.font-family.value}, Helvetica, Arial, sans-serif"
+			}
 		}
 	}
 }

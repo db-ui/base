@@ -13,10 +13,11 @@
   "scripts": {
     "prepare": "node -e \"try { require('husky').install() } catch (e) {}\"",
     "copy:assets": "cpr assets build/assets -d",
-    "copy:csstokens": "cpr build/css/variables.css out/css/variables.css -o",
-    "build:style-dictionary": "node style-dictionary.js && npm run copy:csstokens",
-    "build:css": "sass source/css/db-ui-base.scss:out/css/db-ui-base.css --style=compressed --embed-sources --load-path=node_modules",
+    "copy:scss": "cpr scss build/scss -o",
+    "build:style-dictionary": "node style-dictionary.js && npm run copy:scss",
+    "build:patternlab-css": "sass source/css/patternlab.scss:out/css/patternlab.css --style=compressed --embed-sources --load-path=node_modules",
     "build:tailwind": "node scripts/tailwind-config-generator.mjs false true && cpr scripts/tailwind-config-generator.mjs build/tailwind/tailwind-config-generator.mjs -o",
+    "build-test:css": "sass build/scss/:build/css/ --load-path=node_modules",
     "build": "npm-run-all copy:assets build:* pl:build",
     "clean": "rm -rf build",
     "lint": "npm-run-all -p lint:*",
@@ -26,14 +27,18 @@
     "start": "npm-run-all build:style-dictionary --parallel pl:serve watch:tokens watch:scss",
     "test": "exit 0",
     "watch:tokens": "nodemon --watch tokens/ -e json -x \"npm run build:style-dictionary\"",
-    "watch:scss": "nodemon --watch source/_patterns/ -e scss -x \"npm run build:css\"",
+    "watch:scss": "nodemon --watch source/_patterns/ -e scss -x \"npm run build:patternlab-css\"",
     "pl:build": "patternlab build --config ./patternlab-config.json",
     "pl:help": "patternlab --help",
     "pl:install": "patternlab install --config ./patternlab-config.json",
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
-    "pl:version": "patternlab --version"
+    "pl:version": "patternlab --version",
+    "zeplin:tokens": "node scripts/zeplin-styleguide.js"
   },
   "license": "Apache-2.0",
+  "dependencies": {
+    "@csstools/normalize.css": "^12.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
@@ -43,6 +48,7 @@
     "@pattern-lab/engine-handlebars": "5.16.4",
     "@pattern-lab/starterkit-handlebars-vanilla": "1.4.3",
     "@pattern-lab/uikit-workshop": "5.17.0",
+    "@zeplin/sdk": "^1.14.0",
     "cpr": "3.0.1",
     "dotenv": "^16.0.3",
     "find-versions-cli": "^4.0.0",
@@ -61,7 +67,7 @@
     "xo": "^0.53.1"
   },
   "validate-branch-name": {
-    "pattern": "((dependabot-)|^((test|feat|fix|chore|docs|refactor|style|ci|perf|[0-9]+)\\-[a-zA-Z0-9\\-]+)$)",
+    "pattern": "((dbux-3)|(dependabot-)|^((test|feat|fix|chore|docs|refactor|style|ci|perf|[0-9]+)\\-[a-zA-Z0-9\\-]+)$)",
     "errorMsg": "There is something wrong with your branch name. You should rename your branch to a valid name and try again. See the Pattern below."
   },
   "repository": {

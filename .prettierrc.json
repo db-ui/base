@@ -4,7 +4,9 @@
 		{
 			"files": "**/*.js",
 			"options": {
-				"singleQuote": true
+				"singleQuote": true,
+				"bracketSpacing": true,
+				"bracketSameLine": true
 			}
 		},
 		{

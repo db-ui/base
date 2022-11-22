@@ -1,0 +1,33 @@
+@use "icons.helpers" as *;
+@use "icons.variables" as *;
+@use "icons.placeholder" as *;
+@forward "icons.attributes-mappings";
+@forward "icons.custom-properties";
+@forward "icons.font-faces";
+
+[data-icon],
+[data-icon-before] {
+	&::before {
+		@extend %icon !optional;
+		margin-inline-end: var(--icon-margin-after, #{$icon-content-space});
+	}
+}
+
+[data-icon-after] {
+	&::after {
+		@extend %icon !optional;
+		margin-inline-start: var(--icon-margin-before, #{$icon-content-space});
+	}
+}
+
+// Providing a mechanism for text replacements
+.is-icon-text-replace {
+	&[data-icon],
+	&[data-icon-before] {
+		@include is-icon-text-replace();
+	}
+
+	&[data-icon-after] {
+		@include is-icon-text-replace("after");
+	}
+}

@@ -1,0 +1,37 @@
+@use "sass:math";
+@use "a11y" as *;
+@use "clearfix" as *;
+
+@function to-rem($pxValue) {
+	@return #{$pxValue * 0.0625}rem;
+}
+
+@function to-em($pxValue) {
+	@return #{$pxValue * 0.0625}em;
+}
+
+// TODO: We might be able to simplify the following placeholder/mixins afterwards by partial construct out of DB UI Core
+// Mixin wrappers around the SCSS placeholders
+@mixin a11y-visually-hidden($partial: false) {
+	@if $partial {
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		overflow: hidden;
+		position: absolute !important;
+		white-space: nowrap;
+		width: 1px;
+	} @else {
+		@extend %a11y-visually-hidden;
+	}
+}
+@mixin clearfix($partial: false) {
+	@if $partial {
+		&::after {
+			clear: both;
+			content: " ";
+			display: table;
+		}
+	} @else {
+		@extend %clearfix;
+	}
+}

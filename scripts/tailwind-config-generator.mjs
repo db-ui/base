@@ -22,7 +22,7 @@ const run = async () => {
 			spacing: tokens.spacing,
 			fontFamily: tokens.font.family,
 			fontSize: tokens.fontSize,
-			colors: tokens.color,
+			colors: tokens.colors,
 			gap: ({ theme }) => ({
 				...theme('spacing'),
 				...tokens.gap

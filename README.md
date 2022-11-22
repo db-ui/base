@@ -60,7 +60,17 @@ npm install
 npm run build
 ```
 
-The `npm build` task is what performs the style dictionary build steps to generate the files for each platform. Every time you change something in the style dictionary, like changing colors or adding tokens, you will have to run this command again to generate the files.
+The `npm build` task is what performs the style dictionary build steps to generate the files for each platform.
+
+### Local development
+
+We fetch all tokens like colors, spacings and typography via Zeplin API. To update those files you need to add a zeplin token to your environment.
+
+For this copy `.env.template` and rename it to `.env` and generate a personal access token in the [Browser](https://app.zeplin.io/profile/developer).
+
+Afterwards paste your Token into the `.env` file `DEVELOPER_ZEPLIN_ACCESS_TOKEN=MY_TOKEN`.
+
+To fetch the newest style-tokens via Zeplin API run `npm run zeplin:tokens` and the `/tokens/zeplin.json` should be updated.
 
 ## Code of conduct
 
