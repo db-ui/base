@@ -1,6 +1,8 @@
-require('dotenv').config();
-const FS = require('node:fs');
-const { ZeplinApi, Configuration } = require('@zeplin/sdk');
+import * as fs from 'node:fs';
+import * as dotenv from 'dotenv'; // See https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import { ZeplinApi, Configuration } from '@zeplin/sdk';
+
+dotenv.config();
 
 const zeplin = new ZeplinApi(
 	new Configuration({
@@ -188,26 +190,24 @@ const convertSpacings = (data) => {
 	data.spacing = mergeData(spacings);
 };
 
-(async () => {
-	try {
-		const { data } = await zeplin.designTokens.getStyleguideDesignTokens(
-			'63037ab49bdcb913c9228718'
-		);
+try {
+	const { data } = await zeplin.designTokens.getStyleguideDesignTokens(
+		'63037ab49bdcb913c9228718'
+	);
 
-		convertColors(data);
-		convertTextStyles(data);
-		convertSpacings(data);
+	convertColors(data);
+	convertTextStyles(data);
+	convertSpacings(data);
 
-		FS.writeFileSync(
-			'./tokens/zeplin.json',
-			JSON.stringify({
-				spacing: data.spacing,
-				sizing: data.sizing,
-				typography: data.textStyles,
-				colors: data.colors
-			})
-		);
-	} catch (error) {
-		console.error(error);
-	}
-})();
+	fs.writeFileSync(
+		'./tokens/zeplin.json',
+		JSON.stringify({
+			spacing: data.spacing,
+			sizing: data.sizing,
+			typography: data.textStyles,
+			colors: data.colors
+		})
+	);
+} catch (error) {
+	console.error(error);
+}
