@@ -19,16 +19,11 @@ let configFile = `
   theme: {
 			screens: tokens.screens,
 			spacing: tokens.spacing,
-			fontFamily: tokens.font.family,
-			fontSize: tokens.fontSize,
-			colors: tokens.colors,
 			gap: ({ theme }) => ({
-				...theme('spacing'),
-				...tokens.gap
+				...theme('spacing')
 			}),
 			space: ({ theme }) => ({
-				...theme('spacing'),
-				...tokens.space
+				...theme('spacing')
 			})
   	}
   };
