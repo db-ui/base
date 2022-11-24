@@ -71,6 +71,8 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 	--db-base-icon-font-size: #{$${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size};
 	--db-base-icon-font-family: #{get-icon-family($${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size,
 	$${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height)};
+	--db-base-icon-font-family-filled: #{get-icon-family($${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size,
+	$${prefix}-typography-${scale}-mobile-${textType}-${size}-line-height,"filled")};
 	--db-type-body-font-size-${getShortSize(
 		size
 	)}: #{$${prefix}-typography-${scale}-mobile-${textType}-${size}-font-size};
@@ -89,6 +91,8 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 		--db-base-icon-font-size: #{$${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size};
 		--db-base-icon-font-family: #{get-icon-family($${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size,
 		$${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height)};
+		--db-base-icon-font-family-filled: #{get-icon-family($${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size,
+		$${prefix}-typography-${scale}-tablet-${textType}-${size}-line-height,"filled")};
 		--db-type-body-font-size-${getShortSize(
 			size
 		)}: #{$${prefix}-typography-${scale}-tablet-${textType}-${size}-font-size};
@@ -109,6 +113,8 @@ ${utility ? '.' : '%'}${prefix}-${scale}-${textType}-${getShortSize(size)}{
 		--db-base-icon-font-size: #{$${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size};
 		--db-base-icon-font-family: #{get-icon-family($${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size,
 		$${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height)};
+		--db-base-icon-font-family-filled: #{get-icon-family($${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size,
+		$${prefix}-typography-${scale}-desktop-${textType}-${size}-line-height,"filled")};
 		--db-type-body-font-size-${getShortSize(
 			size
 		)}: #{$${prefix}-typography-${scale}-desktop-${textType}-${size}-font-size};
