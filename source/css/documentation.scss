@@ -1,9 +1,8 @@
 @use "../../build/scss/variables" as *;
 @use "../../build/scss/db-ui-base" as *;
-@use "../../build/scss/typography-classes" as *;
 @use "../../build/scss/color-classes" as *;
 
-body {
+:root {
 	@extend %db-ui-functional;
 }
 
@@ -21,6 +20,7 @@ textarea {
 @import "../_patterns/logo/examples.demonstration";
 @import "../_patterns/spacings/examples.demonstration";
 @import "../_patterns/elevation/examples.demonstration";
+@import "../_patterns/typography/examples.demonstration";
 
 main {
 	padding: $db-spacing-fixed-regular-xs $db-spacing-fixed-regular-l;
