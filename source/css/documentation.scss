@@ -23,11 +23,11 @@ textarea {
 @import "../_patterns/elevation/examples.demonstration";
 
 main {
-	padding: $db-spacing-fixed-normal-xs $db-spacing-fixed-normal-l;
+	padding: $db-spacing-fixed-regular-xs $db-spacing-fixed-regular-l;
 }
 
 .typography-table {
 	tr > td {
-		padding: $db-spacing-fixed-normal-2xs $db-spacing-fixed-normal-xs;
+		padding: $db-spacing-fixed-regular-2xs $db-spacing-fixed-regular-xs;
 	}
 }
