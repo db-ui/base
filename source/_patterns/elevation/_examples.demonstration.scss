@@ -17,24 +17,12 @@
 	background-color: $db-colors-neutral-bg-1-enabled;
 }
 
-$list: "", $db-elevation-1, $db-elevation-2, $db-elevation-4, $db-elevation-8,
-	$db-elevation-12, $db-elevation-24;
+$list: "", $db-elevation-1, $db-elevation-2, $db-elevation-3, $db-elevation-4,
+	$db-elevation-5, $db-elevation-6;
 
 @mixin elevation() {
 	@for $i from 0 to length($list) {
 		$className: $i;
-		@if ($i==3) {
-			$className: 4;
-		}
-		@if ($i==4) {
-			$className: 8;
-		}
-		@if ($i==5) {
-			$className: 12;
-		}
-		@if ($i==6) {
-			$className: 24;
-		}
 		.DO-NOT-COPY-THIS-CLASS-elevation-#{$className} {
 			@extend %elevation-placeholder;
 
