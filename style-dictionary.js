@@ -7,13 +7,12 @@ const transforms = require('style-dictionary/lib/common/transforms');
 const SCSSPlaceholders = require('./scripts/color-placeholders-generator');
 const SCSSClasses = require('./scripts/color-classes-generator');
 
-const generateClasses = require('./scripts/scss-typography-generator');
+const generateTypography = require('./scripts/scss-typography-generator');
 const generateScaling = require('./scripts/scss-scaling-generator');
 
 const modifyTailwind = (dictionary) => {
 	for (const token of [
 		'colors',
-		'elevation',
 		'font',
 		'transition',
 		'sizing',
@@ -41,32 +40,17 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFormat({
-	name: 'db-core-typography-classes',
-	formatter({ dictionary }) {
-		const typography = dictionary.tokens.typography;
-		return generateClasses(typography, true);
-	}
-});
-
-StyleDictionary.registerFormat({
 	name: 'db-core-typography-placeholder',
 	formatter({ dictionary }) {
 		const typography = dictionary.tokens.typography;
-		return generateClasses(typography, false);
-	}
-});
-
-StyleDictionary.registerFormat({
-	name: 'db-core-scaling-classes',
-	formatter() {
-		return generateScaling(true);
+		return generateTypography(typography);
 	}
 });
 
 StyleDictionary.registerFormat({
 	name: 'db-core-scaling-placeholder',
 	formatter() {
-		return generateScaling(false);
+		return generateScaling();
 	}
 });
 

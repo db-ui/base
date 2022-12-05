@@ -19,6 +19,7 @@ let configFile = `
   theme: {
 			screens: tokens.screens,
 			spacing: tokens.spacing,
+			boxShadow: tokens.elevation,
 			gap: ({ theme }) => ({
 				...theme('spacing')
 			}),
