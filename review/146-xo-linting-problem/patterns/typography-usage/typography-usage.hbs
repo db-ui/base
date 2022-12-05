@@ -29,7 +29,7 @@
 <code class="language-scss">/* ./index.scss */
 @import "@db-ui/base/build/scss/db-ui-base";
 
-body {
+:root {
 	@extend %db-ui-functional;
 }
 
@@ -41,16 +41,6 @@ body {
 			<strong>Example html &lt;small&gt;:</strong>
 			<p>Default: <strong>14px</strong></p>
 			<small>SM: <strong>12px</strong></small>
-			<h3>With utility classes</h3>
-			<pre>
-<code class="language-scss">/* ./index.scss */
-... see default
-@import "@db-ui-base/scss/typography-classes";
-</code>
-			</pre>
-			<strong>Example html (class='db-normal-body-xs'):</strong>
-			<p>Default: <strong>14px</strong></p>
-			<p class='db-normal-body-xs'>SM: <strong>12px</strong></p>
 
 		</db-tab>
 		<db-tab label="Tailwind" name="tab-bar">
