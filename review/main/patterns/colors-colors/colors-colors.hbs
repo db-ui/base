@@ -1,3 +1,18 @@
-<main>
-	{{flat-colors}}
-</main>
+{{#color}}
+	{{#each this}}
+		<h2>{{@key}}</h2>
+		<ul class="sg-colors">
+			{{#each this}}
+				<li>
+					<span class="sg-swatch" style="background: {{value}};"></span>
+					<span class="sg-label">
+						color-{{attributes.color}}-{{@key}}
+						<br />
+						{{value}}
+					</span>
+				</li>
+			{{/each}}
+		</ul>
+	{{/each}}
+{{/color}}
+<!--end sg-colors-->
