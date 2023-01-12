@@ -18,7 +18,7 @@
     "build:css": "sass source/css/db-ui-base.scss:out/css/db-ui-base.css --style=compressed --embed-sources --load-path=node_modules",
     "build:tailwind": "node scripts/tailwind-config-generator.mjs false true && cpr scripts/tailwind-config-generator.mjs build/tailwind/tailwind-config-generator.mjs -o",
     "build": "npm-run-all copy:assets build:* pl:build",
-    "clean": "rm -rf build",
+    "clean": "git clean -dfx --exclude=.env",
     "lint": "npm-run-all -p lint:*",
     "lint:markdownlint": "markdownlint -c .markdown-lint.yml **/*.md",
     "lint:stylelint": "stylelint **/*.scss",
