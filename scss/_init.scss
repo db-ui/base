@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 :root {
-// Todo: probably moce those to the tokens as well
+// Todo: probably move these to the tokens as well
 	--db-focus-outline-offset: 1px;
 	--db-focus-outline-color: #{$db-colors-information-enabled};
 	--db-focus-outline-transition-duration: #{$db-transition-duration-ultra-fast};
