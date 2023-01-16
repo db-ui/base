@@ -62,6 +62,10 @@ npm run build
 
 The `npm build` task is what performs the style dictionary build steps to generate the files for each platform. Every time you change something in the style dictionary, like changing colors or adding tokens, you will have to run this command again to generate the files.
 
+## Third party acknowledgments – many kudos for that !!!
+
+- [open privacy by opr.vc](https://opr.vc)
+
 ## Code of conduct
 
 We as members, contributors, and leaders pledge to make participation in our
