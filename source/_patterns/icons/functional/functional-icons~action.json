@@ -533,7 +533,7 @@
 			]
 		},
 		{
-			"icon": "drag_drop",
+			"icon": "drag_and_drop",
 			"variants": [
 				{
 					"size": 32
