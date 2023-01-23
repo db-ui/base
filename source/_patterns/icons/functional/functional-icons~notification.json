@@ -25,6 +25,10 @@
 				{
 					"size": 20,
 					"style": "solid"
+				},
+				{
+					"size": 16,
+					"style": "solid"
 				}
 			]
 		},
@@ -78,6 +82,10 @@
 				},
 				{
 					"size": 20,
+					"style": "solid"
+				},
+				{
+					"size": 16,
 					"style": "solid"
 				}
 			]

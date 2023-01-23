@@ -326,6 +326,10 @@
 				{
 					"size": 20,
 					"style": "solid"
+				},
+				{
+					"size": 16,
+					"style": "solid"
 				}
 			]
 		},
@@ -371,6 +375,20 @@
 		},
 		{
 			"icon": "cloud_upload",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "compass",
 			"variants": [
 				{
 					"size": 32
@@ -502,6 +520,20 @@
 		},
 		{
 			"icon": "download",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "drag_drop",
 			"variants": [
 				{
 					"size": 32
@@ -709,7 +741,19 @@
 					"size": 20
 				},
 				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
 					"size": 20,
+					"style": "solid"
+				},
+				{
+					"size": 16,
 					"style": "solid"
 				}
 			]
@@ -745,7 +789,19 @@
 					"size": 20
 				},
 				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
 					"size": 20,
+					"style": "solid"
+				},
+				{
+					"size": 16,
 					"style": "solid"
 				}
 			]
@@ -870,6 +926,34 @@
 				},
 				{
 					"size": 16
+				}
+			]
+		},
+		{
+			"icon": "person_with_cane",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "person_with_rollator",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
 				}
 			]
 		},
@@ -1141,6 +1225,34 @@
 		},
 		{
 			"icon": "shopping_cart_disabled",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "sort_down",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "sort_up",
 			"variants": [
 				{
 					"size": 32
