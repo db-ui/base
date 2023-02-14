@@ -326,6 +326,10 @@
 				{
 					"size": 20,
 					"style": "solid"
+				},
+				{
+					"size": 16,
+					"style": "solid"
 				}
 			]
 		},
@@ -371,6 +375,20 @@
 		},
 		{
 			"icon": "cloud_upload",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "compass",
 			"variants": [
 				{
 					"size": 32
@@ -502,6 +520,20 @@
 		},
 		{
 			"icon": "download",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "drag_and_drop",
 			"variants": [
 				{
 					"size": 32
@@ -671,6 +703,34 @@
 			]
 		},
 		{
+			"icon": "hearing",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "hearing_disabled",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "heart",
 			"variants": [
 				{
@@ -709,7 +769,19 @@
 					"size": 20
 				},
 				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
 					"size": 20,
+					"style": "solid"
+				},
+				{
+					"size": 16,
 					"style": "solid"
 				}
 			]
@@ -745,7 +817,19 @@
 					"size": 20
 				},
 				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
 					"size": 20,
+					"style": "solid"
+				},
+				{
+					"size": 16,
 					"style": "solid"
 				}
 			]
@@ -1154,6 +1238,34 @@
 			]
 		},
 		{
+			"icon": "sort_down",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "sort_up",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "star",
 			"variants": [
 				{
@@ -1236,6 +1348,20 @@
 			]
 		},
 		{
+			"icon": "translation",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "undo",
 			"variants": [
 				{
@@ -1288,6 +1414,24 @@
 				},
 				{
 					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "voucher",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 20,
+					"style": "solid"
 				}
 			]
 		},
