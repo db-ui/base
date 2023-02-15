@@ -15,12 +15,14 @@
 #   <!-- markdownlint-restore -->
 #
 
+default: true
+
 ###############
 # Rules by id #
 ###############
 MD004: false # Unordered list style
 MD007:
-  indent: 4 # Unordered list indentation
+  indent: 2 # Unordered list indentation
 MD010: false
 MD013:
   line_length: 500 # Line length 80 is far to short

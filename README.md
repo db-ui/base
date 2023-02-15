@@ -62,7 +62,11 @@ npm run build
 
 The `npm build` task is what performs the style dictionary build steps to generate the files for each platform. Every time you change something in the style dictionary, like changing colors or adding tokens, you will have to run this command again to generate the files.
 
+<!-- markdownlint-disable MD026 -->
+
 ## Third party acknowledgments – many kudos for that !!!
+
+<!-- markdownlint-enable MD026 } -->
 
 - [open privacy by opr.vc](https://opr.vc)
 

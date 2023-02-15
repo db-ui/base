@@ -20,7 +20,7 @@
     "build": "npm-run-all copy:assets build:* pl:build",
     "clean": "git clean -dfx --exclude=.env",
     "lint": "npm-run-all -p lint:*",
-    "lint:markdownlint": "markdownlint -c .markdown-lint.yml **/*.md",
+    "lint:markdownlint": "markdownlint -c .markdown-lint.yml '**/*.md'",
     "lint:stylelint": "stylelint **/*.scss",
     "lint:xo": "xo",
     "start": "npm-run-all build:style-dictionary --parallel pl:serve watch:tokens watch:scss",
