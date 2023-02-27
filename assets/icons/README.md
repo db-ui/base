@@ -8,6 +8,6 @@ We're getting these icons by the [DB Design System colleagues](https://dbsw.shar
     - replace `fill="#282D37"` by `fill="var(--db-icon-color, currentColor)"`
     - replace `fill="#55b9e6"` by `fill="var(--db-icon-color, #55b9e6)"`
     - replace `fill="#EC0016"` by `fill="var(--db-icon-pulse-color, #EC0016)"`
-    - replace `fill="#f01414"` by `fill="var(--db-logo-color, #f01414)"`
+    - replace `fill="#78be14"` by `fill="var(--db-icon-pulse-color, #78be14)"`
   - `id`-Attribute (generic `icon` id within all SVG files)
 - Afterwards the JSON files within the `source/_patterns/icons` path might need to get updated
