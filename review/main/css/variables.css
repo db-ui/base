@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 27 Feb 2023 09:21:51 GMT
+ * Generated on Mon, 06 Mar 2023 06:58:01 GMT
  */
 
 :root {
@@ -19,6 +19,11 @@
   --db-asset-font-db-screenhead-fontweight: "300";
   --db-asset-font-db-screenhead-woff: "assets/fonts/dbscreenhead-light.woff";
   --db-asset-font-db-screenhead-woff2: "assets/fonts/dbscreenhead-light.woff2";
+  --db-asset-font-db-screensansdigital-name: "DB Screen Sans Digital Regular";
+  --db-asset-font-db-screensansdigital-fontfamily: "DB Screen Sans Digital";
+  --db-asset-font-db-screensansdigital-fontweight: "400";
+  --db-asset-font-db-screensansdigital-woff: "assets/fonts/dbscreensans-digitalregular.woff";
+  --db-asset-font-db-screensansdigital-woff2: "assets/fonts/dbscreensans-digitalregular.woff2";
   --db-color-yellow-100: #ffffdc;
   --db-color-yellow-200: #ffffaf;
   --db-color-yellow-300: #fff876;
