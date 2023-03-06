@@ -21,6 +21,17 @@
 				"fontweight": { "value": "300" },
 				"woff": { "value": "assets/fonts/dbscreenhead-light.woff" },
 				"woff2": { "value": "assets/fonts/dbscreenhead-light.woff2" }
+			},
+			"db-screensansdigital": {
+				"name": { "value": "DB Screen Sans Digital Regular" },
+				"fontfamily": { "value": "DB Screen Sans Digital" },
+				"fontweight": { "value": "400" },
+				"woff": {
+					"value": "assets/fonts/dbscreensans-digitalregular.woff"
+				},
+				"woff2": {
+					"value": "assets/fonts/dbscreensans-digitalregular.woff2"
+				}
 			}
 		}
 	}
