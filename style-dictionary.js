@@ -2,8 +2,6 @@
 const StyleDictionary = require('style-dictionary').extend(
 	'style-dictionary.config.json'
 );
-
-/* eslint unicorn/prefer-module: 0 */
 const minifyDictionary = require('style-dictionary/lib/common/formatHelpers/minifyDictionary');
 
 const flattenColors = (dictionary) => {
