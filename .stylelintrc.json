@@ -4,8 +4,15 @@
 		"stylelint-config-sass-guidelines"
 	],
 	"rules": {
+		"selector-no-qualifying-type": null,
+		"selector-class-pattern": null,
 		"scss/dollar-variable-pattern": null,
 		"scss/selector-no-redundant-nesting-selector": null,
+		"max-nesting-depth": null,
+		"selector-max-compound-selectors": null,
+		"scss/at-extend-no-missing-placeholder": null,
+		"declaration-property-value-disallowed-list": null,
+		"scss/percent-placeholder-pattern": null,
 		"declaration-property-value-no-unknown": true,
 		"import-notation": "string"
 	}
