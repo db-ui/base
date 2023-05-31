@@ -3,7 +3,19 @@
 	"label": "Ticket",
 	"icons": [
 		{
+			"icon": "children_traveling_alone"
+		},
+		{
+			"icon": "children_traveling_with"
+		},
+		{
 			"icon": "classic_printout"
+		},
+		{
+			"icon": "discount"
+		},
+		{
+			"icon": "information"
 		},
 		{
 			"icon": "mobileticket_brand"
