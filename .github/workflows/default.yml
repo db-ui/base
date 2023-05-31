@@ -29,10 +29,20 @@ jobs:
     needs: [init]
 
   checks-done:
+    if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
       - name: 🎉 Checks done
-        run: echo "🎉 Linting & build were successful."
+        run: |
+          resultBuild="${{ needs.build.result }}"
+          resultLint="${{ needs.lint.result }}"
+          if [[ $resultBuild == "success" && $resultLint == "success" ]]; then
+            echo "🎉 Linting & build were successful."
+            exit 0
+          else
+            echo "There have been problems with the Cypress tests."
+            exit 1
+          fi
     needs: [build, lint]
 
   deploy:

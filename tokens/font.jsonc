@@ -8,9 +8,9 @@
 			"headline": {
 				"value": "'{asset.font.db-screenhead.fontfamily.value}', Helvetica, Arial, sans-serif"
 			},
-			"sans": "'{asset.font.db-screensans-regular.name.value}', Helvetica, Arial, sans-serif",
-			"bold": "'{asset.font.db-screensans-bold.name.value}', Helvetica, Arial, sans-serif",
-			"head": "'{asset.font.db-screenhead.name.value}', Helvetica, Arial, sans-serif"
+			"sans": "'{asset.font.db-screensans-regular.fontfamily.value}', Helvetica, Arial, sans-serif",
+			"bold": "'{asset.font.db-screensans-bold.fontfamily.value}', Helvetica, Arial, sans-serif",
+			"head": "'{asset.font.db-screenhead.fontfamily.value}', Helvetica, Arial, sans-serif"
 		}
 	}
 }

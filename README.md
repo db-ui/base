@@ -1,6 +1,6 @@
 # DB UI Base
 
-With DB UI Base we provide you with basic Design Tokens and assets based on the [DB Design System UX Guides + Standards](https://marketingportal.extranet.deutschebahn.com/de/ui-komponenten), that can be shared across web and native apps projects.
+With DB UI Base we provide you with basic Design Tokens and assets based on the [DB Design System UX Guides + Standards](https://marketingportal.extranet.deutschebahn.com/marketingportal/Design-Anwendungen/DB-UX-Design-System/Design-fuer-Apps-Web/UI-Komponenten), that can be shared across web and native apps projects.
 
 For more information, have a look at our [hosted patternlab](https://db-ui.github.io/base/).
 
@@ -62,7 +62,11 @@ npm run build
 
 The `npm build` task is what performs the style dictionary build steps to generate the files for each platform. Every time you change something in the style dictionary, like changing colors or adding tokens, you will have to run this command again to generate the files.
 
+<!-- markdownlint-disable MD026 -->
+
 ## Third party acknowledgments – many kudos for that !!!
+
+<!-- markdownlint-enable MD026 } -->
 
 - [open privacy by opr.vc](https://opr.vc)
 
@@ -73,4 +77,4 @@ community a harassment-free experience for everyone – have a look at our [Cont
 
 ## License
 
-This project is licensed under [Apache-2.0](LICENSE), Copyright 2022 by DB Systel GmbH.
+This project is licensed under [Apache-2.0](LICENSE), Copyright 2023 by DB Systel GmbH.
