@@ -297,6 +297,20 @@
 			]
 		},
 		{
+			"icon": "steppless_entry",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "support_dog",
 			"variants": [
 				{
