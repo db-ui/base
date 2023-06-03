@@ -4,25 +4,48 @@
 		{
 			"icon": {
 				"paths": [
-					"M887.84 340.48c-32.736 10.624-65.408 21.28-98.048 32-20.48 8.96-25.6 24.8-20.48 40.384 5.12 15.616 22.848 26.688 40.352 20.48 57.28-18.624 58.496-20.416 114.4-37.44 15.136 57.44-16.256 112.064-69.888 128.96l-174.4 54.88-135.744 249.216c-4.352 8-11.776 13.856-20.576 16.224l-18.176 4.928c-2.601 0.729-5.587 1.149-8.672 1.149-18.374 0-33.274-14.876-33.312-33.241l-0-0.004-0.288-170.080-134.368 42.144c-11.334 3.709-24.378 5.847-37.921 5.847-53.093 0-98.509-32.867-117.012-79.365l-0.299-0.85-75.744-214.72c-1.060-2.907-1.673-6.262-1.673-9.761 0-12.406 7.707-23.011 18.594-27.291l0.199-0.069 22.72-8.832c5.54-2.204 11.96-3.482 18.679-3.482 12.331 0 23.657 4.305 32.555 11.495l-0.098-0.077 92.608 74.24 387.648-121.76c71.488-22.848 165.824-18.24 218.944 25.024zM349.248 500.672c-18.275 6.011-31.236 22.924-31.236 42.864 0 24.868 20.16 45.028 45.028 45.028 4.928 0 9.672-0.792 14.11-2.255l-0.318 0.091c18.284-6.012 31.251-22.932 31.251-42.88 0-24.877-20.167-45.043-45.043-45.043-4.928 0-9.672 0.792-14.11 2.254l0.318-0.091zM489.248 455.552c-18.267 6.011-31.221 22.916-31.221 42.848 0 24.86 20.153 45.013 45.013 45.013 4.928 0 9.672-0.792 14.11-2.256l-0.318 0.091c18.258-6.010 31.206-22.909 31.206-42.832 0-24.852-20.146-44.998-44.998-44.998-4.929 0-9.672 0.792-14.11 2.257l0.318-0.091zM629.28 410.496c-18.258 6.010-31.206 22.909-31.206 42.832 0 24.852 20.146 44.998 44.998 44.998 4.929 0 9.672-0.792 14.11-2.257l-0.318 0.091c18.258-6.010 31.206-22.909 31.206-42.832 0-24.852-20.146-44.998-44.998-44.998-4.929 0-9.672 0.792-14.11 2.257l0.318-0.091zM395.936 170.944l120.128 121.76-136.064 46.24-62.656-123.232c-1.86-4.2-2.944-9.099-2.944-14.251 0-16.424 11.009-30.277 26.050-34.583l0.254-0.062 19.712-5.504c12.704-3.52 26.336 0.16 35.52 9.632z"
+					"M663.872 333.952l-0.009 0.114c0.089-0.899 0.135-1.81 0.135-2.732 0-15.075-12.221-27.296-27.296-27.296-4.544 0-8.828 1.11-12.446 3.003-51.552 26.816-103.072 53.728-154.56 80.704-6.56 3.040-12.928 12.224-14.208 19.328-5.952 33.024-11.84 66.080-17.664 99.136l0.023-0.163c-0.264 1.528-0.401 3.1-0.401 4.704 0 13.38 9.559 24.527 22.394 27.012 13.632 2.432 29.12-8.352 31.552-22.016l15.296-85.984 97.856-51.104c-7.104 67.424-14.080 134.848-20.992 202.304l0.015-0.184c-0.148 1.463-0.224 2.948-0.224 4.45 0 11.97 4.808 22.817 12.592 30.71l114.816 115.040c17.344 68.16 34.72 136.288 52.16 204.352 5.184 15.584 19.648 23.040 33.088 19.616l0.189-0.042c11.667-3.063 20.274-13.682 20.274-26.31 0-2.393-0.309-4.714-0.847-6.735-17.92-70.56-35.936-141.088-53.984-211.52-1.152-3.488-4.544-9.92-7.104-12.48l-116.352-116.608-55.591 634.184c9.184-85.012 18.294-170.046 81.287-881.48zM91.2 512h0c-15.022 0-27.2 12.178-27.2 27.2s12.178 27.2 27.2 27.2l233.6 0c15.022 0 27.2-12.178 27.2-27.2s-12.178-27.2-27.2-27.2h-233.6zM164.352 640h0c-15.022 0-27.2 12.178-27.2 27.2s12.178 27.2 27.2 27.2l233.6 0c15.022 0 27.2-12.178 27.2-27.2s-12.178-27.2-27.2-27.2h-233.6zM574.016 670.944l0.171 0.069c-3.425-1.556-7.23-2.422-11.237-2.422-11.007 0-20.487 6.538-24.838 16.113-34.656 77.536-69.28 155.136-103.84 232.8l0.069-0.175c-1.513 3.404-2.354 7.173-2.354 11.139 0 11.026 6.499 20.533 16.044 24.972l-0.17-0.069c3.432 1.563 7.246 2.434 11.263 2.434 11.012 0 20.495-6.544 24.843-16.125l-396.711 972.147c34.907-76.603 69.754-153.239 500.519-1204.979 5.824-15.84-1.088-30.272-13.76-35.904zM737.536 390.784c-12.096-11.776-28.288-10.88-38.4-1.536l-0.018 0.017c-5.38 4.969-8.748 12.084-8.748 19.985 0 7.105 2.724 13.573 7.167 18.399 10.4 11.392 20.864 22.72 31.36 34.016l-0.026-0.024c2.297 2.15 4.81 4.073 7.706 5.848 23.808 12.16 47.616 24.224 71.52 36.256 32.992 14.080 58.176-31.488 24.576-48.512l-67.2-34.112c-9.248-10.176-18.56-20.256-27.936-30.336zM653.76 69.024c50.245 0 90.976 40.731 90.976 90.976s-40.731 90.976-90.976 90.976v0c-50.245 0-90.976-40.731-90.976-90.976s40.731-90.976 90.976-90.976v0zM653.76 123.424c-20.2-0-36.576 16.376-36.576 36.576s16.376 36.576 36.576 36.576v0c20.2 0 36.576-16.376 36.576-36.576s-16.376-36.576-36.576-36.576v-0z"
 				],
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
 				"grid": 0,
-				"tags": ["db_ic_airplane_inverted_32"]
+				"tags": ["db_ic_walking_fast_inverted_32"]
+			},
+			"attrs": [{}],
+			"properties": {
+				"order": 263,
+				"id": 24,
+				"name": "db_ic_walking_fast_inverted_32",
+				"prevSize": 32,
+				"code": 922137
+			},
+			"setIdx": 0,
+			"setId": 0,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M887.84 340.48c-32.736 10.624-65.408 21.28-98.048 32-20.48 8.96-25.6 24.8-20.48 40.384 5.12 15.616 22.848 26.688 40.352 20.48 57.28-18.624 58.496-20.416 114.4-37.44 15.136 57.44-16.256 112.064-69.888 128.96l-174.4 54.88-135.744 249.216c-4.352 8-11.776 13.856-20.576 16.224l-18.176 4.928c-2.601 0.729-5.587 1.149-8.672 1.149-18.374 0-33.274-14.876-33.312-33.241l-0-0.004-0.288-170.080-134.368 42.144c-11.334 3.709-24.378 5.847-37.921 5.847-53.093 0-98.509-32.867-117.012-79.365l-0.299-0.85-75.744-214.72c-1.060-2.907-1.673-6.262-1.673-9.761 0-12.406 7.707-23.011 18.594-27.291l0.199-0.069 22.72-8.832c5.54-2.204 11.96-3.482 18.679-3.482 12.331 0 23.657 4.305 32.555 11.495l-0.098-0.077 92.608 74.24 387.648-121.76c71.488-22.848 165.824-18.24 218.944 25.024zM349.248 500.672c-18.275 6.011-31.236 22.924-31.236 42.864 0 24.868 20.16 45.028 45.028 45.028 4.928 0 9.672-0.792 14.11-2.255l-0.318 0.091c18.284-6.012 31.251-22.932 31.251-42.88 0-24.877-20.167-45.043-45.043-45.043-4.928 0-9.672 0.792-14.11 2.254l0.318-0.091zM489.248 455.552c-18.267 6.011-31.221 22.916-31.221 42.848 0 24.86 20.153 45.013 45.013 45.013 4.928 0 9.672-0.792 14.11-2.256l-0.318 0.091c18.258-6.010 31.206-22.909 31.206-42.832 0-24.852-20.146-44.998-44.998-44.998-4.929 0-9.672 0.792-14.11 2.257l0.318-0.091zM629.28 410.496c-18.258 6.010-31.206 22.909-31.206 42.832 0 24.852 20.146 44.998 44.998 44.998 4.929 0 9.672-0.792 14.11-2.257l-0.318 0.091c18.258-6.010 31.206-22.909 31.206-42.832 0-24.852-20.146-44.998-44.998-44.998-4.929 0-9.672 0.792-14.11 2.257l0.318-0.091zM395.936 170.944l120.128 121.76-136.064 46.24-62.656-123.232c-1.86-4.2-2.944-9.099-2.944-14.251 0-16.424 11.009-30.277 26.050-34.583l0.254-0.062 19.712-5.504c12.704-3.52 26.336 0.16 35.52 9.632z"
+				],
+				"attrs": [{}],
+				"isMulticolor": false,
+				"isMulticolor2": false,
+				"tags": ["db_ic_airplane_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 50,
-				"id": 23,
+				"id": 0,
 				"name": "db_ic_airplane_inverted_32",
 				"prevSize": 32,
 				"code": 922000
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 0
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -32,20 +55,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_bicycle_inverted_32"]
+				"tags": ["db_ic_bicycle_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 51,
-				"id": 22,
+				"id": 1,
 				"name": "db_ic_bicycle_inverted_32",
 				"prevSize": 32,
 				"code": 128690
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 1
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -55,20 +78,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_bicycle_trailer_inverted_32"]
+				"tags": ["db_ic_bicycle_trailer_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 52,
-				"id": 21,
+				"id": 2,
 				"name": "db_ic_bicycle_trailer_inverted_32",
 				"prevSize": 32,
 				"code": 922002
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 2
+			"iconIdx": 3
 		},
 		{
 			"icon": {
@@ -78,20 +101,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_call_a_bike_inverted_32"]
+				"tags": ["db_ic_call_a_bike_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 53,
-				"id": 20,
+				"id": 3,
 				"name": "db_ic_call_a_bike_inverted_32",
 				"prevSize": 32,
 				"code": 922001
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 3
+			"iconIdx": 4
 		},
 		{
 			"icon": {
@@ -101,20 +124,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_car_inverted_32"]
+				"tags": ["db_ic_car_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 54,
-				"id": 19,
+				"id": 4,
 				"name": "db_ic_car_inverted_32",
 				"prevSize": 32,
 				"code": 921937
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 4
+			"iconIdx": 5
 		},
 		{
 			"icon": {
@@ -124,20 +147,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_carsharing_inverted_32"]
+				"tags": ["db_ic_carsharing_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 55,
-				"id": 18,
+				"id": 5,
 				"name": "db_ic_carsharing_inverted_32",
 				"prevSize": 32,
 				"code": 922004
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 5
+			"iconIdx": 6
 		},
 		{
 			"icon": {
@@ -147,20 +170,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_electric_locomotive_inverted_32"]
+				"tags": ["db_ic_electric_locomotive_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 56,
-				"id": 17,
+				"id": 6,
 				"name": "db_ic_electric_locomotive_inverted_32",
 				"prevSize": 32,
 				"code": 922005
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 6
+			"iconIdx": 7
 		},
 		{
 			"icon": {
@@ -170,20 +193,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_electric_scooter_inverted_32"]
+				"tags": ["db_ic_electric_scooter_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 57,
-				"id": 16,
+				"id": 7,
 				"name": "db_ic_electric_scooter_inverted_32",
 				"prevSize": 32,
 				"code": 922006
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 7
+			"iconIdx": 8
 		},
 		{
 			"icon": {
@@ -193,20 +216,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_ev_car_inverted_32"]
+				"tags": ["db_ic_ev_car_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 58,
-				"id": 15,
+				"id": 8,
 				"name": "db_ic_ev_car_inverted_32",
 				"prevSize": 32,
 				"code": 922007
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 8
+			"iconIdx": 9
 		},
 		{
 			"icon": {
@@ -216,20 +239,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_ferry_inverted_32"]
+				"tags": ["db_ic_ferry_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 59,
-				"id": 14,
+				"id": 9,
 				"name": "db_ic_ferry_inverted_32",
 				"prevSize": 32,
 				"code": 922008
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 9
+			"iconIdx": 10
 		},
 		{
 			"icon": {
@@ -239,20 +262,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_handcart_inverted_32"]
+				"tags": ["db_ic_handcart_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 60,
-				"id": 13,
+				"id": 10,
 				"name": "db_ic_handcart_inverted_32",
 				"prevSize": 32,
 				"code": 922009
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 10
+			"iconIdx": 11
 		},
 		{
 			"icon": {
@@ -262,20 +285,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_ice_inverted_32"]
+				"tags": ["db_ic_ice_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 61,
-				"id": 12,
+				"id": 11,
 				"name": "db_ic_ice_inverted_32",
 				"prevSize": 32,
 				"code": 922112
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 11
+			"iconIdx": 12
 		},
 		{
 			"icon": {
@@ -285,20 +308,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_intercity_train_inverted_32"]
+				"tags": ["db_ic_intercity_train_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 62,
-				"id": 11,
+				"id": 12,
 				"name": "db_ic_intercity_train_inverted_32",
 				"prevSize": 32,
 				"code": 922134
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 12
+			"iconIdx": 13
 		},
 		{
 			"icon": {
@@ -308,20 +331,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_local_bus_inverted_32"]
+				"tags": ["db_ic_local_bus_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 63,
-				"id": 10,
+				"id": 13,
 				"name": "db_ic_local_bus_inverted_32",
 				"prevSize": 32,
 				"code": 922113
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 13
+			"iconIdx": 14
 		},
 		{
 			"icon": {
@@ -331,20 +354,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_local_train_inverted_32"]
+				"tags": ["db_ic_local_train_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 64,
-				"id": 9,
+				"id": 14,
 				"name": "db_ic_local_train_inverted_32",
 				"prevSize": 32,
 				"code": 128648
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 14
+			"iconIdx": 15
 		},
 		{
 			"icon": {
@@ -354,20 +377,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_long_distance_bus_inverted_32"]
+				"tags": ["db_ic_long_distance_bus_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 65,
-				"id": 8,
+				"id": 15,
 				"name": "db_ic_long_distance_bus_inverted_32",
 				"prevSize": 32,
 				"code": 922114
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 15
+			"iconIdx": 16
 		},
 		{
 			"icon": {
@@ -377,20 +400,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_s_bahn_inverted_32"]
+				"tags": ["db_ic_s_bahn_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 66,
-				"id": 7,
+				"id": 16,
 				"name": "db_ic_s_bahn_inverted_32",
 				"prevSize": 32,
 				"code": 922115
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 16
+			"iconIdx": 17
 		},
 		{
 			"icon": {
@@ -400,20 +423,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_scooter_inverted_32"]
+				"tags": ["db_ic_scooter_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 67,
-				"id": 6,
+				"id": 17,
 				"name": "db_ic_scooter_inverted_32",
 				"prevSize": 32,
 				"code": 922116
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 17
+			"iconIdx": 18
 		},
 		{
 			"icon": {
@@ -423,20 +446,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_speedboat_inverted_32"]
+				"tags": ["db_ic_speedboat_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 68,
-				"id": 5,
+				"id": 18,
 				"name": "db_ic_speedboat_inverted_32",
 				"prevSize": 32,
 				"code": 922118
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 18
+			"iconIdx": 19
 		},
 		{
 			"icon": {
@@ -446,20 +469,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_subway_inverted_32"]
+				"tags": ["db_ic_subway_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 69,
-				"id": 4,
+				"id": 19,
 				"name": "db_ic_subway_inverted_32",
 				"prevSize": 32,
 				"code": 922119
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 19
+			"iconIdx": 20
 		},
 		{
 			"icon": {
@@ -469,20 +492,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_taxi_inverted_32"]
+				"tags": ["db_ic_taxi_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 70,
-				"id": 3,
+				"id": 20,
 				"name": "db_ic_taxi_inverted_32",
 				"prevSize": 32,
 				"code": 922120
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 20
+			"iconIdx": 21
 		},
 		{
 			"icon": {
@@ -492,20 +515,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_train_and_car_inverted_32"]
+				"tags": ["db_ic_train_and_car_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 71,
-				"id": 2,
+				"id": 21,
 				"name": "db_ic_train_and_car_inverted_32",
 				"prevSize": 32,
 				"code": 922121
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 21
+			"iconIdx": 22
 		},
 		{
 			"icon": {
@@ -515,20 +538,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_tram_inverted_32"]
+				"tags": ["db_ic_tram_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 72,
-				"id": 1,
+				"id": 22,
 				"name": "db_ic_tram_inverted_32",
 				"prevSize": 32,
 				"code": 922128
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 22
+			"iconIdx": 23
 		},
 		{
 			"icon": {
@@ -538,20 +561,20 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_walking_inverted_32"]
+				"tags": ["db_ic_walking_inverted_32"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 73,
-				"id": 0,
+				"id": 23,
 				"name": "db_ic_walking_inverted_32",
 				"prevSize": 32,
 				"code": 128694
 			},
 			"setIdx": 0,
 			"setId": 0,
-			"iconIdx": 23
+			"iconIdx": 24
 		}
 	],
 	"height": 1024,
