@@ -24,6 +24,9 @@
 			"icon": "hashtag"
 		},
 		{
+			"icon": "push_notification"
+		},
+		{
 			"icon": "wifi"
 		}
 	]

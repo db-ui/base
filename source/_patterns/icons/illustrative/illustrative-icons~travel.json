@@ -3,6 +3,9 @@
 	"label": "Travel",
 	"icons": [
 		{
+			"icon": "bahnbonus"
+		},
+		{
 			"icon": "bear"
 		},
 		{
@@ -18,6 +21,18 @@
 			"icon": "dog"
 		},
 		{
+			"icon": "family_compartment"
+		},
+		{
+			"icon": "family_reservation"
+		},
+		{
+			"icon": "family_travel_tips"
+		},
+		{
+			"icon": "infant_compartment"
+		},
+		{
 			"icon": "hotel"
 		},
 		{
@@ -31,6 +46,12 @@
 		},
 		{
 			"icon": "luggage"
+		},
+		{
+			"icon": "onboard_child_care"
+		},
+		{
+			"icon": "onboard_child_service"
 		},
 		{
 			"icon": "passenger_rights"
@@ -52,6 +73,9 @@
 		},
 		{
 			"icon": "travel_insurance"
+		},
+		{
+			"icon": "wheelchair"
 		},
 		{
 			"icon": "zuginformation"
