@@ -239,6 +239,20 @@
 			]
 		},
 		{
+			"icon": "ticket_subscription",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "ticket_multiple",
 			"variants": [
 				{
