@@ -59,7 +59,7 @@
     "stylelint-config-prettier": "9.0.5",
     "stylelint-config-sass-guidelines": "9.0.1",
     "validate-branch-name": "^1.3.0",
-    "xo": "^0.54.2"
+    "xo": "^0.55.0"
   },
   "validate-branch-name": {
     "pattern": "((dependabot-)|^((test|feat|fix|chore|docs|refactor|style|ci|perf|[0-9]+)\\-[a-zA-Z0-9\\-]+)$)",
