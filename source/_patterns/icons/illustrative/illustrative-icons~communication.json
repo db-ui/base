@@ -9,6 +9,9 @@
 			"icon": "chat"
 		},
 		{
+			"icon": "contact"
+		},
+		{
 			"icon": "customer_feedback"
 		},
 		{
@@ -21,6 +24,9 @@
 			"icon": "error"
 		},
 		{
+			"icon": "faq"
+		},
+		{
 			"icon": "hashtag"
 		},
 		{
@@ -28,6 +34,12 @@
 		},
 		{
 			"icon": "wifi"
+		},
+		{
+			"icon": "wifi_ice"
+		},
+		{
+			"icon": "wifi_local_train"
 		}
 	]
 }

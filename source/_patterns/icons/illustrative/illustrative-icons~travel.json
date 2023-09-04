@@ -3,10 +3,19 @@
 	"label": "Travel",
 	"icons": [
 		{
+			"icon": "1st_class"
+		},
+		{
 			"icon": "bahnbonus"
 		},
 		{
 			"icon": "bear"
+		},
+		{
+			"icon": "bike_in_train"
+		},
+		{
+			"icon": "business_customer"
 		},
 		{
 			"icon": "db_comfort_checkin"
@@ -61,6 +70,18 @@
 		},
 		{
 			"icon": "poi_berlin"
+		},
+		{
+			"icon": "quiet_zone"
+		},
+		{
+			"icon": "reservation"
+		},
+		{
+			"icon": "seat_comfort"
+		},
+		{
+			"icon": "signage"
 		},
 		{
 			"icon": "suitcase"
