@@ -3,16 +3,28 @@
 	"label": "Ticket",
 	"icons": [
 		{
+			"icon": "bahncard"
+		},
+		{
 			"icon": "children_traveling_alone"
 		},
 		{
 			"icon": "children_traveling_with"
 		},
 		{
+			"icon": "city_ticket"
+		},
+		{
 			"icon": "classic_printout"
 		},
 		{
 			"icon": "discount"
+		},
+		{
+			"icon": "exchange"
+		},
+		{
+			"icon": "group_travel"
 		},
 		{
 			"icon": "information"

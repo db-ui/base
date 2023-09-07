@@ -3,6 +3,9 @@
 	"label": "Maps",
 	"icons": [
 		{
+			"icon": "door_to_door"
+		},
+		{
 			"icon": "home"
 		},
 		{

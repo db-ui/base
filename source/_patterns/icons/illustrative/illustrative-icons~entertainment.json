@@ -3,6 +3,9 @@
 	"label": "Entertainment",
 	"icons": [
 		{
+			"icon": "db_mobil"
+		},
+		{
 			"icon": "der_kleine_ice"
 		},
 		{
@@ -15,6 +18,9 @@
 			"icon": "gaming"
 		},
 		{
+			"icon": "ice_portal"
+		},
+		{
 			"icon": "movie"
 		},
 		{
@@ -22,6 +28,9 @@
 		},
 		{
 			"icon": "sport"
+		},
+		{
+			"icon": "zugportal"
 		}
 	]
 }

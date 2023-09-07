@@ -45,6 +45,9 @@
 			"icon": "ferry"
 		},
 		{
+			"icon": "flinkster"
+		},
+		{
 			"icon": "handcart"
 		},
 		{
@@ -61,6 +64,12 @@
 		},
 		{
 			"icon": "long_distance_bus"
+		},
+		{
+			"icon": "long_distance_trains"
+		},
+		{
+			"icon": "mobility_hub"
 		},
 		{
 			"icon": "scooter"

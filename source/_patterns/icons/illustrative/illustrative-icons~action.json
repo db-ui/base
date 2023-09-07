@@ -30,10 +30,16 @@
 			"icon": "construction_worker"
 		},
 		{
+			"icon": "credit_card"
+		},
+		{
 			"icon": "db_clock"
 		},
 		{
 			"icon": "diamond"
+		},
+		{
+			"icon": "download"
 		},
 		{
 			"icon": "fokus"
@@ -63,16 +69,28 @@
 			"icon": "printer"
 		},
 		{
+			"icon": "registration"
+		},
+		{
 			"icon": "savings"
 		},
 		{
 			"icon": "search"
 		},
 		{
+			"icon": "sepa"
+		},
+		{
 			"icon": "tips"
 		},
 		{
 			"icon": "trash"
+		},
+		{
+			"icon": "update"
+		},
+		{
+			"icon": "user_manual"
 		}
 	]
 }

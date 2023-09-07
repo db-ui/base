@@ -12,10 +12,16 @@
 			"icon": "tablet"
 		},
 		{
+			"icon": "travel_apps"
+		},
+		{
 			"icon": "usb_3.0"
 		},
 		{
 			"icon": "usb_c"
+		},
+		{
+			"icon": "widget"
 		}
 	]
 }
