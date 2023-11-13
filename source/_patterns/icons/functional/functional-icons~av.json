@@ -3,6 +3,46 @@
 	"label": "AV",
 	"icons": [
 		{
+			"icon": "fast_backward",
+			"variants": [
+				{
+					"size": 64
+				},
+				{
+					"size": 48
+				},
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 64,
+					"style": "solid"
+				},
+				{
+					"size": 48,
+					"style": "solid"
+				},
+				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
+					"size": 20,
+					"style": "solid"
+				}
+			]
+		},
+		{
 			"icon": "fast_backward_10",
 			"variants": [
 				{
@@ -41,6 +81,46 @@
 				},
 				{
 					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "fast_forward",
+			"variants": [
+				{
+					"size": 64
+				},
+				{
+					"size": 48
+				},
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				},
+				{
+					"size": 64,
+					"style": "solid"
+				},
+				{
+					"size": 48,
+					"style": "solid"
+				},
+				{
+					"size": 32,
+					"style": "solid"
+				},
+				{
+					"size": 24,
+					"style": "solid"
+				},
+				{
+					"size": 20,
+					"style": "solid"
 				}
 			]
 		},
