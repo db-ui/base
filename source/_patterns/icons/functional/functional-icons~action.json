@@ -502,6 +502,20 @@
 			]
 		},
 		{
+			"icon": "document_check",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "done",
 			"variants": [
 				{
@@ -561,6 +575,34 @@
 				{
 					"size": 20,
 					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "face_delighted",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "face_disappointed",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
 				}
 			]
 		},
@@ -958,6 +1000,20 @@
 			]
 		},
 		{
+			"icon": "piggybank",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "pin",
 			"variants": [
 				{
@@ -1002,6 +1058,20 @@
 			]
 		},
 		{
+			"icon": "push_button",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "remove",
 			"variants": [
 				{
@@ -1042,6 +1112,20 @@
 				{
 					"size": 20,
 					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "resize_handle_corner",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
 				}
 			]
 		},

@@ -3,7 +3,13 @@
 	"label": "Devices",
 	"icons": [
 		{
+			"icon": "computer"
+		},
+		{
 			"icon": "laptop"
+		},
+		{
+			"icon": "monitor"
 		},
 		{
 			"icon": "smartphone"

@@ -15,7 +15,13 @@
 			"icon": "customer_feedback"
 		},
 		{
-			"icon": "envelope_closed"
+			"icon": "envelope_check"
+		},
+		{
+			"icon": "envelope_closed_back"
+		},
+		{
+			"icon": "envelope_closed_front"
 		},
 		{
 			"icon": "envelope_open"
@@ -31,6 +37,9 @@
 		},
 		{
 			"icon": "push_notification"
+		},
+		{
+			"icon": "telephone"
 		},
 		{
 			"icon": "wifi"
