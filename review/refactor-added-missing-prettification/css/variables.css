@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 04 Dec 2023 06:19:56 GMT
+ * Generated on Fri, 15 Dec 2023 08:31:50 GMT
  */
 
 :root {
@@ -24,6 +24,51 @@
   --db-asset-font-db-screensansdigital-fontweight: "400";
   --db-asset-font-db-screensansdigital-woff: "assets/fonts/dbscreensans-digitalregular.woff";
   --db-asset-font-db-screensansdigital-woff2: "assets/fonts/dbscreensans-digitalregular.woff2";
+  --db-color-success: #508b1b; /* This is the general success color */
+  --db-color-success-small-font: #467a18; /* in case a font-size smaller than 14dp is in use */
+  --db-color-error: #ec0016; /* This is the general error color */
+  --db-color-error-small-font: #db0014; /* in case a font-size smaller than 14dp is in use */
+  --db-color-warning: #f75f00; /* This is the general warning color */
+  --db-color-warning-small-font: #cc4e00; /* in case a font-size smaller than 14dp is in use */
+  --db-color-informative: #0087b9; /* This is the general informative color */
+  --db-color-informative-small-font: #006a96; /* in case a font-size smaller than 14dp is in use */
+  --db-color-food-drink: #f39200;
+  --db-color-health: #a9455d;
+  --db-color-things-to-know: #858379;
+  --db-color-community-facilities: #00a099;
+  --db-color-db-services-facilities: #0c3992;
+  --db-color-shopping: #814997;
+  --db-color-arts-culture: #e93e8f;
+  --db-color-leisure: #408335;
+  --db-color-services: #309fd1;
+  --db-color-guidance: #3c414b;
+  --db-color-red-100: #fee6e6;
+  --db-color-red-200: #fcc8c3;
+  --db-color-red-300: #fa9090;
+  --db-color-red-400: #f75056;
+  --db-color-red-500: #ec0016;
+  --db-color-red-600: #c50014;
+  --db-color-red-700: #9b000e;
+  --db-color-red-800: #740009;
+  --db-color-red: #ec0016; /* This is the primary DB Red */
+  --db-color-white: #ffffff; /* This is the primary DB White */
+  --db-color-black: #000000; /* This is the primary DB Black */
+  --db-color-ice: #282d37;
+  --db-color-ic: #646973;
+  --db-color-ec: #646973;
+  --db-color-re: #878c96;
+  --db-color-rb: #afb4bb;
+  --db-color-s-bahn: #2a7230;
+  --db-color-u-bahn: #1455c0;
+  --db-color-tram: #a9455d;
+  --db-color-intercity-bus: #e93e8f;
+  --db-color-bus: #814997;
+  --db-color-ship: #309fd1;
+  --db-color-airplane: #00a099;
+  --db-color-taxi: #ffd800;
+  --db-color-carsharing: #f39200;
+  --db-color-bikesharing: #63a615;
+  --db-color-walk: #878c96;
   --db-color-yellow-100: #ffffdc;
   --db-color-yellow-200: #ffffaf;
   --db-color-yellow-300: #fff876;
@@ -41,15 +86,6 @@
   --db-color-orange-600: #d77b00;
   --db-color-orange-700: #c05e00;
   --db-color-orange-800: #a24800;
-  --db-color-red-100: #fee6e6;
-  --db-color-red-200: #fcc8c3;
-  --db-color-red-300: #fa9090;
-  --db-color-red-400: #f75056;
-  --db-color-red-500: #ec0016;
-  --db-color-red-600: #c50014;
-  --db-color-red-700: #9b000e;
-  --db-color-red-800: #740009;
-  --db-color-red: #ec0016; /* This is the primary DB Red */
   --db-color-burgundy-100: #f4e8ed;
   --db-color-burgundy-200: #edcbd6;
   --db-color-burgundy-300: #da9aa8;
@@ -130,42 +166,6 @@
   --db-color-cool-gray-600: #3c414b;
   --db-color-cool-gray-700: #282d37;
   --db-color-cool-gray-800: #131821;
-  --db-color-success: #508b1b; /* This is the general success color */
-  --db-color-success-small-font: #467a18; /* in case a font-size smaller than 14dp is in use */
-  --db-color-error: #ec0016; /* This is the general error color */
-  --db-color-error-small-font: #db0014; /* in case a font-size smaller than 14dp is in use */
-  --db-color-warning: #f75f00; /* This is the general warning color */
-  --db-color-warning-small-font: #cc4e00; /* in case a font-size smaller than 14dp is in use */
-  --db-color-informative: #0087b9; /* This is the general informative color */
-  --db-color-informative-small-font: #006a96; /* in case a font-size smaller than 14dp is in use */
-  --db-color-food-drink: #f39200;
-  --db-color-health: #a9455d;
-  --db-color-things-to-know: #858379;
-  --db-color-community-facilities: #00a099;
-  --db-color-db-services-facilities: #0c3992;
-  --db-color-shopping: #814997;
-  --db-color-arts-culture: #e93e8f;
-  --db-color-leisure: #408335;
-  --db-color-services: #309fd1;
-  --db-color-guidance: #3c414b;
-  --db-color-white: #ffffff; /* This is the primary DB White */
-  --db-color-black: #000000; /* This is the primary DB Black */
-  --db-color-ice: #282d37;
-  --db-color-ic: #646973;
-  --db-color-ec: #646973;
-  --db-color-re: #878c96;
-  --db-color-rb: #afb4bb;
-  --db-color-s-bahn: #2a7230;
-  --db-color-u-bahn: #1455c0;
-  --db-color-tram: #a9455d;
-  --db-color-intercity-bus: #e93e8f;
-  --db-color-bus: #814997;
-  --db-color-ship: #309fd1;
-  --db-color-airplane: #00a099;
-  --db-color-taxi: #ffd800;
-  --db-color-carsharing: #f39200;
-  --db-color-bikesharing: #63a615;
-  --db-color-walk: #878c96;
   --db-spacing-xs: 0.25rem;
   --db-spacing-s: 0.5rem;
   --db-spacing-sm: 0.75rem;
