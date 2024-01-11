@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 11 Jan 2024 11:51:32 GMT
+ * Generated on Thu, 11 Jan 2024 11:57:04 GMT
  */
 
 :root {
@@ -57,7 +57,7 @@
   --db-color-ic: #646973;
   --db-color-ec: #646973;
   --db-color-re: #878c96;
-  --db-color-rb: #afb4bb;
+  --db-color-rb: #878c96;
   --db-color-s-bahn: #408335;
   --db-color-u-bahn: #1455c0;
   --db-color-tram: #a9455d;
@@ -67,8 +67,8 @@
   --db-color-airplane: #00a099;
   --db-color-taxi: #ffd800;
   --db-color-carsharing: #f39200;
-  --db-color-bikesharing: #63a615;
-  --db-color-walk: #878c96;
+  --db-color-walk: #d7dce1;
+  --db-color-bikesharing: #c50014;
   --db-color-yellow-100: #ffffdc;
   --db-color-yellow-200: #ffffaf;
   --db-color-yellow-300: #fff876;
