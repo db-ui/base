@@ -5,7 +5,7 @@
 		"ec": { "value": "{color.cool-gray.500.value}" },
 		"re": { "value": "{color.cool-gray.400.value}" },
 		"rb": { "value": "{color.cool-gray.300.value}" },
-		"s-bahn": { "value": "{color.green.600.value}" },
+		"s-bahn": { "value": "{color.green.500.value}" },
 		"u-bahn": { "value": "{color.blue.500.value}" },
 		"tram": { "value": "{color.burgundy.500.value}" },
 		"intercity-bus": { "value": "{color.pink.500.value}" },
