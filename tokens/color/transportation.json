@@ -4,8 +4,8 @@
 		"ic": { "value": "{color.cool-gray.500.value}" },
 		"ec": { "value": "{color.cool-gray.500.value}" },
 		"re": { "value": "{color.cool-gray.400.value}" },
-		"rb": { "value": "{color.cool-gray.300.value}" },
-		"s-bahn": { "value": "{color.green.600.value}" },
+		"rb": { "value": "{color.cool-gray.400.value}" },
+		"s-bahn": { "value": "{color.green.500.value}" },
 		"u-bahn": { "value": "{color.blue.500.value}" },
 		"tram": { "value": "{color.burgundy.500.value}" },
 		"intercity-bus": { "value": "{color.pink.500.value}" },
@@ -14,7 +14,7 @@
 		"airplane": { "value": "{color.turquoise.500.value}" },
 		"taxi": { "value": "{color.yellow.500.value}" },
 		"carsharing": { "value": "{color.orange.500.value}" },
-		"bikesharing": { "value": "{color.light-green.500.value}" },
-		"walk": { "value": "{color.cool-gray.400.value}" }
+		"walk": { "value": "{color.cool-gray.200.value}" },
+		"bikesharing": { "value": "{color.red.600.value}" }
 	}
 }
