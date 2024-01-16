@@ -17,7 +17,7 @@
 		"carsharing": { "value": "{color.orange.500.value}" },
 		"AUTO": { "value": "{color.cool-gray.400.value}" },
 		"E-AUTO": { "value": "{color.green.500.value}" },
-		"walk": { "value": "{color.cool-gray.200.value}" },
+		"walk": { "value": "{color.cool-gray.400.value}" },
 		"FAHRRAD": { "value": "{color.light-green.500.value}" },
 		"bikesharing": { "value": "{color.red.600.value}" },
 		"FAHRRAD-ANHÄNGER": { "value": "{color.cool-gray.400.value}" },
