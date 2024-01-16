@@ -11,10 +11,17 @@
 		"intercity-bus": { "value": "{color.pink.500.value}" },
 		"bus": { "value": "{color.violett.500.value}" },
 		"ship": { "value": "{color.cyan.500.value}" },
+		"SCHNELLBOOT": { "value": "{color.cyan.600.value}" },
 		"airplane": { "value": "{color.turquoise.500.value}" },
 		"taxi": { "value": "{color.yellow.500.value}" },
 		"carsharing": { "value": "{color.orange.500.value}" },
+		"AUTO": { "value": "{color.cool-gray.400.value}" },
+		"E-AUTO": { "value": "{color.green.500.value}" },
 		"walk": { "value": "{color.cool-gray.200.value}" },
-		"bikesharing": { "value": "{color.red.600.value}" }
+		"FAHRRAD": { "value": "{color.light-green.500.value}" },
+		"bikesharing": { "value": "{color.red.600.value}" },
+		"FAHRRAD-ANHÄNGER": { "value": "{color.cool-gray.400.value}" },
+		"ROLLER": { "value": "{color.cool-gray.400.value}" },
+		"ELECTRIC-SCOOTER": { "value": "{color.cool-gray.400.value}" }
 	}
 }
