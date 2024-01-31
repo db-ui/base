@@ -14,7 +14,7 @@
 		"airplane": { "value": "{color.turquoise.500.value}" },
 		"taxi": { "value": "{color.yellow.500.value}" },
 		"carsharing": { "value": "{color.orange.500.value}" },
-		"walk": { "value": "{color.cool-gray.400.value}" },
+		"walk": { "value": "{color.cool-gray.700.value}" },
 		"bikesharing": { "value": "{color.red.600.value}" }
 	}
 }
