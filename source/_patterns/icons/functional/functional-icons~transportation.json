@@ -225,6 +225,14 @@
 			]
 		},
 		{
+			"icon": "ev_bus",
+			"variants": [
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "ev_car",
 			"variants": [
 				{
@@ -247,6 +255,14 @@
 				{
 					"size": 20,
 					"style": "inverted"
+				}
+			]
+		},
+		{
+			"icon": "ev_train",
+			"variants": [
+				{
+					"size": 20
 				}
 			]
 		},
