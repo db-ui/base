@@ -22,7 +22,7 @@
 		},
 		"warning": {
 			"_": {
-				"value": "#f75f00",
+				"value": "{color.yellow.900.value}",
 				"comment": "This is the general warning color"
 			},
 			"small-font": {
