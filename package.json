@@ -53,7 +53,7 @@
     "npm-run-all": "4.1.5",
     "plugin-node-patternlab-inline-remote-assets": "^0.2.1",
     "prettier": "3.3.2",
-    "sass": "^1.77.7",
+    "sass": "^1.77.8",
     "style-dictionary": "3.9.2",
     "stylelint": "14.16.1",
     "stylelint-config-prettier": "9.0.5",
