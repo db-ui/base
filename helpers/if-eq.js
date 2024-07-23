@@ -1,4 +1,4 @@
-/* eslint unicorn/prefer-module: 0, eqeqeq: 0 */
+/* eslint-disable-next-line unicorn/prefer-module, eqeqeq, unicorn/no-anonymous-default-export */
 module.exports = function (Handlebars) {
 	Handlebars.registerHelper('if_eq', function (a, b, options) {
 		if (a == b) {
