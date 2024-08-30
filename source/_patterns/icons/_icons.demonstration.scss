@@ -1,7 +1,7 @@
 .DO-NOT-COPY-THIS-CLASS-example-icon-list {
 	&,
 	ol {
-		list-style: none;
+		list-style-type: "";
 
 		padding-left: 0;
 	}
@@ -36,7 +36,7 @@
 			}
 			// … and using some other declaration for Mozilla Firefox
 			&:first-of-type {
-				list-style-type: none;
+				list-style-type: "";
 			}
 
 			figure {

@@ -29,7 +29,7 @@
 }
 
 .sg-colors {
-	list-style: none !important;
+	list-style-type: "" !important;
 	padding: 0 !important;
 	margin: 0 !important;
 	display: grid;
