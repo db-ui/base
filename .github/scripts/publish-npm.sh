@@ -41,5 +41,5 @@ do
     echo "Could not authenticate with $REGISTRY"
     exit 1
   fi
-  npm publish --tag "$TAG" db-ui-base-"$VALID_SEMVER_VERSION".tgz
+  npm publish --tag "$TAG" db-ui-base-"$VALID_SEMVER_VERSION".tgz --provenance
 done
