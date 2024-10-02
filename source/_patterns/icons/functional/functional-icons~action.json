@@ -402,20 +402,6 @@
 			]
 		},
 		{
-			"icon": "compass",
-			"variants": [
-				{
-					"size": 32
-				},
-				{
-					"size": 24
-				},
-				{
-					"size": 20
-				}
-			]
-		},
-		{
 			"icon": "copy",
 			"variants": [
 				{
