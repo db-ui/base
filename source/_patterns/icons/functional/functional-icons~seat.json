@@ -115,6 +115,20 @@
 			]
 		},
 		{
+			"icon": "priority",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "quiet_zone",
 			"variants": [
 				{
@@ -157,7 +171,7 @@
 			]
 		},
 		{
-			"icon": "traveler-with-reduced-mobility",
+			"icon": "traveler_with_reduced_mobility",
 			"variants": [
 				{
 					"size": 32
