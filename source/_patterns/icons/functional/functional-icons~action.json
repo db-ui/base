@@ -146,6 +146,20 @@
 			]
 		},
 		{
+			"icon": "artificial_intelligence",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "attachment",
 			"variants": [
 				{
@@ -375,20 +389,6 @@
 		},
 		{
 			"icon": "cloud_upload",
-			"variants": [
-				{
-					"size": 32
-				},
-				{
-					"size": 24
-				},
-				{
-					"size": 20
-				}
-			]
-		},
-		{
-			"icon": "compass",
 			"variants": [
 				{
 					"size": 32
