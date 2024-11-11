@@ -1,9 +1,10 @@
-@import "../../build/scss/variables";
+@use "sass:meta";
+@use "../../build/scss/variables";
 @import url("variables.css");
 
 /* body {
 	font-family: var(--asset-font-db-screensans-regular-name);
 } */
 
-@import "../_patterns/icons/icons.demonstration";
-@import "../_patterns/logo/logo.demonstration";
+@include meta.load-css("../_patterns/icons/icons.demonstration");
+@include meta.load-css("../_patterns/logo/logo.demonstration");
