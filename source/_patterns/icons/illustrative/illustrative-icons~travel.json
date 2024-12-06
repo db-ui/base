@@ -18,6 +18,9 @@
 			"icon": "business_customer"
 		},
 		{
+			"icon": "children_traveling_alone"
+		},
+		{
 			"icon": "db_comfort_checkin"
 		},
 		{
@@ -46,6 +49,9 @@
 		},
 		{
 			"icon": "id_card"
+		},
+		{
+			"icon": "inexperienced_travelers"
 		},
 		{
 			"icon": "itinerary"
@@ -81,6 +87,9 @@
 			"icon": "seat_comfort"
 		},
 		{
+			"icon": "senior_travelers"
+		},
+		{
 			"icon": "signage"
 		},
 		{
@@ -94,6 +103,12 @@
 		},
 		{
 			"icon": "travel_insurance"
+		},
+		{
+			"icon": "travelers_with_reduced_mobility"
+		},
+		{
+			"icon": "travelers_with_support_needs"
 		},
 		{
 			"icon": "wheelchair"

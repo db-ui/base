@@ -146,6 +146,20 @@
 			]
 		},
 		{
+			"icon": "artificial_intelligence",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "attachment",
 			"variants": [
 				{
@@ -388,20 +402,6 @@
 			]
 		},
 		{
-			"icon": "compass",
-			"variants": [
-				{
-					"size": 32
-				},
-				{
-					"size": 24
-				},
-				{
-					"size": 20
-				}
-			]
-		},
-		{
 			"icon": "copy",
 			"variants": [
 				{
@@ -516,6 +516,20 @@
 			]
 		},
 		{
+			"icon": "document_cross",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "done",
 			"variants": [
 				{
@@ -575,6 +589,20 @@
 				{
 					"size": 20,
 					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "euro_sign",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
 				}
 			]
 		},
@@ -829,6 +857,20 @@
 			]
 		},
 		{
+			"icon": "id_card",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "image",
 			"variants": [
 				{
@@ -1054,6 +1096,20 @@
 				{
 					"size": 20,
 					"style": "solid"
+				}
+			]
+		},
+		{
+			"icon": "pulse_wave",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
 				}
 			]
 		},
