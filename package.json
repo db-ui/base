@@ -33,7 +33,7 @@
     "pl:serve": "patternlab serve --config ./patternlab-config.json",
     "pl:version": "patternlab --version"
   },
-  "license": "Apache-2.0",
+  "license": "DB Design License",
   "devDependencies": {
     "@commitlint/cli": "19.6.0",
     "@commitlint/config-conventional": "19.6.0",
