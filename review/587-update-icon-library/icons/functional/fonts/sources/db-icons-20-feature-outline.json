@@ -9,16 +9,16 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_iceportal_20"]
+				"tags": ["db_ic_iceportal_20"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 6,
-				"id": 23,
+				"id": 0,
 				"name": "db_ic_iceportal_20",
 				"prevSize": 32,
-				"code": 922374
+				"code": 922384
 			},
 			"setIdx": 0,
 			"setId": 0,
@@ -32,16 +32,16 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_regioguide_20"]
+				"tags": ["db_ic_regioguide_20"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 5,
-				"id": 22,
+				"id": 1,
 				"name": "db_ic_regioguide_20",
 				"prevSize": 32,
-				"code": 922375
+				"code": 922385
 			},
 			"setIdx": 0,
 			"setId": 0,
@@ -61,7 +61,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 59,
-				"id": 0,
+				"id": 2,
 				"name": "db_ic_dog_20",
 				"prevSize": 32,
 				"code": 922265
@@ -84,7 +84,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 248,
-				"id": 1,
+				"id": 3,
 				"name": "db_ic_steppless_entry_20",
 				"prevSize": 32,
 				"code": 922135
@@ -107,7 +107,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 249,
-				"id": 2,
+				"id": 4,
 				"name": "db_ic_support_dog_20",
 				"prevSize": 32,
 				"code": 922133
@@ -130,7 +130,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 370,
-				"id": 3,
+				"id": 5,
 				"name": "db_ic_person_with_cane_20",
 				"prevSize": 32,
 				"code": 922231
@@ -153,7 +153,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 369,
-				"id": 4,
+				"id": 6,
 				"name": "db_ic_person_with_rollator_20",
 				"prevSize": 32,
 				"code": 921992
@@ -176,7 +176,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 144,
-				"id": 5,
+				"id": 7,
 				"name": "db_ic_reservation_20",
 				"prevSize": 32,
 				"code": 921977
@@ -199,7 +199,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 143,
-				"id": 6,
+				"id": 8,
 				"name": "db_ic_platform_20",
 				"prevSize": 32,
 				"code": 128740
@@ -222,7 +222,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 142,
-				"id": 7,
+				"id": 9,
 				"name": "db_ic_no_smoking_20",
 				"prevSize": 32,
 				"code": 922230
@@ -245,7 +245,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 141,
-				"id": 8,
+				"id": 10,
 				"name": "db_ic_night_20",
 				"prevSize": 32,
 				"code": 922249
@@ -268,7 +268,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 140,
-				"id": 9,
+				"id": 11,
 				"name": "db_ic_marketplace_20",
 				"prevSize": 32,
 				"code": 921976
@@ -291,7 +291,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 139,
-				"id": 10,
+				"id": 12,
 				"name": "db_ic_luggage_compartment_20",
 				"prevSize": 32,
 				"code": 922228
@@ -314,7 +314,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 138,
-				"id": 11,
+				"id": 13,
 				"name": "db_ic_hydrogen_20",
 				"prevSize": 32,
 				"code": 921975
@@ -337,7 +337,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 137,
-				"id": 12,
+				"id": 14,
 				"name": "db_ic_environmental_mobility_check_20",
 				"prevSize": 32,
 				"code": 922227
@@ -360,7 +360,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 136,
-				"id": 13,
+				"id": 15,
 				"name": "db_ic_day_20",
 				"prevSize": 32,
 				"code": 9728
@@ -383,7 +383,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 135,
-				"id": 14,
+				"id": 16,
 				"name": "db_ic_clothing_hanger_20",
 				"prevSize": 32,
 				"code": 921984
@@ -406,7 +406,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 4,
-				"id": 15,
+				"id": 17,
 				"name": "ic-db_feature_air-condition_20",
 				"prevSize": 32,
 				"code": 10052
@@ -429,7 +429,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 5,
-				"id": 16,
+				"id": 18,
 				"name": "ic-db_feature_standing-room_20",
 				"prevSize": 32,
 				"code": 921952
@@ -452,7 +452,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 6,
-				"id": 17,
+				"id": 19,
 				"name": "ic-db_buggy_20",
 				"prevSize": 32,
 				"code": 921939
@@ -475,7 +475,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 7,
-				"id": 18,
+				"id": 20,
 				"name": "entry-aid",
 				"prevSize": 32,
 				"code": 921936
@@ -498,7 +498,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 8,
-				"id": 19,
+				"id": 21,
 				"name": "luggage-rack",
 				"prevSize": 32,
 				"code": 922229
@@ -521,7 +521,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 9,
-				"id": 20,
+				"id": 22,
 				"name": "medical",
 				"prevSize": 32,
 				"code": 10010
@@ -544,7 +544,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 10,
-				"id": 21,
+				"id": 23,
 				"name": "power-outlet",
 				"prevSize": 32,
 				"code": 922232
