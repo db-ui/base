@@ -9,16 +9,16 @@
 				"attrs": [{}],
 				"isMulticolor": false,
 				"isMulticolor2": false,
-				"grid": 0,
-				"tags": ["db_ic_clapperboard_20"]
+				"tags": ["db_ic_clapperboard_20"],
+				"grid": 0
 			},
 			"attrs": [{}],
 			"properties": {
 				"order": 2,
-				"id": 19,
+				"id": 0,
 				"name": "db_ic_clapperboard_20",
 				"prevSize": 32,
-				"code": 922373
+				"code": 922377
 			},
 			"setIdx": 0,
 			"setId": 0,
@@ -38,7 +38,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 24,
-				"id": 0,
+				"id": 1,
 				"name": "db_ic_fast_forward_20",
 				"prevSize": 32,
 				"code": 922263
@@ -61,7 +61,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 25,
-				"id": 1,
+				"id": 2,
 				"name": "db_ic_fast_backward_20",
 				"prevSize": 32,
 				"code": 922262
@@ -84,7 +84,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 91,
-				"id": 2,
+				"id": 3,
 				"name": "db_ic_microphone_20",
 				"prevSize": 32,
 				"code": 922164
@@ -107,7 +107,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 322,
-				"id": 3,
+				"id": 4,
 				"name": "fast-backward-10",
 				"prevSize": 32,
 				"code": 921733
@@ -130,7 +130,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 323,
-				"id": 4,
+				"id": 5,
 				"name": "fast-backward-30",
 				"prevSize": 32,
 				"code": 921734
@@ -153,7 +153,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 324,
-				"id": 5,
+				"id": 6,
 				"name": "fast-backward-empty",
 				"prevSize": 32,
 				"code": 10554
@@ -176,7 +176,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 325,
-				"id": 6,
+				"id": 7,
 				"name": "fast-forward-10",
 				"prevSize": 32,
 				"code": 921735
@@ -199,7 +199,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 326,
-				"id": 7,
+				"id": 8,
 				"name": "fast-forward-30",
 				"prevSize": 32,
 				"code": 921736
@@ -222,7 +222,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 327,
-				"id": 8,
+				"id": 9,
 				"name": "fast-forward-empty",
 				"prevSize": 32,
 				"code": 10555
@@ -245,7 +245,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 328,
-				"id": 9,
+				"id": 10,
 				"name": "pause",
 				"prevSize": 32,
 				"code": 9208
@@ -268,7 +268,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 329,
-				"id": 10,
+				"id": 11,
 				"name": "play",
 				"prevSize": 32,
 				"code": 9655
@@ -291,7 +291,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 330,
-				"id": 11,
+				"id": 12,
 				"name": "skip-backward",
 				"prevSize": 32,
 				"code": 9198
@@ -314,7 +314,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 331,
-				"id": 12,
+				"id": 13,
 				"name": "skip-forward",
 				"prevSize": 32,
 				"code": 9197
@@ -337,7 +337,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 332,
-				"id": 13,
+				"id": 14,
 				"name": "stop",
 				"prevSize": 32,
 				"code": 9633
@@ -360,7 +360,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 333,
-				"id": 14,
+				"id": 15,
 				"name": "subtitles",
 				"prevSize": 32,
 				"code": 921745
@@ -384,7 +384,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 334,
-				"id": 15,
+				"id": 16,
 				"name": "volume-down",
 				"prevSize": 32,
 				"code": 922201
@@ -407,7 +407,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 335,
-				"id": 16,
+				"id": 17,
 				"name": "volume-mute",
 				"prevSize": 32,
 				"code": 922208
@@ -430,7 +430,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 336,
-				"id": 17,
+				"id": 18,
 				"name": "volume-off",
 				"prevSize": 32,
 				"code": 922209
@@ -454,7 +454,7 @@
 			"attrs": [{}],
 			"properties": {
 				"order": 337,
-				"id": 18,
+				"id": 19,
 				"name": "volume-up",
 				"prevSize": 32,
 				"code": 922210
