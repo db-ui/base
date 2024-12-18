@@ -123,6 +123,20 @@
 			]
 		},
 		{
+			"icon": "iceportal",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
 			"icon": "luggage_compartment",
 			"variants": [
 				{
@@ -266,6 +280,20 @@
 		},
 		{
 			"icon": "power_outlet",
+			"variants": [
+				{
+					"size": 32
+				},
+				{
+					"size": 24
+				},
+				{
+					"size": 20
+				}
+			]
+		},
+		{
+			"icon": "regioguide",
 			"variants": [
 				{
 					"size": 32
