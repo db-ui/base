@@ -47,7 +47,7 @@
     "dotenv": "^16.4.7",
     "find-versions-cli": "^5.0.0",
     "husky": "9.1.7",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "^15.4.2",
     "markdownlint-cli": "^0.43.0",
     "nodemon": "3.1.9",
     "npm-run-all2": "7.0.2",
