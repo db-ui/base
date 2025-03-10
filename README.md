@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 DB Systel GmbH
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # DB UI Base
 
 [![REUSE Compliance Check](https://github.com/db-ui/base/actions/workflows/99-reuse-compliance-check.yml/badge.svg)](https://github.com/db-ui/base/actions/workflows/99-reuse-compliance-check.yml) Creates copyright & license annotations with [REUSE](https://git.fsfe.org/reuse/tool)
