@@ -2,18 +2,24 @@
 title: Functional Icons
 ---
 
+<!--
+SPDX-FileCopyrightText: 2025 DB Systel GmbH
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 ### Usage
 
 You could either use the Icon font provided with [DB UI Core](https://db-ui.github.io/core/?p=viewall-base-icons) or reference the functional color icons directly via the `<use>` HTML tag within the `<svg>` HTML tag, compare to the source code provided with this pattern, like e.g.:
 
 ```html
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width="20"
-	height="20"
-	aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="20"
+  aria-hidden="true"
 >
-	<use href="/assets/icons/functional/action/db_ic_account_20.svg#icon"></use>
+  <use href="/assets/icons/functional/action/db_ic_account_20.svg#icon"></use>
 </svg>
 ```
 
@@ -21,7 +27,7 @@ You could either use the Icon font provided with [DB UI Core](https://db-ui.gith
 
 To change the line-colors of the icon define a color value for its CSS variable:
 
--   `--db-icon-color`
+- `--db-icon-color`
 
 The fallback for an undefined `--db-icon-color` is the `font-color` defined around or for the `<svg>` itself.
 

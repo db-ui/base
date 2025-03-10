@@ -2,20 +2,26 @@
 title: Illustrative Icons
 ---
 
+<!--
+SPDX-FileCopyrightText: 2025 DB Systel GmbH
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 ### Usage
 
 You could reference the multicolor icons directly via the `<use>` HTML tag within the `<svg>` HTML tag, compare to the source code provided with this pattern, like e.g.:
 
 ```html
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width="64"
-	height="64"
-	aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+  width="64"
+  height="64"
+  aria-hidden="true"
 >
-	<use
-		href="/assets/icons/illustrative/action/db_ic_il_alarm_clock.svg#icon"
-	></use>
+  <use
+    href="/assets/icons/illustrative/action/db_ic_il_alarm_clock.svg#icon"
+  ></use>
 </svg>
 ```
 
@@ -23,8 +29,8 @@ You could reference the multicolor icons directly via the `<use>` HTML tag withi
 
 You could easily change the line-colors of both the pulse and the icon itself by defining different color values for both CSS variables:
 
--   `--db-icon-color`
--   `--db-icon-pulse-color`
+- `--db-icon-color`
+- `--db-icon-pulse-color`
 
 The fallback for an undefined `--db-icon-color` is the `font-color` defined around or for the `<svg>` itself, and `--db-icon-pulse-color` would fall back to `#EC0016`, which is the general pulse color defined by brand.
 
