@@ -8,13 +8,15 @@
 		"s-bahn": { "value": "{color.green.500.value}" },
 		"u-bahn": { "value": "{color.blue.500.value}" },
 		"tram": { "value": "{color.burgundy.500.value}" },
-		"intercity-bus": { "value": "{color.pink.500.value}" },
 		"bus": { "value": "{color.violett.500.value}" },
+		"intercity-bus": { "value": "{color.pink.500.value}" },
+		"call-bus": { "value": "{color.violett.500.value}" },
+		"ev-bus": { "value": "#9B1B60" },
 		"ship": { "value": "{color.cyan.500.value}" },
 		"airplane": { "value": "{color.turquoise.500.value}" },
-		"taxi": { "value": "{color.yellow.500.value}" },
 		"carsharing": { "value": "{color.orange.500.value}" },
-		"walk": { "value": "{color.cool-gray.700.value}" },
-		"bikesharing": { "value": "{color.red.600.value}" }
+		"taxi": { "value": "{color.yellow.500.value}" },
+		"bikesharing": { "value": "{color.red.600.value}" },
+		"walk": { "value": "{color.cool-gray.200.value}" }
 	}
 }
