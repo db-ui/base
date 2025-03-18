@@ -49,7 +49,6 @@
 			},
 			"js": "./source/js",
 			"images": "./source/images",
-			"fonts": "./assets/fonts",
 			"css": "./source/css",
 			"icons": "./assets/icons",
 			"sitemap": "./source/sitemap.xml"
@@ -62,7 +61,6 @@
 			"styleguide": "out/styleguide/",
 			"js": "out/js",
 			"images": "out/images",
-			"fonts": "out/fonts",
 			"css": "out/css",
 			"icons": "out/icons",
 			"sitemap": "out/sitemap.xml"
