@@ -1,9 +1,13 @@
+// stylelint-disable-next-line import-notation, @stylistic/string-quotes
 @import "../../build/scss/variables";
+// stylelint-disable-next-line @stylistic/string-quotes
 @import url("variables.css");
 
 /* body {
 	font-family: var(--asset-font-db-screensans-regular-name);
 } */
 
+// stylelint-disable-next-line import-notation, @stylistic/string-quotes
 @import "../_patterns/icons/icons.demonstration";
+// stylelint-disable-next-line import-notation, @stylistic/string-quotes
 @import "../_patterns/logo/logo.demonstration";
