@@ -2,6 +2,12 @@
 title: Deutsche Bahn Logo
 ---
 
+<!--
+SPDX-FileCopyrightText: 2025 DB Systel GmbH
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 Please find a lot of more information regarding our logo and how to use it within the Marketingportal: <https://marketingportal.extranet.deutschebahn.com/marketingportal/Design-Anwendungen/db-ux-design-system/version-2/foundation/Logo>
 
 #### Adapt logos colors (background and fill)

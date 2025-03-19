@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 DB Systel GmbH
+//
+// SPDX-License-Identifier: Apache-2.0
+
 /* eslint unicorn/prefer-module: 0 */
 const StyleDictionary = require('style-dictionary').extend(
 	'style-dictionary.config.json'
