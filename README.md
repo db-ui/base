@@ -10,9 +10,11 @@ SPDX-License-Identifier: Apache-2.0
 [![REUSE Compliance Check](https://github.com/db-ui/base/actions/workflows/99-reuse-compliance-check.yml/badge.svg)](https://github.com/db-ui/base/actions/workflows/99-reuse-compliance-check.yml) Creates copyright & license annotations with [REUSE](https://git.fsfe.org/reuse/tool)
 
 > [!IMPORTANT]
-> We've released the new stable version of the [DB UX Design System v3](https://github.com/db-ux-design-system/core-web), which is the successor of this generation of DB Design Systems.
-> Especially for new projects, we strongly recommend building on [DB UX Design System v3](https://github.com/db-ux-design-system/core-web).
-> The new version has some great benefits and optimisations, especially in terms of accessibility testing, further and better framework support and ongoing development.
+> We've released the new stable version of the [DB UX Design System v3](https://github.com/db-ux-design-system/core-web), which is the successor to this generation of DB Design Systems.
+> Especially for new projects, we strongly recommend building on [DB UX Design System v3](https://github.com/db-ux-design-system/core-web).<!-- markdownlint-disable MD033 -->
+> The new version has some great benefits and optimisations, especially in terms of accessibility testing, further and better framework support and ongoing development.<br>
+<!-- markdownlint-enable MD033 -->
+> Please note that we won't be providing any new features from now on, only bug fixes until EOL at the end of 2026.
 
 With DB UI Base we provide you with basic Design Tokens and assets based on the [DB UX Design System v2](https://marketingportal.extranet.deutschebahn.com/marketingportal/Design-Anwendungen/db-ux-design-system/version-2/Components), that can be shared across web and native apps projects.
 
