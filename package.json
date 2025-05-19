@@ -48,7 +48,7 @@
     "find-versions-cli": "^5.0.0",
     "husky": "9.1.7",
     "lint-staged": "^16.0.0",
-    "markdownlint-cli": "^0.44.0",
+    "markdownlint-cli": "^0.45.0",
     "nodemon": "3.1.10",
     "npm-run-all2": "8.0.2",
     "plugin-node-patternlab-inline-remote-assets": "^0.2.1",
