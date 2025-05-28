@@ -1,3 +1,5 @@
 build/
+out/
+node_modules/
 source/_patterns/**
 .stylelintrc.json
