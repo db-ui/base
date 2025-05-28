@@ -1,3 +1,5 @@
-build/
+node_modules/
 source/_patterns/**
 .stylelintrc.json
+source/styleguide/css/styleguide-specific.min.css
+source/css/pattern-scaffolding.css
