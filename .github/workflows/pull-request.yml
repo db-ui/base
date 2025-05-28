@@ -19,8 +19,8 @@ jobs:
   auto-merge:
     uses: ./.github/workflows/99-auto-merge.yml
 
-  dependabot-stylelint-self-healing:
-    uses: ./.github/workflows/99-auto-fix-dependabot-stylelint-updates.yml
+  self-healing-dependabot-updates:
+    uses: ./.github/workflows/99-self-healing-dependabot-updates.yml
 
   codeql:
     uses: ./.github/workflows/99-codeql-analysis.yml
