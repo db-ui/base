@@ -15,6 +15,7 @@ const flattenColors = (dictionary) => {
 		for (const colorKey of Object.keys(colors)) {
 			if (
 				typeof colors[colorKey] === 'string' ||
+				// eslint-disable-next-line unicorn/no-instanceof-builtins
 				colors[colorKey] instanceof String
 			) {
 				flatColors[colorKey] = colors[colorKey];
