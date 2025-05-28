@@ -49,6 +49,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          echo 'COMMIT_MAIL=github-actions[bot]@users.noreply.github.com' >> .env
 
           git add .
           git commit --all -m "Auto-format codebase with Stylelint" || echo "No changes to commit"
