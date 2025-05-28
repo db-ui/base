@@ -24,11 +24,15 @@ jobs:
           if [[ "${{ github.event.pull_request.title }}" =~ "bump stylelint from" ]]; then
             echo "Stylelint update detected."
             echo "stylelint_update=true" >> $GITHUB_ENV
+            echo "stylelint_update=false" >> $GITHUB_ENV
           else if [[ "${{ github.event.pull_request.title }}" =~ "bump prettier from" ]]; then
             echo "Prettier update detected."
             echo "prettier_update=true" >> $GITHUB_ENV
+            echo "prettier_update=false" >> $GITHUB_ENV
           else
             echo "No Stylelint or prettier updates detected."
+            echo "stylelint_update=false" >> $GITHUB_ENV
+            echo "prettier_update=false" >> $GITHUB_ENV
           fi
 
       - name: Set up Node.js
