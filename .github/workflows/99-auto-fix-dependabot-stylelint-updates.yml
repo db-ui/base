@@ -52,5 +52,5 @@ jobs:
           echo 'COMMIT_MAIL=github-actions[bot]@users.noreply.github.com' >> .env
 
           git add .
-          git commit --all -m "Auto-format codebase with Stylelint" || echo "No changes to commit"
+          git commit --all -m "refactor(test): Auto-format codebase with Stylelint" || echo "No changes to commit"
           git push origin HEAD:${{ github.head_ref }}  # Push back to the same PR branch
