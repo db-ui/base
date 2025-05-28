@@ -46,7 +46,6 @@
     "cpr": "3.0.1",
     "dotenv": "^16.5.0",
     "find-versions-cli": "^5.0.0",
-    "globals": "^16.2.0",
     "husky": "9.1.7",
     "lint-staged": "^16.1.0",
     "markdownlint-cli": "^0.45.0",
