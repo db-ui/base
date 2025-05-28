@@ -1,8 +1,5 @@
 {
-	"extends": [
-		"stylelint-config-standard",
-		"stylelint-config-sass-guidelines"
-	],
+	"extends": ["stylelint-config-standard-scss"],
 	"rules": {
 		"selector-no-qualifying-type": null,
 		"selector-class-pattern": null,
