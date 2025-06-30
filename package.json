@@ -44,7 +44,7 @@
     "@pattern-lab/starterkit-handlebars-vanilla": "1.4.3",
     "@pattern-lab/uikit-workshop": "6.1.0",
     "cpr": "3.0.1",
-    "dotenv": "^16.5.0",
+    "dotenv": "^17.0.0",
     "find-versions-cli": "^5.0.0",
     "husky": "9.1.7",
     "lint-staged": "^16.1.2",
