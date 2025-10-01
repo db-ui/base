@@ -25,7 +25,7 @@ jobs:
     name: Publish latest package versions to GitHub Packages
     runs-on: ubuntu-24.04 # Use Ubuntu 24.04 explicitly
     permissions:
-      id-token: write
+      id-token: write  # Required for OIDC
     steps:
       - name: ⬇ Checkout repo
         uses: actions/checkout@v4
