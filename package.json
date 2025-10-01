@@ -36,7 +36,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/config-conventional": "20.0.0",
     "@mfranzke/plugin-node-uiextension": "^1.0.1",
     "@pattern-lab/cli": "6.1.0",
     "@pattern-lab/core": "6.1.0",
