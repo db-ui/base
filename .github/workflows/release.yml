@@ -8,6 +8,9 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write  # Required for OIDC
+
 jobs:
   init:
     uses: ./.github/workflows/00-init.yml
