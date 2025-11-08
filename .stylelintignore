@@ -1,6 +1,4 @@
 node_modules/
-assets/fonts/**/sources
-build/
 source/_patterns/**
 .stylelintrc.json
 source/styleguide/css/styleguide-specific.min.css
