@@ -5,9 +5,6 @@
 	"IgnoreDefaults": false,
 	"SpacesAftertabs": false,
 	"NoColor": false,
-	"Exclude": [
-		"assets/fonts\\S*/sources/.*$"
-	],
 	"AllowedContentTypes": [],
 	"PassedFiles": [],
 	"Disable": {
