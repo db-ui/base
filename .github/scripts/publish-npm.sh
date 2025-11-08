@@ -45,5 +45,5 @@ do
     exit 1
   fi
   # https://docs.npmjs.com/generating-provenance-statements#example-github-actions-workflow
-  npm publish --tag "$TAG" db-ui-base-"$VALID_SEMVER_VERSION".tgz --provenance
+  npm publish --tag "$TAG" db-ui-base-"$VALID_SEMVER_VERSION".tgz
 done
