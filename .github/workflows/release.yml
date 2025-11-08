@@ -8,9 +8,6 @@ on:
   release:
     types: [published]
 
-permissions:
-  id-token: write  # Required for OIDC
-
 jobs:
   init:
     uses: ./.github/workflows/00-init.yml
@@ -43,6 +40,8 @@ jobs:
     uses: ./.github/workflows/03-publish-packages.yml
     needs: [lint, build, get-publish-version]
     secrets: inherit
+    permissions:
+      id-token: write  # Required for OIDC
     with:
       release: ${{ needs.get-publish-version.outputs.release }}
       preRelease: ${{ needs.get-publish-version.outputs.preRelease }}
