@@ -49,7 +49,7 @@
     "husky": "9.1.7",
     "lint-staged": "^16.2.6",
     "markdownlint-cli": "^0.45.0",
-    "nodemon": "3.1.10",
+    "nodemon": "3.1.11",
     "npm-run-all2": "8.0.4",
     "plugin-node-patternlab-inline-remote-assets": "^0.2.1",
     "postcss": "^8.5.6",
