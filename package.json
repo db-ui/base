@@ -54,7 +54,7 @@
     "plugin-node-patternlab-inline-remote-assets": "^0.2.1",
     "postcss": "^8.5.6",
     "prettier": "3.6.2",
-    "sass": "^1.93.3",
+    "sass": "^1.94.1",
     "style-dictionary": "3.9.2",
     "stylelint": "16.24.0",
     "stylelint-config-standard-scss": "^16.0.0",
