@@ -8,6 +8,7 @@ SPDX-FileCopyrightText: 2025 DB Systel GmbH
 SPDX-License-Identifier: Apache-2.0
 -->
 
+<!-- markdownlint-disable-next-line MD001 -->
 ### Usage
 
 You could reference the multicolor icons directly via the `<use>` HTML tag within the `<svg>` HTML tag, compare to the source code provided with this pattern, like e.g.:

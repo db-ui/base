@@ -8,6 +8,7 @@ SPDX-FileCopyrightText: 2025 DB Systel GmbH
 SPDX-License-Identifier: Apache-2.0
 -->
 
+<!-- markdownlint-disable-next-line MD001 -->
 ### Usage
 
 You could either use the Icon font provided with [DB UI Core](https://db-ui.github.io/core/?p=viewall-base-icons) or reference the functional color icons directly via the `<use>` HTML tag within the `<svg>` HTML tag, compare to the source code provided with this pattern, like e.g.:
