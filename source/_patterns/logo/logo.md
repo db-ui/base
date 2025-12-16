@@ -10,6 +10,7 @@ SPDX-License-Identifier: Apache-2.0
 
 Please find a lot of more information regarding our logo and how to use it within the Marketingportal: <https://marketingportal.extranet.deutschebahn.com/marketingportal/Design-Anwendungen/db-ux-design-system/version-2/foundation/Logo>
 
+<!-- markdownlint-disable-next-line MD001 -->
 #### Adapt logos colors (background and fill)
 
 You could easily change the line-colors of the logo as well as the background color by defining different color values for both CSS variables:
