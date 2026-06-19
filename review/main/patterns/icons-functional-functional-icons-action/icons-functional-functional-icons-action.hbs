@@ -1,0 +1,55 @@
+{{!--
+SPDX-FileCopyrightText: 2025 DB Systel GmbH
+
+SPDX-License-Identifier: Apache-2.0
+--}}
+
+{{#unless icons}}<p>Please keep in mind that it's optional to set the variant combination of size ({{ icon-size }}) and style ({{ icon-style }}) as these are defined as default.<br>In case that you'll need another default in your project, you could overwrite the defaults by overwriting the <code>$icon-size</code> and <code>$icon-style</code> SCSS variables.</p>{{/unless }}
+<ol class="DO-NOT-COPY-THIS-CLASS-example-icon-list icons functional">
+	{{#each icons }}<li>
+		<details>
+			<summary>
+				<figure>
+					{{#if_eq @root.category "transportation"}}
+						<svg xmlns="http://www.w3.org/2000/svg" width="{{ @root.icon-size }}" height="{{ @root.icon-size }}" aria-hidden="true">
+							<use href="../../icons/functional/images/{{ @root.category }}/{{#if style}}{{style}}{{else}}regular{{/if }}/db_ic_{{ icon }}{{#if style }}_{{ style }}{{/if }}_20.svg#icon"></use>
+						</svg>
+					{{else}}
+						<svg xmlns="http://www.w3.org/2000/svg" width="{{ @root.icon-size }}" height="{{ @root.icon-size }}" aria-hidden="true">
+							<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ icon }}{{#if style }}_{{ style }}{{/if }}_20.svg#icon"></use>
+						</svg>
+					{{/if_eq}}
+					<figcaption>{{ icon }}{{#if style }}_{{ style }}{{/if }}</figcaption>
+				</figure>
+			</summary>
+			<aside>
+				<ol>
+					{{#each @root.example-bgs }}
+						<li class="DO-NOT-COPY-THIS-CLASS-example-bg-variants-{{ variant }}">
+							<ol>
+								{{#each ../variants }}
+									{{#if_eq @root.category "transportation"}}
+										<li>
+											<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
+												<use href="../../icons/functional/images/{{ @root.category }}/{{#if style}}{{style}}{{else}}regular{{/if }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
+											</svg>
+										</li>
+									{{else}}
+										<li>
+											<svg xmlns="http://www.w3.org/2000/svg" width="{{ size }}" height="{{ size }}" aria-hidden="true">
+												<use href="../../icons/functional/images/{{ @root.category }}/db_ic_{{ ../../icon }}{{#if style }}_{{ style }}{{/if }}_{{ size }}.svg#icon"></use>
+											</svg>
+										</li>
+									{{/if_eq}}
+								{{/each }}
+							</ol>
+						</li>
+					{{/each }}
+				</ol>
+				<ul>
+					<li>SCSS: <code>@include icon(glyph({{ icon }}))</code></li>
+					<li>HTML: <code>data-icon="{{ icon }}"</code></li>
+				</ul>
+			</aside>
+	</li>{{/each }}
+</ol>
