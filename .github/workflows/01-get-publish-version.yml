@@ -22,7 +22,7 @@ on:
 jobs:
   publish:
     name: Get and save publish version
-    runs-on: ubuntu-24.04 # Use Ubuntu 24.04 explicitly
+    runs-on: ubuntu-26.04
     outputs:
       release: ${{ steps.releaseCheck.outputs.release }}
       preRelease: ${{ steps.releaseCheck.outputs.preRelease }}
